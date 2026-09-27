@@ -1,0 +1,34 @@
+#!/bin/zsh
+# One-time setup on a new machine (the laptop). Run from anywhere after cloning blc-setup into ~/code/blc-setup.
+# Safe to re-run: it skips anything already in place.
+set -u
+CODE="$HOME/code"
+SETUP="$CODE/blc-setup"
+clone() { [ -d "$2/.git" ] && echo "have $2" || { mkdir -p "$(dirname "$2")"; git clone -q "$1" "$2" && echo "cloned $2"; } }
+clone https://github.com/serafimparente-blc/marketing-agent.git          "$CODE/BLC/marketing-hub/marketing-agent"
+clone https://github.com/blc-charlieharris-gh/meta-access.git            "$CODE/BLC/meta-access"
+clone https://github.com/blc-charlieharris-gh/site-greentide.git         "$CODE/BLC/site-greentide"
+clone https://github.com/blc-charlieharris-gh/site-installrhub.git       "$CODE/BLC/site-installrhub/installrhub-static"
+clone https://github.com/blc-charlieharris-gh/installrhub-creative-library.git "$CODE/BLC/site-installrhub/creative-library"
+
+# Shared skills: one copy, linked to where Claude and other agents look for them.
+ln -sfn "$SETUP/shared-agent-skills" "$CODE/shared-agent-skills"
+for dir in "$HOME/.claude/skills" "$HOME/.agents/skills"; do
+  mkdir -p "$dir"
+  for s in "$SETUP"/shared-agent-skills/skills/*; do ln -sfn "$s" "$dir/$(basename "$s")"; done
+done
+
+# Claude's memory for this project lives in the setup repo; point Claude's per-project folder at it.
+KEY="$(echo "$CODE/BLC" | sed 's#/#-#g')"
+PROJ="$HOME/.claude/projects/$KEY"
+mkdir -p "$PROJ"
+if [ -L "$PROJ/memory" ]; then echo "memory already linked"
+elif [ -d "$PROJ/memory" ]; then mv "$PROJ/memory" "$PROJ/memory.before-blc-setup" && ln -s "$SETUP/claude-memory" "$PROJ/memory" && echo "memory linked (old folder kept as memory.before-blc-setup)"
+else ln -s "$SETUP/claude-memory" "$PROJ/memory" && echo "memory linked"; fi
+
+# BLC notes
+ln -sfn "$SETUP/blc-notes/docs" "$CODE/BLC/docs"
+echo
+echo "Next: copy the key files from the Mac (see README), then:"
+echo "  cd $CODE/BLC/marketing-hub/marketing-agent && npm install"
+echo "  add $SETUP/bin to your PATH, or run it as $SETUP/bin/blc-sync"

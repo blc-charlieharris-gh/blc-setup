@@ -1,0 +1,25 @@
+---
+name: project_retrofit_site_trustpilot_cd
+description: "Retrofit Group website: Trustpilot cease-and-desist 2026-07-30, all TP branding stripped and un-branded, fresh zip delivered"
+metadata: 
+  node_type: memory
+  type: project
+  originSessionId: 214a3b79-ebfc-45d2-9fe4-4c9b5fa97233
+  modified: 2026-07-31T11:19:01.993Z
+---
+
+Retrofit Group's static site lives at `marketing-hub/marketing-agent/client-sites/retrofit-group/site/` (22 HTML pages + `css/style.css` + `js/main.js`). This is the [[project_retrofit_group]] client (BLC-run Meta account).
+
+**2026-07-30 — Trustpilot cease-and-desist.** Client emailed urgently: Trustpilot sent a C&D for unofficial use of their badge on the site. It was used heavily: hero rating bar (green TP logo + wordmark + "4.5 out of 5 · Rated Excellent"), a "Rated Excellent on Trustpilot" reviews section, "read reviews on Trustpilot" links, and a TP star-icon social link in the header + footer of every page.
+
+Charlotte chose **keep quotes, un-brand** (not remove reviews). Applied: removed every TP logo/wordmark/name/link across all 22 pages; dropped the "4.5/5 on Trustpilot" rating claim (hero now "Trusted by 1,500+ homeowners across Central Scotland"); reviews heading → "What Our Customers Say"; recolored TP-green stars `#00B67A` → gold `#f4a623`; repointed old TP links to book-survey.html; renamed the `trustpilot-link` CSS class + TP code comments. Verified 0 `trustpilot` / 0 `#00B67A` in any html/css/js.
+
+- **Web3Forms untouched and intact** on all 6 forms (contact, book-survey, warm-homes-plan, funding, facilities, index warm-homes), access_key `c5c30c62-6419-4397-a104-7cd664ff442f`, inline-success handler in `js/main.js` (`form[action*="web3forms"]`). Always re-verify this survives site edits before delivering.
+- **Deliverable SENT** to Retrofit by Charlotte 2026-07-30: `retrofit-group-site-2026-07-30.zip` (in the retrofit-group folder, files at root, no junk, matches June structure). Prior deliverable `retrofit-group-site-2026-06-11.zip` was the branded version that triggered the C&D.
+- **Web3Forms key `c5c30c62-6419-4397-a104-7cd664ff442f` is Retrofit's own** (verified: same as June zip, appears in NO other client site). Routes submissions to their inbox. Never overwrite it.
+- **Canonical site = `marketing-agent/client-sites/retrofit-group/site/` (untracked working copy).** The old duplicate at `internal-installrhub/.../CustomSites/retrofit-group/` was a stale, diverged copy: DELETED this session (staged git deletion on branch `feat/crew`, UNCOMMITTED as of 2026-07-30). Whoever owns feat/crew should commit the removal. Renerji + Arktek checked = single site each, no dup.
+- **2026-07-31 "Trustpilot still showing" = NAMESCO VARNISH CACHE, not a bad upload.** Retrofit uploaded the clean zip correctly (every file `last-modified: 31 Jul 09:32`); only the cached homepage was stale (`last-modified: 12 Jun`, 14 TP hits). Host = **Namesco Managed WordPress** (IP 178.18.126.97, rDNS `wp.namesco.net`, NS `ns0/1/2.phase8.net`), Varnish in front. Self-serve fix given to client: Control Panel > Services > Dashboard > Manage Hosting > Advanced settings > Caching > **Clear cache** (one action covers both hostnames); fallback 0345 363 3633. A www→non-www redirect does NOT fix it (cache answers before origin).
+- **CACHE-DEBUG LESSON (cost ~2h of ping-pong): Varnish keys on Host AND `Vary: Accept-Encoding`, so "is it fixed?" has different answers per vantage.** Measured simultaneously: apex+identity = 12 Jun, apex+gzip = 31 Jul; www+identity = 31 Jul, www+gzip/browser-set = 12 Jun. Plain `curl` (identity) said apex was broken; the client's browser and WebFetch (gzip/br/zstd) said www was broken. BOTH were right. Never conclude from one curl: test `-H "Accept-Encoding: gzip, deflate, br, zstd"` AND identity, on both hostnames, and judge by `last-modified`/`age`, not by grepping the body (curl can't decode br/zstd, so a br response greps as 0 hits and reads as false-clean). A `?query=` always bypasses Varnish (`age: 0`), so it proves the origin file is right but is USELESS as a "is it live yet" test.
+- **Client-comms lesson from the same session:** "the fix isn't showing" from a non-technical client is a measurement problem first. Charlotte's read (www broken) matched real browsers and mine (apex broken) did not, and arguing the point burned trust. Establish the browser-accurate vantage FIRST, then give one action, not a ranked list of options.
+- **TODO next site update:** restore the plain star social link to their own Trustpilot profile (`https://uk.trustpilot.com/review/www.retrofit-group.com`) in header + footer of all 22 pages, alongside Facebook/Instagram. Stripping it was over-cautious: the C&D targeted the green badge and the "4.5 out of 5 · Rated Excellent" claim, not an unbranded link to your own profile. Not worth a special re-upload trip; bundle it with the next change, once the C&D is formally closed.
+- **Open flag:** customer review quotes remain (un-branded). If not genuine verified reviews, they could invite a separate complaint. Not stripped unless asked.

@@ -1,0 +1,9 @@
+# Never commit secrets or machine junk. Key files are copied between machines by hand (see README).
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vercel/
+node_modules/
+.DS_Store

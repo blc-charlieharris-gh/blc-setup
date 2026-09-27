@@ -1,0 +1,25 @@
+---
+name: project-blc-workdir-corruption
+description: "BLC working dir suffers recurring file corruption (duplicate \" 2\" git refs, incomplete node_modules); known fixes"
+metadata: 
+  node_type: memory
+  type: project
+  originSessionId: dc1469d2-bede-46dc-b266-8718f0dfa3c5
+  modified: 2026-08-25T10:37:31.272Z
+---
+
+**ROOT CAUSE CONFIRMED (2026-07-14):** `/Users/charlotteharris/Documents/BLC` physically lives INSIDE the iCloud container (`~/Library/Mobile Documents/com~apple~CloudDocs/Documents/BLC`); Desktop & Documents sync is ON. So iCloud constantly uploads every `node_modules` + `.git` file, resolves conflicts by writing `<name> 2` copies (found 583, including `marketing-agent/.git/index 2` and a `.git/logs/refs/heads/... 2`), and thrashes the disk. This is the source of ALL the symptoms below, not a coincidence. **The real fix is to move BLC OUT of the iCloud container** (e.g. to `~/BLC`, optionally with a symlink back at the old path), not just to keep clearing `" 2"` files. That move was PREPPED but not yet done: `site-greentide` (the one repo with no backup) is now a real private GitHub repo `blc-charlieharris-gh/site-greentide` [[project_greentide_inhouse_forms]], so the move is low-risk. Backup first (skip node_modules), the machine is slow copying 40k+ files. Also 2026-07-14: disk was 99% full from **56GB of orphaned Dropbox crash dumps** (`~/Library/Group Containers/G7HH3F8CAK...dropbox.sync/Crashpad`, Dropbox uninstalled); cleared to ~90GB free, which fixed the SIGBUS-near-full risk in point 4.
+
+The tree recurrently corrupts files. Forms seen repeatedly in the `marketing-agent` repo:
+
+1. **Duplicate git refs** named `<ref> 2` (e.g. `.git/refs/heads/main 2`, `.git/refs/remotes/origin/main 2`). These cause `fatal: bad object` and block `git fetch`/`merge`/`gh pr merge` local sync. Fix: `find ./.git/refs -name "* 2" -delete` then re-fetch. The last handoff also cleared a `feat/website-files-handover 2` ref and two `" 2.jsx"` Finder-duplicate source files.
+
+2. **Incomplete node_modules packages** — a package's `.bin` symlink exists but the package dir is missing files (seen: `es-module-lexer` missing `dist/`, `eslint` missing `bin/`, `ajv` missing `lib/`, `expect-type` missing `dist/`). Piecemeal `npm install <pkg>` just hits the next broken package. Fix: a single clean `npm ci` (chained with the build so nothing degrades between steps), not targeted installs.
+
+3. **iCloud-offloaded files** (dataless) cause `ETIMEDOUT` mid-operation: eslint reading a source file, or `vite:prepare-out-dir` doing `copyfile` on a `public/` asset (seen: `public/branding/greentide/favicon.png`). The build's transform step succeeds (code compiles); only the static-copy/read times out. Fix: force-materialize first, e.g. `find public -type f -exec cat {} + > /dev/null`, then rebuild. Retrying the build alone sometimes works once the file caches.
+
+4. **Near-full disk causes git SIGBUS crashes** (2026-06-03, in `site-installrhub/installrhub-static`). When the volume hit 99% (~1.9 GB free), git commands were killed mid-write by signal 10 (SIGBUS, exit 138): `stash`, `merge --ff-only`, `checkout`, `stash pop` all crashed intermittently, leaving stale `.git/index.lock` files and "could not write index" / "unable to read tree" errors. `fsck` stayed clean throughout (object DB never actually corrupted), so it was recoverable. Fix: free disk space (got to 18 GB), then retry each op in a loop removing `.git/index.lock` between attempts; most ops succeed within a few retries. To recover untracked files from a `-u` stash whose subtree won't read, extract them by path with retries: `git cat-file -p 'stash@{0}^3:path' > path`. **Keep this disk well above ~10% free; git starts crashing near 99% and that is how a repo eventually gets corrupted.**
+
+**Why:** wastes a chunk of every session if not anticipated. **How to apply:** when fetch/merge fails with "bad object", clear `* 2` refs first; when a build fails with ERR_MODULE_NOT_FOUND / "cannot find module .../dist|lib|bin", run `npm ci` rather than installing the one package; when git is killed by signal 10 / "could not write index", check `df -h` first and free space before retrying.
+
+**Reconfirmed 2026-08-25** in `marketing-agent`: ~112 untracked `<name> 2.<ext>` Finder-duplicate source files appeared across `src/`, `supabase/functions/`, and multiple `website-factory/clients/*` dirs (unrelated to any git operation that session, just ambient iCloud churn). Verified every one byte-identical to its non-" 2" counterpart with `diff -q` before deleting, none differed — safe pattern: never assume, always diff first, a genuinely different " 2" file would mean real uncommitted content, not a sync artifact. Same session independently re-derived point 4's stash-recovery technique (`git checkout stash@{0}^3 -- <path>` to pull untracked files, `git checkout stash@{0} -- <path>` for tracked-file modifications) to recover ~380 files of real, never-committed work (a full client site + a blog-import pipeline run) that had been sitting in a stash since the prior session — this memory already had the answer, worth checking BEFORE re-deriving it.

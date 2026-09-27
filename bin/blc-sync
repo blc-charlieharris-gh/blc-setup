@@ -1,0 +1,44 @@
+#!/bin/zsh
+# blc-sync: keep this machine in step with GitHub when switching between the Mac and the laptop.
+#   blc-sync pull   on ARRIVING: update every repo (fast-forward only) and this setup repo
+#   blc-sync push   on LEAVING: save memory / skills / notes changes in this setup repo to GitHub
+#   blc-sync status show anything uncommitted or unpushed before you switch
+# Project work (the Hub, sites) is saved through PRs as usual; this never commits in those repos.
+set -u
+CODE="$HOME/code"
+SETUP="$CODE/blc-setup"
+REPOS=(
+  "$CODE/BLC/marketing-hub/marketing-agent"
+  "$CODE/BLC/meta-access"
+  "$CODE/BLC/site-greentide"
+  "$CODE/BLC/site-installrhub/installrhub-static"
+  "$CODE/BLC/site-installrhub/creative-library"
+)
+cmd="${1:-status}"
+report() {
+  local r="$1"
+  [ -d "$r/.git" ] || { echo "  missing: $r (run bin/blc-setup-machine)"; return; }
+  local dirty=$(git -C "$r" status --porcelain | wc -l | tr -d ' ')
+  local ahead=$(git -C "$r" log --branches --not --remotes --oneline 2>/dev/null | wc -l | tr -d ' ')
+  echo "  $(basename "$r"): branch $(git -C "$r" branch --show-current), uncommitted $dirty, unpushed commits $ahead"
+}
+case "$cmd" in
+  pull)
+    for r in "$SETUP" "${REPOS[@]}"; do
+      [ -d "$r/.git" ] || { echo "missing: $r"; continue; }
+      echo "== $(basename "$r")"
+      git -C "$r" fetch -q --all --prune
+      if [ -n "$(git -C "$r" status --porcelain)" ]; then echo "  has uncommitted changes, not pulling (check them first)"; continue; fi
+      git -C "$r" pull -q --ff-only && echo "  up to date on $(git -C "$r" branch --show-current)" || echo "  could not fast-forward, check this repo"
+    done ;;
+  push)
+    cd "$SETUP" || exit 1
+    git add -A
+    if git diff --cached --quiet; then echo "blc-setup: nothing to save"; else
+      git commit -q -m "Sync from $(scutil --get ComputerName 2>/dev/null || hostname) $(date '+%Y-%m-%d %H:%M')" && echo "blc-setup: saved"
+    fi
+    git push -q && echo "blc-setup: pushed" ;;
+  status|*)
+    echo "Before switching, everything below should read 0:"
+    for r in "$SETUP" "${REPOS[@]}"; do report "$r"; done ;;
+esac
