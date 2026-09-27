@@ -30,6 +30,11 @@ case "$cmd" in
       git -C "$r" fetch -q --all --prune
       if [ -n "$(git -C "$r" status --porcelain)" ]; then echo "  has uncommitted changes, not pulling (check them first)"; continue; fi
       git -C "$r" pull -q --ff-only && echo "  up to date on $(git -C "$r" branch --show-current)" || echo "  could not fast-forward, check this repo"
+    done
+    # Link any new shared skills so Claude sees them on this machine.
+    for dir in "$HOME/.claude/skills" "$HOME/.agents/skills"; do
+      mkdir -p "$dir"
+      for s in "$SETUP"/shared-agent-skills/skills/*/; do s="${s%/}"; [ -e "$dir/$(basename "$s")" ] || { ln -s "$s" "$dir/$(basename "$s")" && echo "  new skill linked: $(basename "$s")"; }; done
     done ;;
   push)
     cd "$SETUP" || exit 1
