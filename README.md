@@ -40,5 +40,16 @@ Accounts stay per project: BLC's GitHub and Vercel logins apply to BLC folders o
 6. Copy the key files from the Mac (AirDrop the `blc-keys` bundle, unzip inside `~/code/BLC`, then delete it on both machines).
 7. `cd ~/code/BLC/marketing-hub/marketing-agent && npm install`
 8. Vercel, BLC only: `npm i -g vercel`, then `~/code/blc-setup/bin/blc-vercel login` (team blc-promotions). Always deploy BLC sites with `blc-vercel`, never plain `vercel`, so other Vercel/Netlify logins are untouched.
-9. Supabase: nothing to log in on the machine. BLC migrations are pasted in the Supabase website, and Claude's Supabase connector follows the Claude account; check it shows as connected.
+9. Supabase: see "Supabase on a new machine" below (per machine, BLC folder only).
 10. In Antigravity: File > Open Folder > `~/code/BLC`, open Claude in the sidebar and say "prime project".
+
+## Supabase on a new machine
+
+Claude's Supabase tool is set per machine, for `~/code/BLC` only, read-only. Each machine gets its own token
+(so one can be cancelled without the other). Never copy it between machines or put it in git.
+1. In the browser, log in to the BLC Supabase account, then Account > Access Tokens > Generate new token,
+   named e.g. "laptop Claude". Copy it.
+2. In the terminal:
+   `cd ~/code/BLC && claude mcp add supabase --scope local -e SUPABASE_ACCESS_TOKEN=PASTE_TOKEN_HERE -- npx -y @supabase/mcp-server-supabase@latest --read-only --project-ref=ozmyjrzleejbqxqphbut`
+   (if `claude` is not found, ask Claude in Antigravity to run it for you, pasting the token only into that command).
+3. Restart Claude in Antigravity; the Supabase tools should appear.

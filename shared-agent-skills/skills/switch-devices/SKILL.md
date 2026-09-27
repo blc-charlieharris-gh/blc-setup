@@ -32,8 +32,10 @@ machines; only if a key changes does it need copying again (AirDrop, then delete
 - Laptop only: BLC GitHub sign-in is scoped to BLC repos (`bin/blc-accounts`). Never run
   `gh auth setup-git` there, and deploy BLC sites with `~/code/blc-setup/bin/blc-vercel`, not plain `vercel`.
   Her other projects keep their own GitHub, Vercel, Netlify and Supabase accounts.
-- Supabase needs no login on the machine: migrations go through the Supabase website, and Claude's
-  Supabase connector follows the Claude account (check it shows as connected).
+- Supabase: Claude's Supabase tool is set up per machine, for the `~/code/BLC` folder only, with that
+  machine's own read-only access token (never copied between machines or put in git). If a session
+  can't query Supabase, the machine is missing it: see README "Supabase on a new machine".
+- Canva and Higgsfield connectors live in `~/code/BLC/.mcp.json`, which is per machine and not synced.
 
 ## Quick check it's synced
 
