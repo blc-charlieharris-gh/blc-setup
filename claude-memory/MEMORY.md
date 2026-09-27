@@ -1,5 +1,6 @@
 # Memory Index
 
+- [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
 - [Creative workflow preview (09-27)](project_creative_workflow_preview.md): Bank/Taskboard/Library/Why it works on practice-mode preview branch, migration not applied, backfill project next
 - [Hub page-by-page audit (09-27)](project_hub_page_audit.md): tracker in repo .claude/docs/hub-audit/ (#1051), ends with a sweep of every open known issue + clean tree
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
