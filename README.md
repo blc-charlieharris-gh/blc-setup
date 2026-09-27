@@ -29,7 +29,7 @@ One device at a time.
 
 ## Setting up a new machine (once)
 
-1. Install: Homebrew, git, Node (LTS), Claude Code (desktop app or VS Code extension). Log in to Claude.
+1. Install: Homebrew, git, Node (LTS), Antigravity with the Claude Code extension. Log in to Claude. Run the commands below in Antigravity's terminal (Terminal > New Terminal).
 2. GitHub: sign in as `blc-charlieharris-gh` (Serafim's `marketing-agent` repo already lets this account in).
 3. `mkdir -p ~/code && git clone https://github.com/blc-charlieharris-gh/blc-setup.git ~/code/blc-setup`
 4. `~/code/blc-setup/bin/blc-setup-machine` (clones every repo into the same folders as the Mac and links memory, skills, notes).
@@ -41,4 +41,4 @@ One device at a time.
 6. `cd ~/code/BLC/marketing-hub/marketing-agent && npm install`
 7. Vercel CLI (for site deploys): `npm i -g vercel && vercel login` (team scope blc-promotions).
 8. Claude's Supabase connector follows your Claude account; check it shows as connected.
-9. Open Claude in `~/code/BLC` and say "prime project".
+9. In Antigravity: File > Open Folder > `~/code/BLC`, open Claude in the sidebar and say "prime project".
