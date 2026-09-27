@@ -1,0 +1,4 @@
+#!/bin/bash
+# Vercel CLI with its own login for BLC (team blc-promotions), separate from any other Vercel/Netlify accounts.
+# First time on a machine: blc-vercel login
+exec vercel --global-config "$HOME/.config/vercel-blc" "$@"

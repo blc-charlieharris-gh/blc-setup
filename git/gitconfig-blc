@@ -1,0 +1,9 @@
+# BLC repos only (included from ~/.gitconfig by bin/blc-accounts, matched on the repo's GitHub owner).
+# Signs in to GitHub as blc-charlieharris-gh through gh, whatever gh account is active,
+# so Charlotte's other projects keep their own GitHub logins.
+[credential "https://github.com"]
+	helper =
+	helper = "!f() { test \"$1\" = get && echo username=blc-charlieharris-gh && echo password=$(gh auth token --user blc-charlieharris-gh); }; f"
+[user]
+	name = Charlotte Harris
+	email = hello@charlie-harris.com

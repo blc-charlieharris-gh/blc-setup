@@ -1,0 +1,11 @@
+#!/bin/bash
+# One-off per machine: make GitHub sign-in and commit name BLC-only, leaving every other project alone.
+# Needs gh logged in to blc-charlieharris-gh (gh auth login; extra accounts are fine, do NOT run gh auth setup-git).
+set -e
+SETUP="$HOME/code/blc-setup"
+add() { git config --global --get-all "includeIf.$1.path" 2>/dev/null | grep -qx "$2" || git config --global --add "includeIf.$1.path" "$2"; }
+add "hasconfig:remote.*.url:https://github.com/blc-charlieharris-gh/**" "$SETUP/git/gitconfig-blc"
+add "hasconfig:remote.*.url:https://github.com/serafimparente-blc/**" "$SETUP/git/gitconfig-blc"
+add "hasconfig:remote.*.url:https://github.com/serafimparente-blc/**" "$SETUP/git/gitconfig-blc-hub"
+gh auth token --user blc-charlieharris-gh >/dev/null 2>&1 && echo "gh has blc-charlieharris-gh: OK" || echo "gh is NOT logged in to blc-charlieharris-gh yet: run gh auth login first"
+echo "BLC git sign-in set. Other projects unchanged."
