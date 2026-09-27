@@ -4,7 +4,7 @@
 set -u
 CODE="$HOME/code"
 SETUP="$CODE/blc-setup"
-clone() { [ -d "$2/.git" ] && echo "have $2" || { mkdir -p "$(dirname "$2")"; git clone -q "$1" "$2" && echo "cloned $2"; } }
+clone() { [ -d "$2/.git" ] && echo "have $2" || { mkdir -p "$(dirname "$2")"; git -c credential.helper= -c "include.path=$SETUP/git/gitconfig-blc" clone -q "$1" "$2" && echo "cloned $2"; } }
 clone https://github.com/serafimparente-blc/marketing-agent.git          "$CODE/BLC/marketing-hub/marketing-agent"
 clone https://github.com/blc-charlieharris-gh/meta-access.git            "$CODE/BLC/meta-access"
 clone https://github.com/blc-charlieharris-gh/site-greentide.git         "$CODE/BLC/site-greentide"
