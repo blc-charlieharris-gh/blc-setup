@@ -33,7 +33,8 @@ Accounts stay per project: BLC's GitHub and Vercel logins apply to BLC folders o
 
 1. Install: Homebrew, git, Node (LTS), Antigravity with the Claude Code extension. Log in to Claude. Run the commands below in Antigravity's terminal (Terminal > New Terminal).
 2. GitHub, BLC only: `brew install gh`, then `gh auth login` and sign in as `blc-charlieharris-gh` (adding it next to other accounts is fine). Do NOT run `gh auth setup-git`: it makes one account sign in for every project.
-3. `mkdir -p ~/code && git -c credential.helper= -c include.path=$HOME/code/blc-setup/git/gitconfig-blc clone https://github.com/blc-charlieharris-gh/blc-setup.git ~/code/blc-setup` (if that fails because the include file is not there yet, see "first clone" below)
+3. First clone, signed in as the BLC account for this one command only:
+   `mkdir -p ~/code && git -c credential.helper= -c 'credential.helper=!f() { echo username=blc-charlieharris-gh; echo password=$(gh auth token --user blc-charlieharris-gh); }; f' clone https://github.com/blc-charlieharris-gh/blc-setup.git ~/code/blc-setup`
 4. `~/code/blc-setup/bin/blc-accounts` (BLC-only GitHub sign-in and commit name, matched on the repo owner)
 5. `~/code/blc-setup/bin/blc-setup-machine` (clones every repo into the same folders as the Mac and links memory, skills, notes).
 6. Copy the key files from the Mac (AirDrop the `blc-keys` bundle, unzip inside `~/code/BLC`, then delete it on both machines).
@@ -41,7 +42,3 @@ Accounts stay per project: BLC's GitHub and Vercel logins apply to BLC folders o
 8. Vercel, BLC only: `npm i -g vercel`, then `~/code/blc-setup/bin/blc-vercel login` (team blc-promotions). Always deploy BLC sites with `blc-vercel`, never plain `vercel`, so other Vercel/Netlify logins are untouched.
 9. Supabase: nothing to log in on the machine. BLC migrations are pasted in the Supabase website, and Claude's Supabase connector follows the Claude account; check it shows as connected.
 10. In Antigravity: File > Open Folder > `~/code/BLC`, open Claude in the sidebar and say "prime project".
-
-**First clone:** the include file lives inside blc-setup itself, so for the very first clone use gh directly:
-`GH_TOKEN=$(gh auth token --user blc-charlieharris-gh) gh repo clone blc-charlieharris-gh/blc-setup ~/code/blc-setup -- -c credential.helper=`
-then carry on from step 4.
