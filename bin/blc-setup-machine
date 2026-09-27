@@ -28,6 +28,7 @@ else ln -s "$SETUP/claude-memory" "$PROJ/memory" && echo "memory linked"; fi
 
 # BLC notes
 ln -sfn "$SETUP/blc-notes/docs" "$CODE/BLC/docs"
+for f in CHANGELOG.md SERVICES.md; do [ -L "$CODE/BLC/$f" ] || { [ -e "$CODE/BLC/$f" ] && mv "$CODE/BLC/$f" "$CODE/BLC/$f.bak"; ln -s "$SETUP/blc-notes/$f" "$CODE/BLC/$f"; }; done
 echo
 echo "Next: copy the key files from the Mac (see README), then:"
 echo "  cd $CODE/BLC/marketing-hub/marketing-agent && npm install"

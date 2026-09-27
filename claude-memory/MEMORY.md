@@ -1,7 +1,7 @@
 # Memory Index
 
 - [Creative workflow preview (09-27)](project_creative_workflow_preview.md): Bank/Taskboard/Library/Why it works on practice-mode preview branch, migration not applied, backfill project next
-- [Hub page-by-page audit (09-27)](project_hub_page_audit.md): tracker at ~/code/BLC/docs/hub-audit/, ends with a sweep of every open known issue + clean tree
+- [Hub page-by-page audit (09-27)](project_hub_page_audit.md): tracker in repo .claude/docs/hub-audit/ (#1051), ends with a sweep of every open known issue + clean tree
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
 - [Manual meta-sync, one client](reference_manual_meta_sync_single_client.md): anon key works (verify_jwt off), local service key is blank; untracked campaigns lose spend, use Hide from Dashboard

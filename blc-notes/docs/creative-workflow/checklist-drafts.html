@@ -1,0 +1,199 @@
+<title>BLC Checklist Drafts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ground: #f4f6f3;
+    --paper: #ffffff;
+    --ink: #1b2420;
+    --muted: #5f6b65;
+    --line: #d8ded9;
+    --accent: #2b7a52;
+    --accent-soft: #e3f1e9;
+    --warn: #9a5b12;
+    --shadow: 0 1px 2px rgba(27, 36, 32, 0.06);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #121715; --paper: #1a211e; --ink: #e6ece8; --muted: #9aa8a0; --line: #2d3833;
+      --accent: #5cc08a; --accent-soft: #1d3328; --warn: #e3a857; --shadow: none; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #121715; --paper: #1a211e; --ink: #e6ece8; --muted: #9aa8a0; --line: #2d3833;
+    --accent: #5cc08a; --accent-soft: #1d3328; --warn: #e3a857; --shadow: none; color-scheme: dark;
+  }
+  body { background: var(--ground); color: var(--ink); font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; line-height: 1.5; }
+  .wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 28px 64px; display: grid; gap: 28px; }
+  header { display: grid; gap: 10px; }
+  h1 { font-size: 26px; font-weight: 700; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+  .lede { margin: 0; color: var(--muted); max-width: 68ch; }
+  .status { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: 13px; color: var(--muted); }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); margin-right: 6px; vertical-align: 1px; }
+  .dot.ok { background: var(--accent); }
+  .dot.warn { background: var(--warn); }
+  section { display: grid; gap: 12px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0; font-weight: 600; }
+  .sub { margin: -6px 0 0; font-size: 13px; color: var(--muted); max-width: 70ch; }
+  .list { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); }
+  .item { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 14px; display: grid; gap: 8px; box-shadow: var(--shadow); min-width: 0; }
+  .item-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+  .item-title { font-weight: 600; font-size: 15px; background: transparent; border: 0; color: var(--ink); font-family: inherit; padding: 0; width: 100%; min-width: 0; }
+  .item-title:focus { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+  .count { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .where { font-size: 12.5px; color: var(--muted); }
+  textarea { width: 100%; min-height: 150px; resize: vertical; box-sizing: border-box; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-family: inherit; font-size: 14px; line-height: 1.55; background: var(--ground); color: var(--ink); }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; background: var(--paper); }
+  .foot { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); min-height: 18px; }
+  .saved { color: var(--accent); }
+  .tag { font-size: 11px; padding: 2px 7px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; white-space: nowrap; }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  button.btn { font: inherit; font-size: 14px; font-weight: 600; padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+  button.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .note { background: var(--paper); border: 1px dashed var(--line); border-radius: 10px; padding: 14px; font-size: 13.5px; color: var(--muted); }
+  .note b { color: var(--ink); }
+  .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(18px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--ground); padding: 8px 14px; border-radius: 8px; font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>BLC checklist drafts</h1>
+    <p class="lede">One box per checklist, one step per line, in the order you do them. It saves as you type, and Claude reads it straight from here, so there's no need to copy and paste. My drafts are in each box to edit or replace.</p>
+    <div class="status" id="status"><span><span class="dot"></span>Connecting...</span></div>
+  </header>
+
+  <div class="note">
+    <b>Steps that move a client's card on the board:</b> Meta access granted, Google access granted, and a job being finished (website, logo, blog). Keep those in your lists, worded however you like, and they'll stay wired to the board.
+  </div>
+
+  <section>
+    <h2>Client checklists</h2>
+    <p class="sub">One per job a client can buy. Each goes automatically on that job's build task when it reaches build.</p>
+    <div class="list" id="client"></div>
+  </section>
+
+  <section>
+    <h2>Task checklists</h2>
+    <p class="sub">For our own work. Creative design and Meta upload go on every creative task; Meta upload is also the launch checklist.</p>
+    <div class="list" id="task"></div>
+  </section>
+
+  <div class="actions">
+    <button class="btn" id="add" type="button">Add another checklist</button>
+    <button class="btn" id="copy" type="button">Copy all as text</button>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(function () {
+  var dbRef = null
+  var docs = {}          // id -> data
+  var timers = {}
+  var statusEl = document.getElementById('status')
+
+  function toast(msg) {
+    var t = document.getElementById('toast')
+    t.textContent = msg; t.hidden = false
+    clearTimeout(toast._t); toast._t = setTimeout(function () { t.hidden = true }, 2200)
+  }
+  function setStatus(kind, text) {
+    statusEl.innerHTML = ''
+    var s = document.createElement('span')
+    var d = document.createElement('span'); d.className = 'dot ' + (kind || '')
+    s.appendChild(d); s.appendChild(document.createTextNode(text))
+    statusEl.appendChild(s)
+  }
+  function stepCount(text) { return String(text || '').split('\n').map(function (x) { return x.trim() }).filter(Boolean).length }
+
+  function card(id, d) {
+    var el = document.createElement('div'); el.className = 'item'; el.dataset.id = id
+    var head = document.createElement('div'); head.className = 'item-head'
+    var title = document.createElement('input'); title.className = 'item-title'; title.id = 'title-' + id; title.value = d.name || ''
+    title.setAttribute('aria-label', 'Checklist name')
+    var count = document.createElement('span'); count.className = 'count'
+    head.appendChild(title)
+    if (d.launch) { var tg = document.createElement('span'); tg.className = 'tag'; tg.textContent = 'Launch checklist'; head.appendChild(tg) }
+    head.appendChild(count)
+    var where = document.createElement('div'); where.className = 'where'; where.textContent = d.where || ''
+    var ta = document.createElement('textarea'); ta.id = 'steps-' + id; ta.value = d.steps || ''
+    ta.setAttribute('aria-label', (d.name || 'Checklist') + ' steps, one per line')
+    var foot = document.createElement('div'); foot.className = 'foot'
+    var who = document.createElement('span'); var st = document.createElement('span')
+    foot.appendChild(who); foot.appendChild(st)
+    function refresh() {
+      var n = stepCount(ta.value); count.textContent = n + (n === 1 ? ' step' : ' steps')
+      who.textContent = d.updated_at ? 'Last saved ' + new Date(d.updated_at).toLocaleString('en-GB', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }) : 'Draft'
+    }
+    function queue() {
+      st.textContent = 'Saving...'; st.className = ''
+      clearTimeout(timers[id])
+      timers[id] = setTimeout(function () { save(id, { name: title.value.trim(), steps: ta.value }, st) }, 900)
+    }
+    ta.addEventListener('input', function () { refresh(); queue() })
+    title.addEventListener('input', queue)
+    refresh()
+    el.appendChild(head); el.appendChild(where); el.appendChild(ta); el.appendChild(foot)
+    return el
+  }
+
+  var saving = {}
+  function save(id, patch, st) {
+    if (!dbRef) { st.textContent = 'Not saved: open this page signed in to Claude'; return }
+    if (saving[id]) { saving[id].then(function () { save(id, patch, st) }); return }
+    patch.updated_at = new Date().toISOString()
+    saving[id] = dbRef.doc('checklists/' + id).update(patch)
+      .then(function () { st.textContent = 'Saved'; st.className = 'saved' })
+      .catch(function (e) { st.textContent = 'Not saved (' + (e && e.code || 'error') + ')'; st.className = '' })
+      .finally(function () { saving[id] = null })
+  }
+
+  function render() {
+    var ids = Object.keys(docs).sort(function (a, b) { return (docs[a].order || 0) - (docs[b].order || 0) })
+    ;['client', 'task'].forEach(function (kind) {
+      var box = document.getElementById(kind)
+      var have = {}
+      Array.prototype.forEach.call(box.children, function (c) { have[c.dataset.id] = c })
+      ids.filter(function (id) { return (docs[id].use || 'task') === kind }).forEach(function (id) {
+        if (!have[id]) box.appendChild(card(id, docs[id]))
+        delete have[id]
+      })
+      Object.keys(have).forEach(function (id) { have[id].remove() })
+    })
+  }
+
+  document.getElementById('add').addEventListener('click', function () {
+    if (!dbRef) { toast('Open this page signed in to Claude to add one'); return }
+    var id = 'custom-' + Date.now().toString(36)
+    dbRef.doc('checklists/' + id).set({ name: 'New checklist', use: 'task', where: 'Tell Claude where this one is used.', steps: '', order: 900 + Object.keys(docs).length, updated_at: new Date().toISOString() })
+      .then(function () { toast('Added at the bottom of Task checklists') })
+      .catch(function () { toast('Could not add it') })
+  })
+
+  document.getElementById('copy').addEventListener('click', function () {
+    var ids = Object.keys(docs).sort(function (a, b) { return (docs[a].order || 0) - (docs[b].order || 0) })
+    var text = ids.map(function (id) {
+      var ta = document.getElementById('steps-' + id); var ti = document.getElementById('title-' + id)
+      return (ti ? ti.value : docs[id].name) + '\n' + (ta ? ta.value : docs[id].steps || '').trim()
+    }).join('\n\n')
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { toast('Copied') }, function () { toast('Copy was blocked; Claude can read it from here anyway') })
+    } else { toast('Copy was blocked; Claude can read it from here anyway') }
+  })
+
+  if (!window.claude || !window.claude.use) { setStatus('warn', 'Open this in Claude to load and save the checklists.'); return }
+  window.claude.use('db').then(function (db) {
+    if (!db) { setStatus('warn', 'Saving isn\'t available in this view. Open it signed in to Claude.'); return }
+    dbRef = db
+    db.collection('checklists').onSnapshot(function (snap) {
+      snap.docs.forEach(function (d) { docs[d.id] = d.data() })
+      snap.docChanges().forEach(function (c) { if (c.type === 'removed') delete docs[c.doc.id] })
+      render()
+      setStatus('ok', snap.size + ' checklists. Saves as you type; Claude reads them from here.')
+    }, function () { setStatus('warn', 'Lost the connection. Reload the page.') })
+  })
+})()
+</script>
