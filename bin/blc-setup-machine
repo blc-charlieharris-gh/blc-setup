@@ -11,12 +11,8 @@ clone https://github.com/blc-charlieharris-gh/site-greentide.git         "$CODE/
 clone https://github.com/blc-charlieharris-gh/site-installrhub.git       "$CODE/BLC/site-installrhub/installrhub-static"
 clone https://github.com/blc-charlieharris-gh/installrhub-creative-library.git "$CODE/BLC/site-installrhub/creative-library"
 
-# Shared skills: one copy, linked to where Claude and other agents look for them.
-ln -sfn "$SETUP/shared-agent-skills" "$CODE/shared-agent-skills"
-for dir in "$HOME/.claude/skills" "$HOME/.agents/skills"; do
-  mkdir -p "$dir"
-  for s in "$SETUP"/shared-agent-skills/skills/*; do ln -sfn "$s" "$dir/$(basename "$s")"; done
-done
+# Skills: BLC's prime-project / handoff only inside BLC, generic ones everywhere else (see blc-link-skills).
+"$SETUP/bin/blc-link-skills"
 
 # Claude's memory for this project lives in the setup repo; point Claude's per-project folder at it.
 KEY="$(echo "$CODE/BLC" | sed 's#/#-#g')"

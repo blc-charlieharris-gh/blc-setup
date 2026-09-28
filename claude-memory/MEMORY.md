@@ -94,3 +94,6 @@
 - [Hotlinked partner images set cookies](feedback_hotlinked_third_party_images_set_cookies.md): curl -I for Set-Cookie first (Phoenix banner did), self-host + link out
 - [Board tick = finished (09-25)](reference_onboarding_board_tick_means_done.md): website card now follows site status (#1016), approval cards merge; realtime only on client_onboarding
 - [Website builds on Crew stages (09-26)](project_website_builds_crew_stages.md): #1027/#1030/#1032 live, 5 steps, Paid gates hand-over, Google+website answers auto-move to build, previews stay live
+- [Hub work is ours, Serafim = app only](feedback_serafim_items_batched_at_end.md): Hub edge fns/tables/his Hub notes = we fix; only app-side items batched to him at audit end, never mid-page
+- [Audit = full page, hidden + linked](feedback_audit_full_page_hidden_and_linked.md): every card vs live data, folded sections, modals, edge fns behind it, linked pages/emails; say what was not checked
+- [No Supabase write for Claude](reference_blc_supabase_cli_wrapper.md): Charlotte deploys edge fns (paste single-file copy from ~/Code/BLC/_deploy) + runs SQL; blc-supabase = read-only

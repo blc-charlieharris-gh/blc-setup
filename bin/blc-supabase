@@ -1,0 +1,35 @@
+#!/bin/zsh
+# Supabase CLI with BLC's own login, separate from any other Supabase account on this machine.
+# The BLC access token lives in its own keychain entry ("blc-supabase") and is handed to the CLI for this
+# command only (SUPABASE_ACCESS_TOKEN), so the machine's normal `supabase login` is never touched.
+#   blc-supabase set-token          first time per machine: paste a token made while signed in as BLC
+#   blc-supabase deploy <fn> [...]  deploy Hub edge fns from marketing-agent to the BLC project
+#   blc-supabase <any supabase args> anything else, with the BLC token
+set -u
+REF="ozmyjrzleejbqxqphbut"   # BLC / InstallrHub shared project
+HUB="$HOME/code/BLC/marketing-hub/marketing-agent"
+case "${1:-}" in
+  set-token)
+    echo "Paste the BLC Supabase access token (Supabase > Account > Access Tokens, signed in as BLC):"
+    read -rs TOKEN; echo
+    [ -n "$TOKEN" ] || { echo "No token given"; exit 1; }
+    security add-generic-password -U -s blc-supabase -a blc -w "$TOKEN" && echo "Saved to the keychain as blc-supabase." ;;
+  *)
+    TOKEN="$(security find-generic-password -s blc-supabase -a blc -w 2>/dev/null)" || { echo "No BLC token yet: run blc-supabase set-token"; exit 1; }
+    export SUPABASE_ACCESS_TOKEN="$TOKEN"
+    if [ "${1:-}" = "deploy" ]; then
+      shift
+      [ $# -gt 0 ] || { echo "Usage: blc-supabase deploy <function> [more functions]"; exit 1; }
+      cd "$HUB" || exit 1
+      # These are called by pg_cron or check the caller themselves, so the gateway JWT check is off (as live).
+      # Every other function keeps the check on (agent-execute, agent-apply, agent-tweak need it).
+      NO_JWT=(marketing-status-check hub-action-alerts meta-sync marketing-sweep creative-gen google-sync broadcasts marketplace-campaign)
+      for fn in "$@"; do
+        if (( ${NO_JWT[(Ie)$fn]} )); then flag=--no-verify-jwt; else flag=; fi
+        echo "Deploying $fn ${flag:-(JWT check on)}"
+        supabase functions deploy "$fn" --project-ref "$REF" --use-api ${flag:+$flag} || exit 1
+      done
+    else
+      exec supabase "$@"
+    fi ;;
+esac

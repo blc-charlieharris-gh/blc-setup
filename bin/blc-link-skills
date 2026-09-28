@@ -1,0 +1,45 @@
+#!/bin/zsh
+# blc-link-skills: point Claude and Codex at the right prime-project / handoff (run by blc-setup-machine and
+# `blc-sync pull`; safe to re-run).
+#   - BLC's own versions (this repo, shared-agent-skills/skills/) are linked ONLY inside BLC folders:
+#     ~/code/BLC (where BLC sessions start) and this setup repo, under .claude/skills and .agents/skills.
+#   - Everywhere else (Pulset, Vanessa Flow, Slow Life...) gets the generic versions in ~/code/shared-agent-skills
+#     through the machine-wide ~/.claude/skills and ~/.agents/skills links. A machine without the generic
+#     folder gets no machine-wide prime-project / handoff until it's copied there (it has no GitHub remote);
+#     BLC still has its own.
+#   - Other BLC skills (switch-devices) stay machine-wide: they're run from anywhere.
+set -u
+CODE="$HOME/code"
+SETUP="$CODE/blc-setup"
+BLC_SKILLS="$SETUP/shared-agent-skills/skills"
+GENERIC="$CODE/shared-agent-skills"
+PROJECT_ONLY=(prime-project handoff)
+
+# An old setup line linked ~/code/shared-agent-skills to this repo's skills: that path belongs to the generic set.
+[ -L "$GENERIC" ] && [[ "$(readlink "$GENERIC")" == *blc-setup* ]] && rm "$GENERIC" && echo "removed old link $GENERIC (pointed at BLC's skills)"
+[ -L "$GENERIC/shared-agent-skills" ] && rm "$GENERIC/shared-agent-skills" && echo "removed stray link $GENERIC/shared-agent-skills"
+
+for dir in "$HOME/.claude/skills" "$HOME/.agents/skills"; do
+  mkdir -p "$dir"
+  for s in "$BLC_SKILLS"/*(/); do
+    name="$(basename "$s")"
+    if (( ${PROJECT_ONLY[(Ie)$name]} )); then
+      if [ -f "$GENERIC/$name/SKILL.md" ]; then
+        [ "$(readlink "$dir/$name" 2>/dev/null)" = "$GENERIC/$name" ] || { ln -sfn "$GENERIC/$name" "$dir/$name" && echo "  $dir/$name -> generic"; }
+      elif [ -L "$dir/$name" ]; then
+        rm "$dir/$name" && echo "  $dir/$name removed (no generic copy on this machine; BLC has its own)"
+      fi
+    else
+      [ -e "$dir/$name" ] || { ln -s "$s" "$dir/$name" && echo "  $dir/$name -> BLC"; }
+    fi
+  done
+done
+
+for proj in "$CODE/BLC" "$SETUP"; do
+  for sub in .claude/skills .agents/skills; do
+    mkdir -p "$proj/$sub"
+    for name in "${PROJECT_ONLY[@]}"; do
+      [ "$(readlink "$proj/$sub/$name" 2>/dev/null)" = "$BLC_SKILLS/$name" ] || { ln -sfn "$BLC_SKILLS/$name" "$proj/$sub/$name" && echo "  $proj/$sub/$name -> BLC"; }
+    done
+  done
+done

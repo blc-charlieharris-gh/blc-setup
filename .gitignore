@@ -7,3 +7,6 @@
 .vercel/
 node_modules/
 .DS_Store
+# Per-machine skill links made by bin/blc-link-skills
+.claude/skills/
+.agents/skills/

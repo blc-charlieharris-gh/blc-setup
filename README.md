@@ -7,7 +7,7 @@ and is saved through PRs as usual.
 | Folder | What | Where the machine sees it |
 |---|---|---|
 | `claude-memory/` | Claude's memory for the BLC project (how Charlotte works, what we've learned) | `~/.claude/projects/-Users-<you>-code-BLC/memory` (link) |
-| `shared-agent-skills/` | prime-project and handoff skills | `~/code/shared-agent-skills`, `~/.claude/skills`, `~/.agents/skills` (links) |
+| `shared-agent-skills/` | BLC's prime-project, handoff, switch-devices | prime-project + handoff linked only in `~/code/BLC` and this repo (`.claude/skills`, `.agents/skills`); switch-devices machine-wide. Other projects use the generic `~/code/shared-agent-skills` (Mac only). `bin/blc-link-skills` sets it up. |
 | `blc-notes/` | BLC-wide notes (CHANGELOG, SERVICES, CAC reports, lead routing, notes for Serafim) | `~/code/BLC/docs` (link) |
 | `bin/` | `blc-sync` and `blc-setup-machine` | run directly |
 
@@ -40,6 +40,7 @@ Accounts stay per project: BLC's GitHub and Vercel logins apply to BLC folders o
 6. Copy the key files from the Mac (AirDrop the `blc-keys` bundle, unzip inside `~/code/BLC`, then delete it on both machines).
 7. `cd ~/code/BLC/marketing-hub/marketing-agent && npm install`
 8. Vercel, BLC only: `npm i -g vercel`, then `~/code/blc-setup/bin/blc-vercel login` (team blc-promotions). Always deploy BLC sites with `blc-vercel`, never plain `vercel`, so other Vercel/Netlify logins are untouched.
+9. Supabase, BLC only: `brew install supabase/tap/supabase`, then `~/code/blc-setup/bin/blc-supabase set-token` (paste an access token made while signed in to Supabase as BLC). Deploy Hub edge fns with `blc-supabase deploy <fn>`; the token sits in its own keychain entry and is used per command, so the machine's other Supabase login is untouched.
 9. Supabase: see "Supabase on a new machine" below (per machine, BLC folder only).
 10. In Antigravity: File > Open Folder > `~/code/BLC`, open Claude in the sidebar and say "prime project".
 
