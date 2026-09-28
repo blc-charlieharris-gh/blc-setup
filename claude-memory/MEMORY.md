@@ -1,8 +1,9 @@
 # Memory Index
 
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
-- [Creative workflow preview (09-27)](project_creative_workflow_preview.md): Bank/Taskboard/Library/Why it works on practice-mode preview branch, migration not applied, backfill project next
-- [Hub page-by-page audit (09-27)](project_hub_page_audit.md): tracker in repo .claude/docs/hub-audit/ (#1051), ends with a sweep of every open known issue + clean tree
+- [Creative workflow (live 09-28)](project_creative_workflow_preview.md): merged #1068-#1074, chaser + hourly runs live; left: bulk AI tag then combos/by-creative/AI read, Actions onboarding events, page 16 checklists, backfill
+- [Creative backfill handoff (09-27)](project_creative_backfill_handoff.md): audit session owns it now; files in ~/code/BLC/docs/creative-workflow/backfill/, rules + order, list page artifact 8PEWFZuLQJnHBM36uJDyAS
+- [Hub page-by-page audit (09-28)](project_hub_page_audit.md): tracker in repo .claude/docs/hub-audit/; pages 1-5 done, NEXT pages 1-5 scan then page 6 Status
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
 - [Manual meta-sync, one client](reference_manual_meta_sync_single_client.md): anon key works (verify_jwt off), local service key is blank; untracked campaigns lose spend, use Hide from Dashboard

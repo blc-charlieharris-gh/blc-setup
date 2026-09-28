@@ -1,0 +1,151 @@
+<title>Creative Backlog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F5F7F6;--surface:#FFFFFF;--ink:#17201E;--muted:#5E6B68;--line:#DCE3E1;
+  --accent:#0F6E68;--accent-soft:#DDEFEC;--live:#1F7A3D;--live-soft:#E1F2E6;--done:#9AA6A3;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#101614;--surface:#18201E;--ink:#E6EDEB;--muted:#9AA8A4;--line:#2A3532;
+  --accent:#4FC2B8;--accent-soft:#173B38;--live:#6BCB8B;--live-soft:#183324;--done:#4D5956;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#101614;--surface:#18201E;--ink:#E6EDEB;--muted:#9AA8A4;--line:#2A3532;
+  --accent:#4FC2B8;--accent-soft:#173B38;--live:#6BCB8B;--live-soft:#183324;--done:#4D5956;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:28px 60px;display:grid;gap:22px}
+h1{font-size:26px;font-weight:600;margin:0;text-wrap:balance;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:66ch;margin:6px 0 0}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font-family:var(--mono);font-size:20px;font-weight:500}
+.stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--bg);padding-block:10px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.chip:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.search{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 10px;min-width:0;flex:1 1 180px;max-width:280px}
+.count{margin-left:auto;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.card.found{opacity:.5}
+.thumb{position:relative;aspect-ratio:1;background:var(--accent-soft);display:grid;place-items:center;color:var(--muted);font-size:12px}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.rank{position:absolute;top:8px;left:8px;background:var(--surface);color:var(--ink);font-family:var(--mono);font-size:12px;padding:2px 7px;border-radius:6px}
+.tag{position:absolute;top:8px;right:8px;font-size:11px;padding:2px 7px;border-radius:6px;background:var(--live-soft);color:var(--live);font-weight:500}
+.body{padding:10px 12px 12px;display:grid;gap:6px;flex:1}
+.name{font-weight:600;overflow-wrap:anywhere}
+.meta{color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+.nums{display:flex;gap:14px;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+.nums small{display:block;font-family:var(--sans);color:var(--muted);font-size:11px}
+.ids{font-family:var(--mono);font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+.found-row{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:6px;border-top:1px solid var(--line);font-size:13px;cursor:pointer}
+.found-row input{accent-color:var(--accent);width:16px;height:16px}
+.dupe{font-size:12px;background:var(--accent-soft);color:var(--ink);border-radius:6px;padding:5px 8px;overflow-wrap:anywhere}
+h2,.h2{font-size:18px;font-weight:600;margin:0}.bl{display:grid;gap:10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.note{color:var(--muted);font-size:12px;max-width:80ch}
+@media (max-width:480px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.nums{gap:10px}.count{margin-left:0;width:100%}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Creative backlog</h1>
+    <p class="lede">Every creative that ran in the last 90 days, plus the untested backlog further down. The Hub has no original files, only screenshots and copies, so each one needs its original added to the Drive folder. Once the Library is live, upload each one and it gets linked to every Meta ad that ran it, live or ended, so its spend and leads carry over. Highest spend first. Tick one off when you've found the file.</p>
+  </header>
+  <h2 class="h2">Ran in the last 90 days</h2>
+  <div class="stats" id="stats"></div>
+  <div class="bar" role="toolbar" aria-label="Filters">
+    <button class="chip" id="f-small" aria-pressed="true">Hide under £25</button>
+    <button class="chip" data-tech="all" aria-pressed="true">All</button>
+    <button class="chip" data-tech="hp" aria-pressed="false">Heat pump</button>
+    <button class="chip" data-tech="solar" aria-pressed="false">Solar</button>
+    <button class="chip" data-tech="none" aria-pressed="false">Tech not set</button>
+    <button class="chip" id="f-live" aria-pressed="false">Still running</button>
+    <button class="chip" id="f-found" aria-pressed="false">Hide found</button>
+    <input class="search" id="q" type="search" placeholder="Search client or ad name" aria-label="Search">
+    <span class="count" id="count"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+  <section class="bl" aria-labelledby="bl-h">
+    <h2 id="bl-h">Untested backlog</h2>
+    <p class="lede">The 45 creatives waiting to be tested. The pictures are the Hub's copies. Add the original with its B number at the start of the file name, for example <b>B7 heat pump.png</b>.</p>
+    <div class="grid" id="bl-grid"></div>
+  </section>
+  <p class="note">Pulled 27 Sep 2026 from the Hub's Meta data. Creatives are grouped by your Matcher merges, then any cards showing the same picture are folded into one. The same video run in two ad accounts can get a different thumbnail, so some video duplicates may still show; uploading the file once links it to every matching ad either way. Versions with a different hook are separate cards, since each hook is its own file. "Running" means it spent in the last 3 days. One card can cover several ads; ad IDs are listed so you can find them in Ads Manager. Helix Power (their own ads) and Eco Green (no longer a client) are left out. Spend and leads are Meta's figures for the last 90 days. Your ticks stay in this browser only.</p>
+</div>
+
+<script>
+const DATA = __DATA__;
+const BACKLOG = __BACKLOG__;
+const $ = (s) => document.querySelector(s);
+const gbp = (n) => '£' + Math.round(n).toLocaleString('en-GB');
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const techLabel = (t) => t.split('/').map((x) => ({hp:'Heat pump',solar:'Solar','not set':'Tech not set'}[x] || x)).join(' / ');
+let found = new Set();
+try { found = new Set(JSON.parse(localStorage.getItem('backlog_found_v3') || '[]')); } catch (e) {}
+const saveFound = () => { try { localStorage.setItem('backlog_found_v3', JSON.stringify([...found])); } catch (e) {} };
+const state = { small: true, tech: 'all', live: false, hideFound: false, q: '' };
+
+function matches(x) {
+  if (state.small && x.spend < 25) return false;
+  if (state.live && x.active !== 'yes') return false;
+  if (state.hideFound && found.has(x.id)) return false;
+  if (state.tech === 'hp' && !x.tech.includes('hp')) return false;
+  if (state.tech === 'solar' && !x.tech.includes('solar')) return false;
+  if (state.tech === 'none' && x.tech !== 'not set') return false;
+  if (state.q && !(x.top_ad_name + ' ' + x.clients).toLowerCase().includes(state.q)) return false;
+  return true;
+}
+
+function render() {
+  const rows = DATA.filter(matches);
+  const total = DATA.reduce((s, x) => s + x.spend, 0);
+  const shown = rows.reduce((s, x) => s + x.spend, 0);
+  const foundN = DATA.filter((x) => found.has(x.id)).length;
+  $('#stats').innerHTML = [
+    [DATA.length + ' + ' + BACKLOG.length, 'ran + untested backlog'], [gbp(total), 'spent, last 90 days'],
+    [DATA.filter((x) => x.spend >= 25).length, 'spent £25 or more'], [foundN + ' / ' + (DATA.length + BACKLOG.length), 'found so far'],
+  ].map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join('');
+  $('#count').textContent = `${rows.length} shown · ${gbp(shown)} (${total ? Math.round(shown / total * 100) : 0}% of spend)`;
+  $('#grid').innerHTML = rows.map((x) => `
+    <article class="card${found.has(x.id) ? ' found' : ''}">
+      <div class="thumb">${x.img ? `<img src="${x.img}" alt="${esc(x.top_ad_name)}" loading="lazy">` : 'No preview from Meta'}
+        <span class="rank">#${x.rank}</span>${x.active === 'yes' ? '<span class="tag">Running</span>' : ''}</div>
+      <div class="body">
+        <div class="name">${esc(x.top_ad_name)}${x.kind === 'video' ? ' <span class="meta">· video</span>' : ''}</div>
+        <div class="meta">${esc(x.clients)} · ${esc(techLabel(x.tech))}</div>
+        <div class="nums"><div><small>Spend</small>${gbp(x.spend)}</div><div><small>Meta leads</small>${x.meta_leads}</div><div><small>CPL</small>${x.meta_cpl ? '£' + x.meta_cpl : '–'}</div></div>
+        ${x.hook && x.hook !== 'Static' ? `<div class="meta">Hook: <b>${esc(x.hook)}</b></div>` : ''}
+        ${x.hook_note ? `<div class="dupe">${esc(x.hook_note)}</div>` : ''}
+        ${x.hub_copy ? '<div class="meta">The Hub has a screenshot or copy of this one. Add the original if you have it.</div>' : ''}
+        ${x.dupes ? `<div class="dupe">${x.dupes} copies folded into one${x.names_differ ? ': same picture, different names, check it is one creative' : ''}. Also listed as ${x.other_names.map(esc).join(', ')}</div>` : ''}
+        <div class="meta">${x.ads} ad${x.ads > 1 ? 's' : ''} · ran ${x.first.slice(5).split('-').reverse().join('/')} to ${x.last.slice(5).split('-').reverse().join('/')}</div>
+        <div class="ids">${esc(x.ad_ids)}</div>
+        <label class="found-row"><input type="checkbox" id="found-${x.id}" data-id="${x.id}" ${found.has(x.id) ? 'checked' : ''}> Found the file</label>
+      </div>
+    </article>`).join('') || '<p class="meta">Nothing matches these filters.</p>';
+}
+
+$('#grid').addEventListener('change', (e) => {
+  const r = e.target.dataset.id; if (!r) return;
+  e.target.checked ? found.add(r) : found.delete(r); saveFound(); render();
+});
+$('#f-small').onclick = (e) => { state.small = !state.small; e.target.setAttribute('aria-pressed', state.small); render(); };
+$('#f-live').onclick = (e) => { state.live = !state.live; e.target.setAttribute('aria-pressed', state.live); render(); };
+$('#f-found').onclick = (e) => { state.hideFound = !state.hideFound; e.target.setAttribute('aria-pressed', state.hideFound); render(); };
+document.querySelectorAll('[data-tech]').forEach((b) => b.onclick = () => {
+  state.tech = b.dataset.tech;
+  document.querySelectorAll('[data-tech]').forEach((o) => o.setAttribute('aria-pressed', o === b)); render();
+});
+$('#q').oninput = (e) => { state.q = e.target.value.trim().toLowerCase(); render(); };
+render();
+const renderBacklog = () => { document.getElementById('bl-grid').innerHTML = BACKLOG.map((x) => `
+  <article class="card${found.has('B' + x.n) ? ' found' : ''}"><div class="thumb"><img src="${x.img}" alt="Backlog creative B${x.n}" loading="lazy"><span class="rank">B${x.n}</span>${x.shot || x.small ? '<span class="tag">Screenshot</span>' : ''}</div>
+  <div class="body"><div class="name">${esc(x.client)} · ${esc(x.tech)}</div><div class="meta">Added ${esc(x.added)} · Hub copy is ${x.w} × ${x.h}px</div>
+  <label class="found-row"><input type="checkbox" id="found-B${x.n}" data-id="B${x.n}" ${found.has('B' + x.n) ? 'checked' : ''}> Found the file</label></div></article>`).join(''); };
+renderBacklog();
+document.getElementById('bl-grid').addEventListener('change', (e) => {
+  const r = e.target.dataset.id; if (!r) return;
+  e.target.checked ? found.add(r) : found.delete(r); saveFound(); renderBacklog(); render();
+});
+</script>
