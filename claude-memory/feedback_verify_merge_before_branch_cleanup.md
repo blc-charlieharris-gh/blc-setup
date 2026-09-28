@@ -13,3 +13,5 @@ Only delete a feature branch (local + remote) and its worktree after `git fetch`
 **Why:** 2026-09-27 Charlotte said "sql ran and merged" for Actions PR 2; origin/main was still on the previous PR. I printed the log but chained the delete anyway, which removed the remote branch (and would have closed her PR). Recovered by re-pushing the commit from the local object store.
 
 **How to apply:** every PR cleanup in the Hub audit ([[project_hub_page_audit]]). If the merge isn't there, say so and ask, don't clean up.
+
+2026-09-28 near-miss: ran worktree/branch deletion in the same command as the merge check (git diff --stat ... ; cleanup) so cleanup ran even though origin/main didn't have the PR yet (merge landed seconds later, no loss). **How to apply:** chain cleanup behind the check so it can't run on failure, e.g. `[ -z "$(git diff origin/<branch> origin/main --stat)" ] && <cleanup>`, never `;`.

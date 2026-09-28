@@ -1,9 +1,9 @@
 # Memory Index
 
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
-- [Creative workflow (live 09-28)](project_creative_workflow_preview.md): merged #1068-#1074, chaser + hourly runs live; left: bulk AI tag then combos/by-creative/AI read, Actions onboarding events, page 16 checklists, backfill
-- [Creative backfill handoff (09-27)](project_creative_backfill_handoff.md): audit session owns it now; files in ~/code/BLC/docs/creative-workflow/backfill/, rules + order, list page artifact 8PEWFZuLQJnHBM36uJDyAS
-- [Hub page-by-page audit (09-28)](project_hub_page_audit.md): tracker in repo .claude/docs/hub-audit/; pages 1-5 done, NEXT pages 1-5 scan then page 6 Status
+- [Creative workflow (live 09-28)](project_creative_workflow_preview.md): shipped in full through #1099 (approval, Library, Bank, Why it works by tech); backfill DONE and tool removed
+- [Creative backfill (DONE 09-28)](project_creative_backfill_handoff.md): finished, tool removed #1096; history only
+- [Hub page-by-page audit (09-28)](project_hub_page_audit.md): pages 1-5 DONE (#1039-#1099), read repo .claude/docs/hub-audit/pages/summary-01-05.md first; NEXT page 6 Status (2 decisions pending)
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
 - [Manual meta-sync, one client](reference_manual_meta_sync_single_client.md): anon key works (verify_jwt off), local service key is blank; untracked campaigns lose spend, use Hide from Dashboard
@@ -81,6 +81,7 @@
 - [Check git history before building](feedback_check_history_before_building.md): features get added then removed; search log/-G first, restore via revert instead of duplicating
 - [Artifact publish auto-opens](feedback_artifact_publish_auto_opens.md): interrupts Charlotte, edit locally, publish only when she says
 - [Artifact confirm/alert blocked](feedback_artifact_confirm_alert_blocked.md): silently no-op in artifact pages, use two-click arm + toast
+- [Harvard site (09-28)](project_harvard_site.md): Renerji design, live harvard-renewables.vercel.app, merged 09-28 (#1097 logo tool, #1098 site), Kent-first, air con in
 - [Core Electrics site (09-25)](project_core_electrics_site.md): round 3 live (North headline, one area list, Oldham map), waiting on FCA wording, HP photos, domain, Web3Forms key; SWH updates then Harvard next
 - [Client site Vercel deploy](reference_client_site_vercel_deploy.md): per-folder CLI link + deploy --prod in blc-promotions, Claude can run it, no skill, playbook in docs
 - [Shared tree on another branch: edit in a worktree](feedback_shared_tree_on_other_branch_edit_in_worktree.md): check branch + behind count first, stale files look clean
