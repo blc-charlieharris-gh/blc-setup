@@ -13,7 +13,7 @@ DONE: #1158 notes, #1159 Urgent (SQL run), #1160 launch, #1161 Performance (SQL 
    - hub-action-alerts      <- ~/code/BLC/_deploy/hub-action-alerts.ts
    - marketing-status-check <- ~/code/BLC/_deploy/marketing-status-check.ts
 
-2. [x] Library, Bank and Taskboard MERGED (#1163). Only the SQL below left:
+2. [x] Library, Bank and Taskboard MERGED (#1163) and repairs SQL run (checked).
    a. Merge: https://github.com/serafimparente-blc/marketing-agent/pull/new/fix/final-library-bank-tasks
    b. Run SQL: ~/code/BLC/docs/final_library_repairs.sql (when nobody has the Hub open)
 
