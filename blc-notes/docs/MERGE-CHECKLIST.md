@@ -8,10 +8,10 @@ DONE today (all merged + live): #1165 Targeting rebuild (SQL run), #1166/#1167 T
 Brand package pause flow, #1174 archive Coverage/Placement/AI Ops/chat (SQL run). Edge fns deployed + verified.
 
 ## Still to do
-1. [ ] Run the L W Heating SQL (ticks their onboarding form so the campaign card sits in Campaign set up).
+1. [x] DONE 29 Sep (verified): L W Heating SQL (ticks their onboarding form so the campaign card sits in Campaign set up).
        On the Mac it's in the Claude scratchpad; on another device ask Claude to write it again:
        update client_onboarding set checklist = checklist || '{"form_submitted": true}' where id = 'c2e972e3-5bd5-4b3d-8e28-bc97b3db1073'
-2. [ ] Merge the handoff docs PR:
+2. [x] DONE: handoff docs PR merged (#1176):
        https://github.com/serafimparente-blc/marketing-agent/pull/new/docs/handoff-2026-09-29-evening
 3. [ ] Optional: delete unused edge fns in Supabase (marketing-sweep, agent-execute, agent-apply, agent-tweak, placement-rollout).
 
