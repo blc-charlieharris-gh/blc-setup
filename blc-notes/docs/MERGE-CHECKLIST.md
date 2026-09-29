@@ -1,35 +1,25 @@
 # Merge checklist (kept up to date by Claude)
 
-Last updated: 29 Sep, end of session. Everything is on GitHub. Safe to switch devices.
-Report: ~/code/BLC/docs/FINAL-AUDIT-REPORT.md
+Last updated: 29 Sep, late evening (Mac). Everything is on GitHub. Safe to switch devices.
+Hub handoff: marketing-agent/.claude/docs/current-handoff.md (PR docs/handoff-2026-09-29-evening, merge it).
 
-DONE: #1158 notes, #1159 Urgent (SQL run), #1160 launch, #1161 Performance (SQL run),
-#1162 By creative + Why it works, #1164 Dashboard/Actions/Status.
+DONE today (all merged + live): #1165 Targeting rebuild (SQL run), #1166/#1167 Taskboard Priority + Bank decisions,
+#1168 SOPs/Parameters to Admin, #1169/#1172 client groups everywhere, #1170 lead-only no-bookings, #1171/#1173/#1175
+Brand package pause flow, #1174 archive Coverage/Placement/AI Ops/chat (SQL run). Edge fns deployed + verified.
 
 ## Still to do
+1. [ ] Run the L W Heating SQL (ticks their onboarding form so the campaign card sits in Campaign set up).
+       On the Mac it's in the Claude scratchpad; on another device ask Claude to write it again:
+       update client_onboarding set checklist = checklist || '{"form_submitted": true}' where id = 'c2e972e3-5bd5-4b3d-8e28-bc97b3db1073'
+2. [ ] Merge the handoff docs PR:
+       https://github.com/serafimparente-blc/marketing-agent/pull/new/docs/handoff-2026-09-29-evening
+3. [ ] Optional: delete unused edge fns in Supabase (marketing-sweep, agent-execute, agent-apply, agent-tweak, placement-rollout).
 
-1. [ ] Paste-deploy 2 edge functions (from #1164, not live yet: checked 29 Sep):
-   Supabase > Edge Functions > open the function > paste > Deploy
-   - hub-action-alerts      <- ~/code/BLC/_deploy/hub-action-alerts.ts
-   - marketing-status-check <- ~/code/BLC/_deploy/marketing-status-check.ts
-
-2. [x] Library, Bank and Taskboard MERGED (#1163) and repairs SQL run (checked).
-   a. Merge: https://github.com/serafimparente-blc/marketing-agent/pull/new/fix/final-library-bank-tasks
-   b. Run SQL: ~/code/BLC/docs/final_library_repairs.sql (when nobody has the Hub open)
-
-3. [ ] Page 8 Targeting decisions, then Claude builds the page 8 fixes:
-   - A. Headline %: A1 show "1 of 1 areas" and grey until enough areas (recommended) / A2 loosen the rule.
-   - B. "Add / remove targeting" sketch pad: remove (recommended) / relabel "Planning sketch".
-   - C. Excluded installers: one shared list (small SQL) / drop the feature.
-
-## With you and Erin
-- Tag the live ads for Arktek, SWH and webinar 3/4/5; change Arktek's test to 4 days.
-- National Eco: send the 2 missing 22 Sep leads by hand (Leads Center, 03:32 and 11:35).
-- Supabase disk: shrink to 8 GB after a heads-up to Serafim.
+## For Serafim, at the end of the audit (only things that affect him)
+- Supabase disk to 8 GB (Spend Cap warning).
+- GHL: a fixed "Out of area" lost reason for telesales.
+- Old targeting functions + targeting_pins can be dropped (Hub-only; we can do it ourselves).
 
 ## Next session (on the other device)
-Say "prime project", then: finish items 1-3 above, build page 8 fixes, then page 9 Coverage.
-
-Note for the other device: the 2 edge function paste files live only on the Mac (_deploy). On another
-device, Claude rebuilds them from the repo: `python3 scripts/bundle-edge-fn.py hub-action-alerts` and
-`... marketing-status-check` in marketing-agent (main already has the code, #1164).
+Run blc-sync pull, say "prime project", then: item 1-2 above, then page 12 SOPs + Parameters, then Crew pages 13-15.
+Edge fn paste files: ALWAYS rebuild before pasting (scripts/bundle-edge-fn.py), never trust _deploy.

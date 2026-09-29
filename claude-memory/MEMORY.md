@@ -6,7 +6,7 @@
 - [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
-- [Hub page-by-page audit (09-29)](project_hub_page_audit.md): pages 1-7 DONE + final audit (#1039-#1164); page 8 audited, decisions A/B/C pending; see _deploy/MERGE-CHECKLIST.md; queue in repo .claude/docs/hub-audit/README.md
+- [Hub page-by-page audit (09-29 late)](project_hub_page_audit.md): pages 1-11 done (8 rebuilt, 9-11 archived), #1165-#1175 live; NEXT page 12 SOPs+Parameters, L W Heating SQL pending
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
 - [Manual meta-sync, one client](reference_manual_meta_sync_single_client.md): anon key works (verify_jwt off), local service key is blank; untracked campaigns lose spend, use Hide from Dashboard
@@ -105,3 +105,5 @@
 - [IntersectionObserver tall elements](feedback_intersection_observer_tall_elements.md): % threshold never fires if taller than screen, use threshold 0 + rootMargin
 - [Hub costs = Hub side only](feedback_hub_costs_hub_side_only.md): Supabase shared with the app; lead with Hub share, label project-wide numbers, heads-up Serafim on project changes
 - [Merge checklist file](feedback_merge_checklist_file.md): many PRs in flight -> keep _deploy/MERGE-CHECKLIST.md current, end with one full summary
+- [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always bundle+boot-check fresh, pbcopy one at a time
+- [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
