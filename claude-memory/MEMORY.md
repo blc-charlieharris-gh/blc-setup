@@ -6,6 +6,7 @@
 - [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
+- [MOT booking calendar (09-30)](project_mot_booking_calendar.md): PR #85, inert until GHL_BOOKING_TOKEN in Vercel, never test-booked, field ids unconfirmed
 - [Hub page-by-page audit (09-29 late)](project_hub_page_audit.md): pages 1-11 done (8 rebuilt, 9-11 archived), #1165-#1175 live; NEXT page 12 SOPs+Parameters, L W Heating SQL pending
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
