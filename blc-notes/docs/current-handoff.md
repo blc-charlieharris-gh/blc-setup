@@ -1,4 +1,4 @@
-# Handoff, 2026-09-25
+# Handoff, 2026-09-30
 
 ## READ THIS FIRST (carried from 2026-09-23)
 
@@ -6,25 +6,26 @@
 after **2026-10-07**, if two weeks here with nothing missing. Never delete silently.
 
 ## What we worked on
-- Manage Clients board (#1015, #1016): approval cards merge (`mergeApprovalCards` in
-  `src/lib/onboardingChecklist.js`), website card follows `hub_clients.status` (`siteStage`),
-  drags write the site status (`useClientOnboarding.moveOne`), empty note shows "Awaiting sign-off".
-- Site page Status dropdown: 7 plain stages over raw values (`StatusSelect.jsx`).
-- Onboarding emails section moved to the bottom of `ClientCard.jsx`.
-- Legal elements (#1017): Heat pump / Solar guides (`ProductGuide` in `LegalElements.jsx`),
-  solar £7,000 (£109/mo), heat pump £4,000 after grant (£63/mo), clients show only what they sell
-  (`productsFor`).
+- IH webinar campaign `120250485863060731` (act_7095438517245067): ad set `120250485863400731`
+  set to broad via the Meta API from `meta-access` (`meta_api.py`). 3SEC-ALLVIDEOS-TOF removed,
+  renamed `Webinar - Broad`. Registrant exclusion, UK, 25-65, FB+IG only (no Audience Network) unchanged.
+- Day 1 check: the Hub had 4 sign-ups by 11:00 (3 fb/ig, 1 no source), while Meta credited 1, then caught up.
 
 ## Current state
-All merged and live (verified via Vercel alias). Core sits in Awaiting client approval with Website + Google pills.
+Done and live, read back from Meta. Delivering (£9.97 by 11:25).
 
 ## Next steps
-1. Charlotte to sign off the grant facts on Legal elements (#1018 live: no line under a plain price, monthly price out of the legal block, every block editable in place via `data.overrides`).
-2. Confirm which March the £9,000 oil/LPG BUS uplift ends.
+1. Around 2026-10-01: compare Meta Webinar Registrations with the Hub
+   (`sales_lead_intake_events`, tags `webinar-oct2026` / `webinar-oct2026-completed`).
+2. If Meta stays well under, consider a server-side Lead on webinar form submit (offered, not requested).
+3. Carried from 09-25: Charlotte to sign off the grant facts on Legal elements (#1018), and
+   confirm which March the £9,000 oil/LPG BUS uplift ends.
 
 ## Decisions and open questions
-- Realtime is only on `client_onboarding`; `hub_clients`/`crew_deliverables` listeners never fire (reload needed).
+- Broad targeting was Charlotte's call on 09-30.
+- The thank-you Lead is consent-gated (`installrhub-static/js/consent.js`, `IH_TRACK_LEAD`):
+  16 link clicks gave 1 landing page view, so Meta sees only some sign-ups.
 
 ## Working tree and other sessions
-marketing-agent main: clean; other session has since pulled (at 87db6ac1).
-`wt-core` worktree (`fix/audit-client-questions`) belongs to another session, left alone.
+Clean: meta-access main matches origin, no repo files changed. blc-39 (marketing-agent) was
+told about the targeting change and this handoff.

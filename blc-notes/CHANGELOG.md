@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-01 (Gas Worx)
+
+### Gas Worx website
+- Mobile fixes (stats grid, daily flow strip, Why list centred), single room air con from £2,337, blog index paged 12 per page (#1276, #1277). [project: installrhub]
+- Care plan brochure PDF on care plans page, real air con photos, brand wording loosened, client's own Web3Forms key, audit title/description fixes (#1287, #1288, #1289, #1295). [project: installrhub]
+- Homepage video panel built, PR open (feat/gasworx-home-video-b). [project: installrhub]
+
+### Hub
+- Gas Worx client footage uploaded (24 clips). Business details question per item Yes/No, PR open, site-feedback edge fn to paste (feat/business-details-per-item-1001). [project: installrhub]
+
 ## 2026-09-25
 
 ### Manage Clients board

@@ -39,3 +39,9 @@ workflow name in the row is a re-engagement/tagging workflow (e.g. "Incoming Exi
 Tags") rather than the original intake form, this may not be their FIRST touchpoint — the row
 that actually set `ih_channel` (first-touch-only, never overwritten per track.js) could predate
 what's in this table for them entirely.
+
+**Downstream dependency (10-01):** marketing-agent rules read these values. The Status rule
+(#1234, `_shared/leadFlow.js` isMetaWebinarRow) needs contact_source containing "webinar",
+ih_channel = "paid-social" and utm_source fb/ig, and IH lead reporting matches sign-ups to ads
+via raw utm_content / "UTM Content" (= Meta ad id). Changing track.js channel values, UTM
+passthrough, contact_source names or GHL/n8n field names breaks them: flag to Charlotte first.

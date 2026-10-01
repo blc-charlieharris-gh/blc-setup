@@ -45,3 +45,27 @@ Moved 2026-09-25:
 - [InstallrHub webinar Meta tracking (09-21)](project_installrhub_webinar_meta_tracking.md): webinar in MOF audience, Webinar Registration CC 2258431381610266 waits on IH_TRACK_LEAD site change
 - [Erin onboarding plan](project_erin_onboarding_plan.md): Artifact ENJBH2aU5xTtmfd5miqq7e, 30-day plan + log + admin checklist, empty as of 09-22
 - [SWH final updates (09-25)](project_swh_final_updates_2026_09_25.md): all merged; fonts + inline-script CSP deferred to just before final handover; waiting on Web3Forms key + ICO/MCS/NICEIC/Gas Safe numbers
+
+Moved 2026-09-30 (index near 24 KB):
+- [Creative workflow (live 09-28)](project_creative_workflow_preview.md): shipped in full through #1099 (approval, Library, Bank, Why it works by tech); backfill DONE and tool removed
+- [Creative backfill (DONE 09-28)](project_creative_backfill_handoff.md): finished, tool removed #1096; history only
+- **CREW (09-18/19):** [roster + retainer pill](project_crew_roster_and_retainer_pill.md) #823/#824/#825 live · [logo studio](project_crew_logo_studio.md) full package done, LIVE #815-#830, open: disclaimer wording + guideline extras · [workspace](project_crew_workspace.md) AI organic-marketing, console = /crew · [socials engine](project_crew_socials_engine.md) shipped (#470), never run, needs sign-off · [audit-engine learnings](project_crew_audit_engine_learnings.md) Heatzen = quality bar · [intake retired](project_intake_forms_retired.md) legacy /intake/:token still live
+- [Harvard site (09-28)](project_harvard_site.md): Renerji design, live harvard-renewables.vercel.app, merged 09-28 (#1097 logo tool, #1098 site), Kent-first, air con in
+
+Moved 2026-09-30 (index near 24KB). Audit memories stay in MEMORY.md.
+
+- [Marketplace campaigns + parked items (09-25)](project_session_2026_09_25_parked.md): stages 1-4 live, count-on-Take-live #1025 (09-26); stage 5 import waits on list; Serafim only retainer_sop; onboarding gap low; Serafim reminders
+- [Status page needs reorganizing](project_status_page_needs_reorganizing.md): 4 unrelated checks stacked, nav badge only counts 1 of them, not urgent (DONE: page 6 audit 09-28)
+- [OnboardingPicker doesn't prefill services](project_onboarding_picker_doesnt_prefill_services.md): blank services on load risks wiping existing package, flag to Serafim (FIXED 09-30: picker prefills whole package, #1185)
+- [Site audit system (09-21/22)](project_site_audit_upgrade.md): v1 LIVE + set up 09-22, zip only on final send after approval, Gas Worx blog sync fixed to main, LW noindex fixed; waiting on client keys/domains, Layers B/C need Serafim
+- [Audit security-headers blame (09-18)](feedback_audit_security_headers_attribution.md): fail is usually OUR missing config, check server + shipped config before blaming host
+- [Gas Worx + LJP ads residents-only (09-23)](project_gasworx_ads_location_targeting.md): API-set home-only, don't edit locations in UI, coverage answer from client pending
+- **Gas Worx:** [website](project_gasworx_website.md) SEO audit + AI blog shipped, MCS heat-pump-ONLY, servicing prices, Haier aircon page, savings funnel wired, all live 09-21 (#854/#860) · [energy-savings landing](project_gasworx_energy_savings_landing.md) funnel wired 09-21: Web3Forms + Calendly + thank-you, Calendly redirect not set yet · [template.html slice overlap](feedback_gasworx_mobile_slice_overlap.md) byte-range slices can duplicate everywhere
+- **SiteScore:** [audits](project_sitescore_audits.md) co-branded audit → £1.5k rebuild upsell · [scoring principles](feedback_sitescore_score_what_the_customer_sees.md) score what customer sees, sell don't fix · [method + CREW gap](project_sitescore_method_and_crew_gap.md) hand-built method in METHOD.md
+- **BLC misc:** [Creative Library](project_creative_library.md) single-HTML pitch deck at portfolio.installrhub.com · [Offboarding Plan](project_offboarding.md) Charlotte may leave, flag personal-account entanglements · [ClientSiteGenerator](project_clientsitegenerator.md) BLC internal site generator · [Client Landers](project_client_landers.md) tokenized GT-mirror ad funnel per client
+- [Core Electrics site (09-25)](project_core_electrics_site.md): round 3 live (North headline, one area list, Oldham map), waiting on FCA wording, HP photos, domain, Web3Forms key; SWH updates then Harvard next
+- [forecast.css is shared (09-25)](feedback_forecast_css_shared_by_other_pages.md): webinar/breakdown pages + a marketing-hub prototype load it from live, grep all + pixel-diff before removing rules
+- [Preview question upload feature (queued 09-22)](project_preview_question_upload.md): "Allow upload" tickbox on preview questions, reuse CREW Google photos #884, after audit project
+- [BUS grant £9k for oil/LPG till March (09-25)](reference_bus_grant_oil_lpg_9k.md): £7,500 standard, £9,000 replacing oil/LPG, don't flag it; recheck SWH copy after March
+- [Hotlinked partner images set cookies](feedback_hotlinked_third_party_images_set_cookies.md): curl -I for Set-Cookie first (Phoenix banner did), self-host + link out
+- [IntersectionObserver tall elements](feedback_intersection_observer_tall_elements.md): % threshold never fires if taller than screen, use threshold 0 + rootMargin

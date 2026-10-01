@@ -1,32 +1,29 @@
 # Memory Index
 
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
-- [Creative workflow (live 09-28)](project_creative_workflow_preview.md): shipped in full through #1099 (approval, Library, Bank, Why it works by tech); backfill DONE and tool removed
-- [Creative backfill (DONE 09-28)](project_creative_backfill_handoff.md): finished, tool removed #1096; history only
-- [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
+- [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, broad since 09-30, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
-- [MOT booking calendar (09-30)](project_mot_booking_calendar.md): PR #85, inert until GHL_BOOKING_TOKEN in Vercel, never test-booked, field ids unconfirmed
-- [Hub page-by-page audit (09-29 late)](project_hub_page_audit.md): pages 1-11 done (8 rebuilt, 9-11 archived), #1165-#1175 live; NEXT page 12 SOPs+Parameters, L W Heating SQL pending
+- [MOT booking calendar (10-01)](project_mot_booking_calendar.md): live since 10-01 (GHL_BOOKING_TOKEN set), awaiting Charlotte's test booking; same token covers all 4 site calendars
+- [Hub page-by-page audit (10-01 final)](project_hub_page_audit.md): 1-11, 16, 28 done + all 10-01 builds retro-fixed (#1256-#1283); NEXT SESSION: sequences off-guard, closed-not-on-board card, 50MB videos, Google Drive import, then page 17 Funnels
+- [Audit end state (09-30)](feedback_audit_end_state_zero_issues.md): comprehensive first pass, retrospective each page, end = Serafim pack + 0 issues in EVERY repo
+- [Serafim Trello -> Taskboard (09-30)](project_serafim_trello_to_taskboard.md): Operational type, all 135 imported (tagged), Serafim archives Trello himself; remind ~10-21 to retire Trello
+- [Security lockdown live (09-30)](project_security_lockdown_0930.md): Hub closed + verified; check 10-01 04:00 meta sync; app list with Serafim
+- [No duplicate solutions, keep it simple (09-30)](feedback_no_duplicate_solutions.md): one way per thing, build what she describes, nothing clients tell us lost
+- [Audit fixes must not break things (09-30)](feedback_audit_changes_must_not_break.md): IH Dashboard regression from #1164 A16 + #1169; check same-day PRs before deleting 'dead' code, retrospective on live numbers
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists, detail stays in the file
 - [Manual meta-sync, one client](reference_manual_meta_sync_single_client.md): anon key works (verify_jwt off), local service key is blank; untracked campaigns lose spend, use Hide from Dashboard
-- [Marketplace campaigns + parked items (09-25)](project_session_2026_09_25_parked.md): stages 1-4 live, count-on-Take-live #1025 (09-26); stage 5 import waits on list; Serafim only retainer_sop; onboarding gap low; Serafim reminders
 - [Meta lead routing chain (09-25)](reference_marketplace_lead_routing_chain.md): webhook files by ad account first, retainer_sop only for retainers; blocks Green Tide marketplace campaigns until Serafim's fix
 - [rpcCached returns {data,error}](feedback_rpccached_returns_data_error.md): never throws, destructure it; iterating it crashed Cost of supply (#1037)
 - [Verify known-issues against live](feedback_verify_known_issues_against_live.md): old notes go stale, check live before repeating a gap to Charlotte
-- [Archive, Sep 2026](MEMORY-archive-2026-09.md): finished items (offer remap, SWH, Retrofit, broadcasts, Hub batch 09-24, IH audit cleanup, etc.), check before re-investigating
+- [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas Worx/Core/SiteScore/site-audit/creative-workflow lines moved 09-30; finished items (offer remap, SWH, Retrofit, broadcasts, Hub batch 09-24, IH audit cleanup, etc.), check before re-investigating
 - [meta-access is a repo now (09-23)](reference_meta_access_repo.md): private blc-charlieharris-gh/meta-access, scripts+SOP tracked, .env and generated media excluded
 - [BLC moved out of iCloud (09-23)](project_blc_moved_out_of_icloud.md): now ~/code/BLC, old Documents copy is rollback until ~10-07
 - [Shared agent skills (09-23)](reference_blc_shared_agent_skills.md): ~/code/shared-agent-skills is the one source, prime-project read-only, handoff never pushes
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up to 60 min stale
 
-- [Status page needs reorganizing](project_status_page_needs_reorganizing.md): 4 unrelated checks stacked, nav badge only counts 1 of them, not urgent
-- [OnboardingPicker doesn't prefill services](project_onboarding_picker_doesnt_prefill_services.md): blank services on load risks wiping existing package, flag to Serafim
-- **CREW (09-18/19):** [roster + retainer pill](project_crew_roster_and_retainer_pill.md) #823/#824/#825 live · [logo studio](project_crew_logo_studio.md) full package done, LIVE #815-#830, open: disclaimer wording + guideline extras · [workspace](project_crew_workspace.md) AI organic-marketing, console = /crew · [socials engine](project_crew_socials_engine.md) shipped (#470), never run, needs sign-off · [audit-engine learnings](project_crew_audit_engine_learnings.md) Heatzen = quality bar · [intake retired](project_intake_forms_retired.md) legacy /intake/:token still live
-- [Site audit system (09-21/22)](project_site_audit_upgrade.md): v1 LIVE + set up 09-22, zip only on final send after approval, Gas Worx blog sync fixed to main, LW noindex fixed; waiting on client keys/domains, Layers B/C need Serafim
 - [Preview links = crew host](reference_client_preview_links_crew_host.md): crew.installrhub.com/preview/:token is correct, website.* comments stale, not a bug
-- [Audit security-headers blame (09-18)](feedback_audit_security_headers_attribution.md): fail is usually OUR missing config, check server + shipped config before blaming host
 - [Prebuilt deploy overrides git-main](feedback_prebuilt_deploy_overrides_main.md): merged but not live = manual vercel --prod took the alias, inspect alias holder
 - [RLS empty read looks like an empty table](feedback_rls_empty_read_looks_like_empty_table.md): unauthenticated read returns 0 rows with NO error; check updated_at clustering before blaming the write path
 - [installrhub track.js attribution (09-17)](reference_installrhub_track_js_attribution.md): deriveChannel() logic, why thank-you pages carry ih_channel, how to trace a B2B lead's source
@@ -36,8 +33,6 @@
 - [Reporting RPCs are Hub-only (09-23)](reference_reporting_rpcs_are_hub_only.md): ad_windowed_totals etc called only from internal.*, verify via edge_logs referer
 - [GHL double-fire files retainer leads as Green Tide (09-22)](project_resubmit_lands_as_greentide.md): 2 NIBE rows, reporting-only, with Serafim, not urgent
 - [Meta targeting write rate limit](feedback_meta_targeting_write_rate_limit.md): 1 write/30s per ad set incl validate_only; explore_home needs explore
-- [Gas Worx + LJP ads residents-only (09-23)](project_gasworx_ads_location_targeting.md): API-set home-only, don't edit locations in UI, coverage answer from client pending
-- **Gas Worx:** [website](project_gasworx_website.md) SEO audit + AI blog shipped, MCS heat-pump-ONLY, servicing prices, Haier aircon page, savings funnel wired, all live 09-21 (#854/#860) · [energy-savings landing](project_gasworx_energy_savings_landing.md) funnel wired 09-21: Web3Forms + Calendly + thank-you, Calendly redirect not set yet · [template.html slice overlap](feedback_gasworx_mobile_slice_overlap.md) byte-range slices can duplicate everywhere
 - **Vercel gotchas:** [cleanUrls breaks "/" rewrite](feedback_vercel_cleanurls_breaks_custom_rewrite.md) homepage 404s silently · [marketing-agent domains](reference_marketing_agent_vercel_domains.md) .vercel.app 404s, prod is *.installrhub.com · [account mixup](feedback_vercel_github_account_mixup.md) "no linked account" = personal signup
 - [InstallrHub Meta account not in .env](reference_installrhub_meta_account_not_in_env.md): act_7095438517245067, must override META_AD_ACCOUNT_ID
 - **GHL:** [send credential pattern](feedback_ghl_send_credential_pattern.md) use _shared/ghl-config.ts's keys, never invent one · [funnel_key clone gotcha](feedback_nurture_funnel_key_clone_gotcha.md) active in Hub proves nothing, check GHL · [custom fields title-case](feedback_ghl_custom_field_title_case_keys.md) "Converted Page" not converted_page
@@ -73,10 +68,10 @@
 - [Budget 100x won't-fix](feedback_budget_100x_wontfix.md): budget_cents stored 100x high, dashboard reads /100
 - [internal.installrhub = marketing-agent](reference_internal_installrhub_is_marketing_agent.md): old repo archived
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based, UK-wide
-- **SiteScore:** [audits](project_sitescore_audits.md) co-branded audit → £1.5k rebuild upsell · [scoring principles](feedback_sitescore_score_what_the_customer_sees.md) score what customer sees, sell don't fix · [method + CREW gap](project_sitescore_method_and_crew_gap.md) hand-built method in METHOD.md
-- **BLC misc:** [Creative Library](project_creative_library.md) single-HTML pitch deck at portfolio.installrhub.com · [Offboarding Plan](project_offboarding.md) Charlotte may leave, flag personal-account entanglements · [ClientSiteGenerator](project_clientsitegenerator.md) BLC internal site generator · [Client Landers](project_client_landers.md) tokenized GT-mirror ad funnel per client
 - **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) internal+website .installrhub.com, scope blc-promotions · [InstallrHub Git Repo](reference_installrhub_git.md) site-installrhub/installrhub-static, remote blc-charlieharris-gh · [Git Auth](reference_git_auth.md) push via gh credential helper · [InstallrHub domains](reference_installrhub_domains.md) app.*=dashboard, www.*=public
 - [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions
+- [Peer session asks = reply, not handoff (10-01)](feedback_peer_session_coordination_not_handoff.md): SendMessage the state, no mid-session handoff PR
+- [Heatrite + Heat Wise Not paid yet (10-01)](project_not_paid_flag_heatrite_heatwise.md): set by SQL, will NOT clear on payment (Close won already done), clear SQL inside
 - [Cleanup Requests](feedback_cleanup_requests.md): action flagged issues immediately, not later
 - [Serafim sign-off & handoffs](feedback_serafim_signoff_and_handoffs.md): never bypass sign-off, surgical notes only
 - **Higgsfield/ads output:** [project](project_higgsfield.md) image/video gen in meta-access via Higgsfield CLI · [default for image/video](feedback_higgsfield_default.md) unless told otherwise · [ads location](feedback_ads_location.md) generated images/ads go in meta-access/outputs
@@ -86,25 +81,27 @@
 - [Check git history before building](feedback_check_history_before_building.md): features get added then removed; search log/-G first, restore via revert instead of duplicating
 - [Artifact publish auto-opens](feedback_artifact_publish_auto_opens.md): interrupts Charlotte, edit locally, publish only when she says
 - [Artifact confirm/alert blocked](feedback_artifact_confirm_alert_blocked.md): silently no-op in artifact pages, use two-click arm + toast
-- [Harvard site (09-28)](project_harvard_site.md): Renerji design, live harvard-renewables.vercel.app, merged 09-28 (#1097 logo tool, #1098 site), Kent-first, air con in
-- [Core Electrics site (09-25)](project_core_electrics_site.md): round 3 live (North headline, one area list, Oldham map), waiting on FCA wording, HP photos, domain, Web3Forms key; SWH updates then Harvard next
 - [Client site Vercel deploy](reference_client_site_vercel_deploy.md): per-folder CLI link + deploy --prod in blc-promotions, Claude can run it, no skill, playbook in docs
 - [Shared tree on another branch: edit in a worktree](feedback_shared_tree_on_other_branch_edit_in_worktree.md): check branch + behind count first, stale files look clean
 - [api/ imports need .js (09-24)](feedback_api_imports_need_js_extension.md): src/lib files used by api/ must use .js imports, vitest passes but Vercel crashes; onboarding sender was down 21-24 Sep
 - [Hub permissions guard + default role (09-24)](feedback_hub_permissions_guard_and_default_role.md): every app sign-up gets hub_role team_member; hub_permissions writes need service_role (set_config in SQL)
-- [forecast.css is shared (09-25)](feedback_forecast_css_shared_by_other_pages.md): webinar/breakdown pages + a marketing-hub prototype load it from live, grep all + pixel-diff before removing rules
-- [Preview question upload feature (queued 09-22)](project_preview_question_upload.md): "Allow upload" tickbox on preview questions, reuse CREW Google photos #884, after audit project
 - ["Find on Meta" discovery button](project_meta_assets_discovery.md): crawl+assign built, meta-sync never discovers
-- [BUS grant £9k for oil/LPG till March (09-25)](reference_bus_grant_oil_lpg_9k.md): £7,500 standard, £9,000 replacing oil/LPG, don't flag it; recheck SWH copy after March
-- [Hotlinked partner images set cookies](feedback_hotlinked_third_party_images_set_cookies.md): curl -I for Set-Cookie first (Phoenix banner did), self-host + link out
 - [Board tick = finished (09-25)](reference_onboarding_board_tick_means_done.md): website card now follows site status (#1016), approval cards merge; realtime only on client_onboarding
 - [Website builds on Crew stages (09-26)](project_website_builds_crew_stages.md): #1027/#1030/#1032 live, 5 steps, Paid gates hand-over, Google+website answers auto-move to build, previews stay live
 - [Hub work is ours, Serafim = app only](feedback_serafim_items_batched_at_end.md): Hub edge fns/tables/his Hub notes = we fix; only app-side items batched to him at audit end, never mid-page
 - [Audit = full page, hidden + linked](feedback_audit_full_page_hidden_and_linked.md): every card vs live data, folded sections, modals, edge fns behind it, linked pages/emails; say what was not checked
 - [No Supabase write for Claude](reference_blc_supabase_cli_wrapper.md): Charlotte deploys edge fns (paste single-file copy from ~/Code/BLC/_deploy) + runs SQL; blc-supabase = read-only
 - [IH previews behind Vercel SSO](reference_installrhub_preview_sso.md): branch preview 302s to SSO, share via toolbar Share link
-- [IntersectionObserver tall elements](feedback_intersection_observer_tall_elements.md): % threshold never fires if taller than screen, use threshold 0 + rootMargin
 - [Hub costs = Hub side only](feedback_hub_costs_hub_side_only.md): Supabase shared with the app; lead with Hub share, label project-wide numbers, heads-up Serafim on project changes
 - [Merge checklist file](feedback_merge_checklist_file.md): many PRs in flight -> keep _deploy/MERGE-CHECKLIST.md current, end with one full summary
 - [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always bundle+boot-check fresh, pbcopy one at a time
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
+- [Gas Worx video montage (09-30)](project_gasworx_video_montage.md): edit.py pipeline in meta-access outputs, v2 silent 20s, music blocked on key
+- [OpenRouter key location](reference_openrouter_key_location.md): ~/code/BLC/.env.local, dead 09-30 (401), Serafim issues keys, never grep for keys
+- [IH merge skipped deploy (10-01)](feedback_installrhub_merge_no_deploy.md): no PushEvent = no deploy; Claude prod deploy blocked, give Charlotte the one-line vercel command
+- [Client catch-up helper (10-01)](project_client_catchup_helper.md): action notes always per campaign; general client feedback goes in Charlotte's upcoming catch-up helper
+- [Hooks = video labels, ingredients = analysis (10-01)](feedback_hooks_videos_only_ingredients_for_analysis.md): statics never need a hook; analyse on ingredients
+- [Analysis page roadmap (10-01)](project_analysis_page_roadmap.md): main page pulling creative analysis, breakdowns, tech, destinations + AI; not built, breakdown fill first
+- [Client site forms + photo slots (10-01)](feedback_client_site_form_test_and_image_placement.md): no test enquiry after Web3Forms swap (client tests at handover), put photos in an existing page pattern, never behind the hero
+- [IH n8n payload fields (10-01)](reference_installrhub_n8n_payload_fields.md): per-form field names, GHL key mcsstatus, add source + real fbclid, breakdown name bug
+- [Gas Worx open work (10-01)](project_gasworx_site_amends_1001.md): video PR + business details PR unmerged, site-feedback paste, delete her local media after video live; handoff in ~/code/BLC/docs
