@@ -1,3 +1,5 @@
+> **UPDATE 1 Oct night: all done.** Video B merged #1296 and live on gasworx.vercel.app, option A branch unused; business details per item merged #1298, site-feedback v25 pasted; client clips deleted. Worktrees removed. Only open item: Charlotte adds the business details question on his site page, then numbers go in the footer. Current state lives in marketing-agent/.claude/docs/current-handoff.md.
+
 # Handoff, 2026-10-01 (Gas Worx site + business details question)
 
 ## What we worked on
