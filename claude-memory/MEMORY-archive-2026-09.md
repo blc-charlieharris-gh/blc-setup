@@ -69,3 +69,10 @@ Moved 2026-09-30 (index near 24KB). Audit memories stay in MEMORY.md.
 - [BUS grant £9k for oil/LPG till March (09-25)](reference_bus_grant_oil_lpg_9k.md): £7,500 standard, £9,000 replacing oil/LPG, don't flag it; recheck SWH copy after March
 - [Hotlinked partner images set cookies](feedback_hotlinked_third_party_images_set_cookies.md): curl -I for Set-Cookie first (Phoenix banner did), self-host + link out
 - [IntersectionObserver tall elements](feedback_intersection_observer_tall_elements.md): % threshold never fires if taller than screen, use threshold 0 + rootMargin
+
+## Moved 2026-10-02
+- [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, broad since 09-30, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
+- [Security lockdown live (09-30)](project_security_lockdown_0930.md): Hub closed + verified; check 10-01 04:00 meta sync; app list with Serafim
+- [Gas Worx video montage (09-30)](project_gasworx_video_montage.md): edit.py pipeline in meta-access outputs, v2 silent 20s, music blocked on key
+- [IH merge skipped deploy (10-01)](feedback_installrhub_merge_no_deploy.md): no PushEvent = no deploy; Claude prod deploy blocked, give Charlotte the one-line vercel command
+- [Client site forms + photo slots (10-01)](feedback_client_site_form_test_and_image_placement.md): no test enquiry after Web3Forms swap (client tests at handover), put photos in an existing page pattern, never behind the hero

@@ -1,14 +1,12 @@
 # Memory Index
 
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
-- [IH webinar campaign 6 Oct (09-29)](project_installrhub_webinar_campaign_oct6.md): runs 30 Sep-6 Oct, broad since 09-30, Webinar Registration conv, CAPI source unknown, check vs GHL ~10-01
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
 - [MOT booking calendar (10-01)](project_mot_booking_calendar.md): live since 10-01 (GHL_BOOKING_TOKEN set), awaiting Charlotte's test booking; same token covers all 4 site calendars
-- [Hub page-by-page audit (10-01 final)](project_hub_page_audit.md): 1-11, 16, 28 done + all 10-01 builds retro-fixed (#1256-#1283); NEXT SESSION: sequences off-guard, closed-not-on-board card, 50MB videos, Google Drive import, then page 17 Funnels
+- [Hub page-by-page audit (10-02)](project_hub_page_audit.md): 1-11, 16, 28 done; 10-02 cleared the queued fixes (nurture guard, closed-not-on-board, 50MB); NEXT: site audit closes Build website task bug, Google Drive upload, then page 17 Funnels
 - [Audit end state (09-30)](feedback_audit_end_state_zero_issues.md): comprehensive first pass, retrospective each page, end = Serafim pack + 0 issues in EVERY repo
 - [Serafim Trello -> Taskboard (09-30)](project_serafim_trello_to_taskboard.md): Operational type, all 135 imported (tagged), Serafim archives Trello himself; remind ~10-21 to retire Trello
-- [Security lockdown live (09-30)](project_security_lockdown_0930.md): Hub closed + verified; check 10-01 04:00 meta sync; app list with Serafim
 - [No duplicate solutions, keep it simple (09-30)](feedback_no_duplicate_solutions.md): one way per thing, build what she describes, nothing clients tell us lost
 - [Audit fixes must not break things (09-30)](feedback_audit_changes_must_not_break.md): IH Dashboard regression from #1164 A16 + #1169; check same-day PRs before deleting 'dead' code, retrospective on live numbers
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit before deleting branch/worktree; deleted a live PR branch 09-27
@@ -96,12 +94,11 @@
 - [Merge checklist file](feedback_merge_checklist_file.md): many PRs in flight -> keep _deploy/MERGE-CHECKLIST.md current, end with one full summary
 - [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always bundle+boot-check fresh, pbcopy one at a time
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
-- [Gas Worx video montage (09-30)](project_gasworx_video_montage.md): edit.py pipeline in meta-access outputs, v2 silent 20s, music blocked on key
 - [OpenRouter key location](reference_openrouter_key_location.md): ~/code/BLC/.env.local, dead 09-30 (401), Serafim issues keys, never grep for keys
-- [IH merge skipped deploy (10-01)](feedback_installrhub_merge_no_deploy.md): no PushEvent = no deploy; Claude prod deploy blocked, give Charlotte the one-line vercel command
 - [Client catch-up helper (10-01)](project_client_catchup_helper.md): action notes always per campaign; general client feedback goes in Charlotte's upcoming catch-up helper
 - [Hooks = video labels, ingredients = analysis (10-01)](feedback_hooks_videos_only_ingredients_for_analysis.md): statics never need a hook; analyse on ingredients
 - [Analysis page roadmap (10-01)](project_analysis_page_roadmap.md): main page pulling creative analysis, breakdowns, tech, destinations + AI; not built, breakdown fill first
-- [Client site forms + photo slots (10-01)](feedback_client_site_form_test_and_image_placement.md): no test enquiry after Web3Forms swap (client tests at handover), put photos in an existing page pattern, never behind the hero
 - [IH n8n payload fields (10-01)](reference_installrhub_n8n_payload_fields.md): per-form field names, GHL key mcsstatus, add source + real fbclid, breakdown name bug
-- [Gas Worx open work (10-01)](project_gasworx_site_amends_1001.md): video PR + business details PR unmerged, site-feedback paste, delete her local media after video live; handoff in ~/code/BLC/docs
+- [Event invites for telesales (10-02)](project_event_invites_telesales.md): /events, per-event settings, Louise+Leon event_invites only, invite/resend/correct-email
+- [Old-tab guard (10-02)](reference_old_tab_guard_client_info.md): X-Client-Info hub-web build/<id>, trigger blocks stale-tab Taskboard writes; browser-only rules need a DB backstop
+- [Bounce pause = hard only (10-02)](feedback_bounce_pause_hard_bounces_only.md): Transient bounces never pause a broadcast; repeat/typo bounces auto-suppress
