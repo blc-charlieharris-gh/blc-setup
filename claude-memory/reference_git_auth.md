@@ -7,6 +7,10 @@ metadata:
   originSessionId: 611e6634-68df-414b-9fe0-4e066f7c9851
 ---
 
+**Current (verified 2026-10-02):** marketing-agent `origin` = `https://github.com/serafimparente-blc/marketing-agent.git` is CORRECT (the repo lives under Serafim's account). `~/.gitconfig` includeIf loads `~/code/blc-setup/git/gitconfig-blc` for serafimparente-blc/* and blc-charlieharris-gh/* remotes, so a plain `git push` signs in as BLC automatically; pushed fine 10-02. The repo CLAUDE.md was updated to say this (PR docs/fix-setup-and-list-1002). Don't flag the HTTPS remote as a mismatch again.
+
+Older history below (06-17..07-01), partly superseded:
+
 The machine's git auth changed from what marketing-agent CLAUDE.md and [[reference_installrhub_git]] describe. As of 2026-06-17 (re-confirmed 2026-06-19):
 
 - **`~/.ssh` has no keys/config** (only an `agent/` socket; `ssh-add -l` = no identities), so the `github.com-blc` SSH alias does NOT resolve. Default `origin` URLs are the stale `git@github.com-blc:...` SSH form, so a plain `git push` fails with "Could not resolve hostname github.com-blc". `github.com` itself is reachable; only the alias is dead.

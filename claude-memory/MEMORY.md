@@ -1,5 +1,7 @@
 # Memory Index
 
+- [Meta campaign copy skill (10-03)](reference_meta_clone_campaign_skill.md): meta-clone-campaign skill + clone_campaign.py, asks links/source/budget/finance; page token + IG identity gotchas
+- [J&B solar campaign (10-03)](project_jones_baker_solar_campaign.md): 3 ads ready, campaign+ad set off, £65/day, Hub lead routing not set
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
@@ -66,7 +68,7 @@
 - [Budget 100x won't-fix](feedback_budget_100x_wontfix.md): budget_cents stored 100x high, dashboard reads /100
 - [internal.installrhub = marketing-agent](reference_internal_installrhub_is_marketing_agent.md): old repo archived
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based, UK-wide
-- **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) internal+website .installrhub.com, scope blc-promotions · [InstallrHub Git Repo](reference_installrhub_git.md) site-installrhub/installrhub-static, remote blc-charlieharris-gh · [Git Auth](reference_git_auth.md) push via gh credential helper · [InstallrHub domains](reference_installrhub_domains.md) app.*=dashboard, www.*=public
+- **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) internal+website .installrhub.com, scope blc-promotions · [InstallrHub Git Repo](reference_installrhub_git.md) site-installrhub/installrhub-static, remote blc-charlieharris-gh · [Git Auth](reference_git_auth.md) HTTPS serafimparente-blc remote is correct, plain git push = BLC · [InstallrHub domains](reference_installrhub_domains.md) app.*=dashboard, www.*=public
 - [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions
 - [Peer session asks = reply, not handoff (10-01)](feedback_peer_session_coordination_not_handoff.md): SendMessage the state, no mid-session handoff PR
 - [Heatrite + Heat Wise Not paid yet (10-01)](project_not_paid_flag_heatrite_heatwise.md): set by SQL, will NOT clear on payment (Close won already done), clear SQL inside
