@@ -32,7 +32,12 @@ session did not intend: another session may have changed branch underneath you.
 - each entry in `git worktree list`, with the branch it holds
 
 **c. Other active sessions.** If your harness can list other running agent sessions, list the
-ones on this machine and the folder each is working in. Either way, list files in these repos
+ones on this machine and the folder each is working in. Coordinate with them automatically,
+without being asked (Charlotte, 2026-10-03): one session writes each repo's handoff, CHANGELOG
+top entry and known-issues. Before writing, message every session in the same repo: say you
+are writing it and ask for a short summary of their work (what changed, PRs, anything open,
+things for Charlotte) to fold in as their own section, or agree that they write it instead.
+Sessions in other repos just get a heads-up. After writing, tell them it's done. Either way, list files in these repos
 modified in the last few hours that this session did not touch. That is the sign of a live
 session sharing the tree. If you cannot see other sessions, say so rather than assuming there
 are none.
@@ -151,6 +156,9 @@ duplicate. Skip this step entirely if the session held no surprises.
 Confirm what was written, in one line per file. Then state plainly what has **not** been
 done: nothing was committed, pushed, or deployed by this skill. Repeat any step 0 findings
 the operator chose to leave, and anything still uncommitted, so they can decide.
+
+Write the close for Charlotte in plain words (see the prime-project report rule): what is
+live, what she needs to merge or run (with links), what's next.
 
 Then check the clean-close list below and report each line as met, or not met with who owns it:
 - `git status --porcelain` is empty in every repo the session touched.

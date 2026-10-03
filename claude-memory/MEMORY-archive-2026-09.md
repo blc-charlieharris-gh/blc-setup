@@ -76,3 +76,10 @@ Moved 2026-09-30 (index near 24KB). Audit memories stay in MEMORY.md.
 - [Gas Worx video montage (09-30)](project_gasworx_video_montage.md): edit.py pipeline in meta-access outputs, v2 silent 20s, music blocked on key
 - [IH merge skipped deploy (10-01)](feedback_installrhub_merge_no_deploy.md): no PushEvent = no deploy; Claude prod deploy blocked, give Charlotte the one-line vercel command
 - [Client site forms + photo slots (10-01)](feedback_client_site_form_test_and_image_placement.md): no test enquiry after Web3Forms swap (client tests at handover), put photos in an existing page pattern, never behind the hero
+
+## Moved 2026-10-03
+- [BLC moved out of iCloud (09-23)](project_blc_moved_out_of_icloud.md): now ~/code/BLC, old Documents copy is rollback until ~10-07
+- [Preview links = crew host](reference_client_preview_links_crew_host.md): crew.installrhub.com/preview/:token is correct, website.* comments stale, not a bug
+- [Board tick = finished (09-25)](reference_onboarding_board_tick_means_done.md): website card now follows site status (#1016), approval cards merge; realtime only on client_onboarding
+- [Website builds on Crew stages (09-26)](project_website_builds_crew_stages.md): #1027/#1030/#1032 live, 5 steps, Paid gates hand-over, Google+website answers auto-move to build, previews stay live
+- [Event invites for telesales (10-02)](project_event_invites_telesales.md): /events, per-event settings, Louise+Leon event_invites only, invite/resend/correct-email

@@ -15,3 +15,5 @@ Only delete a feature branch (local + remote) and its worktree after `git fetch`
 **How to apply:** every PR cleanup in the Hub audit ([[project_hub_page_audit]]). If the merge isn't there, say so and ask, don't clean up.
 
 2026-09-28 near-miss: ran worktree/branch deletion in the same command as the merge check (git diff --stat ... ; cleanup) so cleanup ran even though origin/main didn't have the PR yet (merge landed seconds later, no loss). **How to apply:** chain cleanup behind the check so it can't run on failure, e.g. `[ -z "$(git diff origin/<branch> origin/main --stat)" ] && <cleanup>`, never `;`.
+
+2026-10-03 repeat: "merged" for fix/client-mot-not-a-lead, I chained `git pull ... && git log -1 && git push --delete` (log -1 always succeeds), so the remote branch went while origin/main was still #1387. Re-pushed from the local commit. **How to apply:** the gate must be a test that FAILS when the PR isn't there (grep the title, or diff empty), never `git log` on its own.

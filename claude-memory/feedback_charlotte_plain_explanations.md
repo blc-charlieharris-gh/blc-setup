@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 24ad4395-e293-445b-b359-401bf085cfbb
-  modified: 2026-09-01T11:30:21.952Z
+  modified: 2026-10-03T12:21:22.511Z
 ---
 
 Recurring pattern across a 2026-08-31/09-01 session (marketing-agent, Creatives Matcher / meta-sync
@@ -24,6 +24,14 @@ verification steps, code paths) belongs in a follow-up only if she asks, not the
 clarifying questions like "huh? if it's an LJP creative, needs to be labelled LJP?" that cut right
 to the real bug) — the friction is specifically with a wall of technical explanation on the FIRST
 pass, not a lack of technical engagement generally.
+
+**Prime + handoff write-ups too (2026-10-03):** after a marketing-agent prime she replied "arktek whats
+this? coverage areas huh? nine migrations?" and "dont know what you're telling me here" about a
+"Skipped: git fetch + two Supabase reads" line. Every item in a prime/handoff report must say in
+plain words what it is, who it affects, and whether she needs to do anything. No bare issue titles,
+no tool names (git fetch, Supabase reads, cross_agent_notes) without saying what they mean in
+practice ("checking GitHub for newer code", "messages Serafim's agent left us"). Don't list
+process steps I skipped; just run the safe read-only ones or drop the line.
 
 **How to apply:** default every finding/fix summary in this project to the plain-first format above.
 Don't preemptively load an explanation with mechanism ("Supabase's per-request row cap", "execution

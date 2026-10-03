@@ -1,11 +1,12 @@
 # Memory Index
 
 - [Meta campaign copy skill (10-03)](reference_meta_clone_campaign_skill.md): meta-clone-campaign skill + clone_campaign.py, asks links/source/budget/finance; page token + IG identity gotchas
+- [IH custom conversions (10-03)](project_installrhub_custom_conversions.md): Installer MOT Lead created; 2 PageView ones still on paused WEB ad sets, keep; Booking to archive
 - [J&B solar campaign (10-03)](project_jones_baker_solar_campaign.md): 3 ads ready, campaign+ad set off, £65/day, Hub lead routing not set
 - [Device switching + per-project logins (09-27)](reference_device_switching_blc_setup.md): blc-sync pull/push, one machine at a time; laptop BLC-only GitHub via blc-accounts, Vercel via blc-vercel, never gh auth setup-git
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only ignored on audiences, 1 description per rule
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md): utm_medium={{placement}}&utm_campaign={{adset.id}}&utm_content={{ad.id}}
-- [MOT booking calendar (10-01)](project_mot_booking_calendar.md): live since 10-01 (GHL_BOOKING_TOKEN set), awaiting Charlotte's test booking; same token covers all 4 site calendars
+- [MOT booking calendar (10-03)](project_mot_booking_calendar.md): MOT fully wired page>n8n>GHL>Hub; NEXT move 3 GHL-widget pages onto our booking, screenshots first
 - [Hub page-by-page audit (10-02)](project_hub_page_audit.md): 1-11, 16, 28 done; 10-02 cleared the queued fixes (nurture guard, closed-not-on-board, 50MB); NEXT: site audit closes Build website task bug, Google Drive upload, then page 17 Funnels
 - [Audit end state (09-30)](feedback_audit_end_state_zero_issues.md): comprehensive first pass, retrospective each page, end = Serafim pack + 0 issues in EVERY repo
 - [Serafim Trello -> Taskboard (09-30)](project_serafim_trello_to_taskboard.md): Operational type, all 135 imported (tagged), Serafim archives Trello himself; remind ~10-21 to retire Trello
@@ -19,11 +20,9 @@
 - [Verify known-issues against live](feedback_verify_known_issues_against_live.md): old notes go stale, check live before repeating a gap to Charlotte
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas Worx/Core/SiteScore/site-audit/creative-workflow lines moved 09-30; finished items (offer remap, SWH, Retrofit, broadcasts, Hub batch 09-24, IH audit cleanup, etc.), check before re-investigating
 - [meta-access is a repo now (09-23)](reference_meta_access_repo.md): private blc-charlieharris-gh/meta-access, scripts+SOP tracked, .env and generated media excluded
-- [BLC moved out of iCloud (09-23)](project_blc_moved_out_of_icloud.md): now ~/code/BLC, old Documents copy is rollback until ~10-07
 - [Shared agent skills (09-23)](reference_blc_shared_agent_skills.md): ~/code/shared-agent-skills is the one source, prime-project read-only, handoff never pushes
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up to 60 min stale
 
-- [Preview links = crew host](reference_client_preview_links_crew_host.md): crew.installrhub.com/preview/:token is correct, website.* comments stale, not a bug
 - [Prebuilt deploy overrides git-main](feedback_prebuilt_deploy_overrides_main.md): merged but not live = manual vercel --prod took the alias, inspect alias holder
 - [RLS empty read looks like an empty table](feedback_rls_empty_read_looks_like_empty_table.md): unauthenticated read returns 0 rows with NO error; check updated_at clustering before blaming the write path
 - [installrhub track.js attribution (09-17)](reference_installrhub_track_js_attribution.md): deriveChannel() logic, why thank-you pages carry ih_channel, how to trace a B2B lead's source
@@ -46,7 +45,7 @@
 - [website-factory manual deploy gap](feedback_website_factory_manual_deploy_gap.md): no redeploy on merge or alias follow
 - [Audit crawl asset-extension exclusion](feedback_audit_crawl_asset_extension_filter.md): page-ext check breaks clean-URL sites
 - [Hub-only migrations skip Serafim review](feedback_hub_only_migrations_no_serafim_review.md): gate is cross-repo blast radius, crew_* is Hub-only, judge it even if the task says Tier-2
-- [Charlotte prefers plain explanations](feedback_charlotte_plain_explanations.md): 2-4 sentence result first, detail if asked
+- [Charlotte prefers plain explanations](feedback_charlotte_plain_explanations.md): 2-4 sentence result first, detail if asked; prime/handoff items explained in plain words, no bare titles
 - **Shared worktree:** [stale agent reads](feedback_shared_worktree_stale_agent_reads.md) reads reverted files, audit from origin · [scratch docs get clobbered](feedback_shared_scratch_docs_get_clobbered.md) plan/handoff/CHANGELOG top entry overwrites· [workdir corruption](project_blc_workdir_corruption.md) iCloud writes " 2" conflict copies
 - [Public client links need cross-host routing](feedback_public_client_link_needs_crosshost_route.md): /preview/:token pattern or 404
 - [placed_with_company_id is survey truth](reference_placed_with_company_id_survey_truth.md): "who holds this survey" field
@@ -70,6 +69,7 @@
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based, UK-wide
 - **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) internal+website .installrhub.com, scope blc-promotions · [InstallrHub Git Repo](reference_installrhub_git.md) site-installrhub/installrhub-static, remote blc-charlieharris-gh · [Git Auth](reference_git_auth.md) HTTPS serafimparente-blc remote is correct, plain git push = BLC · [InstallrHub domains](reference_installrhub_domains.md) app.*=dashboard, www.*=public
 - [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions
+- [Coordinate other sessions automatically (10-03)](feedback_coordinate_other_sessions_automatically.md): at prime + handoff ListAgents, message each, one writer per repo's handoff; also in marketing-agent
 - [Peer session asks = reply, not handoff (10-01)](feedback_peer_session_coordination_not_handoff.md): SendMessage the state, no mid-session handoff PR
 - [Heatrite + Heat Wise Not paid yet (10-01)](project_not_paid_flag_heatrite_heatwise.md): set by SQL, will NOT clear on payment (Close won already done), clear SQL inside
 - [Cleanup Requests](feedback_cleanup_requests.md): action flagged issues immediately, not later
@@ -83,12 +83,11 @@
 - [Artifact confirm/alert blocked](feedback_artifact_confirm_alert_blocked.md): silently no-op in artifact pages, use two-click arm + toast
 - [Client site Vercel deploy](reference_client_site_vercel_deploy.md): per-folder CLI link + deploy --prod in blc-promotions, Claude can run it, no skill, playbook in docs
 - [Shared tree on another branch: edit in a worktree](feedback_shared_tree_on_other_branch_edit_in_worktree.md): check branch + behind count first, stale files look clean
+- [Vercel runs eslint (10-03)](feedback_vercel_runs_eslint_lint_changed_files.md): vite build green isn't enough; eslint the changed files before pushing
 - [api/ imports need .js (09-24)](feedback_api_imports_need_js_extension.md): src/lib files used by api/ must use .js imports, vitest passes but Vercel crashes; onboarding sender was down 21-24 Sep
 - [Hub permissions guard + default role (09-24)](feedback_hub_permissions_guard_and_default_role.md): every app sign-up gets hub_role team_member; hub_permissions writes need service_role (set_config in SQL)
 - ["Find on Meta" discovery button](project_meta_assets_discovery.md): crawl+assign built, meta-sync never discovers
-- [Board tick = finished (09-25)](reference_onboarding_board_tick_means_done.md): website card now follows site status (#1016), approval cards merge; realtime only on client_onboarding
-- [Website builds on Crew stages (09-26)](project_website_builds_crew_stages.md): #1027/#1030/#1032 live, 5 steps, Paid gates hand-over, Google+website answers auto-move to build, previews stay live
-- [Hub work is ours, Serafim = app only](feedback_serafim_items_batched_at_end.md): Hub edge fns/tables/his Hub notes = we fix; only app-side items batched to him at audit end, never mid-page
+- [Hub work is ours, Serafim = app only](feedback_serafim_items_batched_at_end.md): Hub edge fns/tables/his Hub notes = we fix; only app-side items batched to him at audit end, never mid-page; already-raised app items drop off our list (10-03)
 - [Audit = full page, hidden + linked](feedback_audit_full_page_hidden_and_linked.md): every card vs live data, folded sections, modals, edge fns behind it, linked pages/emails; say what was not checked
 - [No Supabase write for Claude](reference_blc_supabase_cli_wrapper.md): Charlotte deploys edge fns (paste single-file copy from ~/Code/BLC/_deploy) + runs SQL; blc-supabase = read-only
 - [IH previews behind Vercel SSO](reference_installrhub_preview_sso.md): branch preview 302s to SSO, share via toolbar Share link
@@ -101,6 +100,10 @@
 - [Hooks = video labels, ingredients = analysis (10-01)](feedback_hooks_videos_only_ingredients_for_analysis.md): statics never need a hook; analyse on ingredients
 - [Analysis page roadmap (10-01)](project_analysis_page_roadmap.md): main page pulling creative analysis, breakdowns, tech, destinations + AI; not built, breakdown fill first
 - [IH n8n payload fields (10-01)](reference_installrhub_n8n_payload_fields.md): per-form field names, GHL key mcsstatus, add source + real fbclid, breakdown name bug
-- [Event invites for telesales (10-02)](project_event_invites_telesales.md): /events, per-event settings, Louise+Leon event_invites only, invite/resend/correct-email
 - [Old-tab guard (10-02)](reference_old_tab_guard_client_info.md): X-Client-Info hub-web build/<id>, trigger blocks stale-tab Taskboard writes; browser-only rules need a DB backstop
 - [Bounce pause = hard only (10-02)](feedback_bounce_pause_hard_bounces_only.md): Transient bounces never pause a broadcast; repeat/typo bounces auto-suppress
+- [IH sign-up vs lead rule (10-03)](feedback_installrhub_signup_vs_lead_rule.md): lead magnets=sign-ups, offer forms=leads, triage by source
+- [meta-sync CC fallback (10-03)](reference_meta_sync_custom_conversion_fallback.md): no-Lead ads sum all custom conversions; IH PageView CCs never as goal
+- [n8n paste rules (10-03)](feedback_n8n_paste_expressions.md): ask webhook node name + node type, JSON.stringify multiline, note node = text only
+- [Client MOT link (10-03)](reference_client_mot_link.md): installrhub.com/client-mot?cid={{contact_id}}, Hub-gated, n8n notes only, Gas Worx test cid
+- [installrhub.com deploy + verify (10-03)](reference_installrhub_site_deploy_and_verify.md): check vercel ls after merge (#108 never deployed), bot checkpoint 403s curl/headless
