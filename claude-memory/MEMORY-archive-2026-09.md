@@ -83,3 +83,9 @@ Moved 2026-09-30 (index near 24KB). Audit memories stay in MEMORY.md.
 - [Board tick = finished (09-25)](reference_onboarding_board_tick_means_done.md): website card now follows site status (#1016), approval cards merge; realtime only on client_onboarding
 - [Website builds on Crew stages (09-26)](project_website_builds_crew_stages.md): #1027/#1030/#1032 live, 5 steps, Paid gates hand-over, Google+website answers auto-move to build, previews stay live
 - [Event invites for telesales (10-02)](project_event_invites_telesales.md): /events, per-event settings, Louise+Leon event_invites only, invite/resend/correct-email
+
+
+## Moved from MEMORY.md 2026-10-04
+- **Telesales dialer:** [diagnostics](reference_telesales_dialer_diagnostics.md) start here · [caller ID switch 09-21](project_telesales_caller_id_switch.md) LIVE on +447307212762 (Brad, in-app default), GHL 07446919125 to release · [stuck-call bug](project_installrhub_dialer_stuck_call.md) false "already on call", fix-stuck-agent-call skill · [daily cap](project_installrhub_dialer_daily_cap.md) cap is global, raise doesn't self-revert
+- **Arktek:** [ads onboarding](project_arktek_ads_onboarding.md) act_1356131912961185, lead_only=false · [accreditations](reference_arktek_mcs_status.md) MCS+HIES = solar/battery only, not TrustMark
+- **Higgsfield/ads output:** [project](project_higgsfield.md) image/video gen in meta-access via Higgsfield CLI · [default for image/video](feedback_higgsfield_default.md) unless told otherwise · [ads location](feedback_ads_location.md) generated images/ads go in meta-access/outputs
