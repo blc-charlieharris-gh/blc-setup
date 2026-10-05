@@ -16,3 +16,6 @@ The pixel 6022454534459147 receives server (CAPI) Lead + PageView events (7d to 
 **How to apply:** around 2026-10-01, compare Meta registrations with GHL. If Meta is well under, chase the server feed. MOF DTO is £80/day since 09-29 (her change). Related: [[installrhub-meta-tracking]], [[installrhub-standard-url-tags]].
 
 **Day 1 (2026-09-30):** Hub had 4 sign-ups by 11:00, while Meta credited 1 at first and caught up later that day. The thank-you Lead is consent-gated (consent.js IH_TRACK_LEAD): 16 link clicks gave only 1 landing page view. Hub truth: `sales_lead_intake_events`, tags `webinar-oct2026` / `webinar-oct2026-completed`, with utm_source in `raw`. A server-side send on form submit was offered, not asked for yet.
+
+
+**2026-10-05:** budget is now £250/day CBO (was £60). All 3 ads were swapped in place to the 'Less than 24 hours left' banner images (webinar3->webinarfinal3, webinar4->webinarfinal1, webinar5->webinarfinal2), 'Last chance to register.' added to the top of every body, and a 4th headline 'Last Chance: Free Installer Webinar, Tue 6pm' added. Up to 10-05: webinar4's square image was the best (£8.43 per registration), webinar5 barely spent (£13.50).
