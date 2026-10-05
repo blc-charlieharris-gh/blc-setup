@@ -50,7 +50,7 @@
 - [Hub-only migrations skip Serafim review](feedback_hub_only_migrations_no_serafim_review.md): gate is cross-repo blast radius, crew_* is…
 - [Charlotte prefers plain explanations](feedback_charlotte_plain_explanations.md): 2-4 sentence result first, detail if asked…
 - **Shared worktree:** [stale agent reads](feedback_shared_worktree_stale_agent_reads.md) · [scratch docs get clobbered](feedback_shared_scratch_docs_get_clobbered.md) · [workdir corruption](project_blc_workdir_corruption.md)
-- [Webinar deck (10-04)](project_webinar_deck.md): source, Hub link, republish command, Growth Plan naming
+- [Webinar deck (10-04)](project_webinar_deck.md): source is git installrhub-static/webinar-deck (pull first), Hub link, republish command, Growth Plan naming
 - [Public-by-link pages rule (10-04)](feedback_public_by_link_pages_rule.md): event slides OK public (Hub public/present/)…
 - [Public client links need cross-host routing](feedback_public_client_link_needs_crosshost_route.md): /preview/:token pattern or 404
 - [placed_with_company_id is survey truth](reference_placed_with_company_id_survey_truth.md): "who holds this survey" field
@@ -127,3 +127,5 @@
 - [Edge fn bundle + boot check (10-05)](reference_edge_fn_bundle_and_boot_check.md): bundle-edge-fn.mjs direct, npx -y deno to boot, pkill leftovers
 
 - [CREW audit build gotchas (10-05)](feedback_crew_audit_build_gotchas.md): page not JSON, helix build-report for raster logos, verify HTML text renders
+- [One step at a time, clipboard (10-05)](feedback_one_step_at_a_time_clipboard.md): pbcopy each SQL/deploy, verify live before next
+- [whatsNew conflicts: one PR (10-05)](feedback_whatsnew_conflicts_one_pr.md): same-day Hub PRs combined, else every merge conflicts

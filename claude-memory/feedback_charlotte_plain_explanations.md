@@ -36,3 +36,5 @@ process steps I skipped; just run the safe read-only ones or drop the line.
 **How to apply:** default every finding/fix summary in this project to the plain-first format above.
 Don't preemptively load an explanation with mechanism ("Supabase's per-request row cap", "execution
 ceiling") — lead with the observable symptom and the fix, then stop.
+
+Charlotte 2026-10-05: updates between tool calls get lost ("you'll need to write it all at the end"): give the full explanation in the final message of the turn, not spread across progress notes.
