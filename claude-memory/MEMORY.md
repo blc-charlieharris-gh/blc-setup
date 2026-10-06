@@ -13,7 +13,7 @@
 - [Build check every PR (10-06)](feedback_build_check_every_pr.md): audit checklist scoped to the PR, live data, walk the job as Erin; retros never partial
 - [Audit end state (09-30)](feedback_audit_end_state_zero_issues.md): comprehensive first pass, retrospective each…
 - [Serafim Trello -> Taskboard (09-30)](project_serafim_trello_to_taskboard.md): Operational type, all 135 imported (tagged)…
-- [No duplicate solutions, keep it simple (09-30)](feedback_no_duplicate_solutions.md): one way per thing, build what she describes…
+- [No duplicate solutions or rules (09-30, 10-06)](feedback_no_duplicate_solutions.md): one way per thing, one function per question, build what she describes
 - [Audit fixes must not break things (09-30)](feedback_audit_changes_must_not_break.md): IH Dashboard regression from #1164 A16 + #1169…
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Verify merge before branch cleanup](feedback_verify_merge_before_branch_cleanup.md): gate on origin/main containing the PR commit…
@@ -130,3 +130,13 @@
 - [CREW audit build gotchas (10-05)](feedback_crew_audit_build_gotchas.md): page not JSON, helix build-report for raster logos, verify HTML text renders
 - [One step at a time, clipboard (10-05)](feedback_one_step_at_a_time_clipboard.md): pbcopy each SQL/deploy, verify live before next
 - [whatsNew conflicts: one PR (10-05)](feedback_whatsnew_conflicts_one_pr.md): same-day Hub PRs combined, else every merge conflicts
+- [No peer PR links to Charlotte (10-06)](feedback_no_peer_pr_links.md): never relay another session's PR links; peers send them to the repo owner, tell her in plain words only
+- [Client booking pages (10-06)](project_client_booking_pages.md): /catch-up + /access-call live, open without link, untagged so not leads
+- [Messages self-contained, chat resets (10-06)](feedback_messages_self_contained_chat_resets.md): her view loses earlier messages; every ask restates its context, answer every point
+- [Client area plan (10-06)](project_client_area_plan.md): CREW dashboard -> real per-client page by personal link; Email client = update + one button; after builders merge + audit invariants
+- [No pbcopy while a peer deploys (10-06)](feedback_no_pbcopy_while_peer_deploying.md): my script got pasted as the broadcasts edge fn; file paths only when other sessions run
+- [New marketplace AS codes (10-06)](project_new_marketplace_as_codes.md): ad set per tech+region on GT, one AS code in name; AS01 = Solar NW (Kcglinks), next AS02
+- [Meta lead form API limits (10-06)](reference_meta_lead_form_api_limits.md): logic/DQ page + rename UI-only, archived names reserved, pixel via tracking_specs, CRM events not in API
+- [PRESENT at next start: open items (10-06)](project_open_items_2026_10_06.md): webinar-day close list, her waits + my 7 in order; source = marketing-agent current-handoff
+- [GT lead to installer chain (10-06)](reference_greentide_lead_to_installer_chain.md): Meta -> GT GHL -> utm_content ad id -> AS code -> installer; bookings copy every 30 min
+- [Timed reminders capped 100/5min (10-06)](feedback_timed_reminders_batch_cap.md): nurture-run before_date must send all due at once; no-mobile = skip
