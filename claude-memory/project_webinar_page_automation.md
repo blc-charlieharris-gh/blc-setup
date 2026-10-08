@@ -17,5 +17,7 @@ Live 2026-10-04 (site #131, Hub #1436-#1442). Per new webinar Charlotte only cre
 - Webinar sign-ups between webinars wait and join the next webinar's sequence once it exists.
 - Title date fills from the event; share/meta text is date-free. The share image (images/webinar/og-webinar.jpg) has the date baked in: new image per webinar (on the Hub's next-webinar checklist). Headline copy is hand-written per topic.
 
+- Replay page (7 Oct, site #190/#191): the discovery booking calendar sits beside the video (no button). Its cover is the YouTube video's own thumbnail, so set the cover in YouTube Studio. "Replay for (hours)" in Edit event counts from the webinar END, not from now: on 7 Oct Charlotte set 43 thinking from now, and the replay would have ended Thu 14:00. Thu evening = 48-53 for a Tue 7pm end. Related: [[reference_google_meet_webinar_files]].
+
 **Why:** Charlotte wants webinars fully automatic, with nothing lost and no site edits.
 **How to apply:** for a new webinar, don't edit site times. Check the event is ticked and has an active sequence. Related: [[feedback_source_first_touch_classify_on_page]], [[project_email_audit_cleanup_list]].

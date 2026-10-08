@@ -34,3 +34,5 @@ scratch directory is enough; no new project dependency needed for one-off mobile
 (≤~500px) via headless Chrome, don't trust the plain CLI `--window-size` flag — use puppeteer-core
 with `setViewport` instead. For desktop-width screenshots (≥~500px), the plain CLI flag is fine and
 was used successfully many times this same session.
+
+**Quicker alternative (2026-10-07, worked)**: no install needed. Write a scratch wrapper page served by the same local static server with `<iframe src="/page?preview=1" style="width:390px;height:1500px;border:0">` (several side by side for 390/768), and screenshot the wrapper with the plain CLI at a wide window. Inside an iframe the page's viewport is the iframe's width, so media queries hit phone widths exactly. Caveat: a tall iframe makes `min-height:100vh` sections tall, so extra space above centred content is an artifact. Delete the wrapper before committing.

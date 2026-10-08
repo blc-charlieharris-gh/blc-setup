@@ -1,11 +1,19 @@
 ---
 name: project_open_items_2026_10_06
-description: "Webinar day 10-06 close: the full list to PRESENT to Charlotte at next session start (her waiting list, my build list in her order); source is marketing-agent .claude/docs/current-handoff.md"
+description: "PRESENT at next start: Charlotte's open list and the audit order; source is marketing-agent .claude/docs/current-handoff.md (updated 10-08 afternoon)"
 metadata:
+  node_type: memory
   type: project
+  originSessionId: 4d169e9e-5d48-4101-a9ec-00314ce2fab3
+  modified: 2026-10-08T07:15:46.637Z
 ---
 
-Charlotte 2026-10-06 (switching device): "remember ALL of this to present to me next session". The list lives in marketing-agent `.claude/docs/current-handoff.md` (PR docs/handoff-2026-10-06-evening). At prime, present it in plain words: what's live, what's waiting on her (GHL booking count vs 26 site bookings, attendance upload + Send to Serafim, replay link, follow-up broadcasts, Q Smart tech, Kcglinks AS01 test lead + go live, Resend unsuppress, Brad note, deck shared-layout merge), then my list in her order: (1) area ad sets out of Green Tide numbers + Marketplace areas view, (2) event ad spend, (3) timed reminders all at once, (4) client page locations map + link at top, (5) ad set linked ticks itself, (6) reports reminder to installrhub.com, (7) audit. Next site session: website alert emails off blc-promotions.
+Updated 2026-10-08 (evening, handoff PR docs/handoff-2026-10-08-evening). The live list is marketing-agent `.claude/docs/current-handoff.md`, with retro batch 3 detail in `.claude/docs/hub-audit/retro-2026-10-07.md` section 6.
 
-**Why:** she lost the thread across devices before; the handoff alone wasn't presented.
-**How to apply:** open the session by presenting this list, check each against live first ([[feedback_verify_known_issues_against_live]]), then start item 1 of my list once she OKs the reporting change. Related: [[feedback_messages_self_contained_chat_resets]].
+Done 10-08: everything up to #1637 + site #201 (client page Stages 1-3, Drive uploads, fix list 3b-3i, happy-to-go-live button, replay window).
+
+Order next: ask Charlotte D1/D3/D8 (unanswered); retro batch 3 (28 open, one Hub PR + one site PR); redeploy hub-action-alerts + marketing-status-check; Creative Testing audit; Manage Clients; CREW audit; marketplace overhaul.
+
+Still on Charlotte: Peter O'Connor call; remove Elect test lead; Q&A date + Meet link; Elect Full control of FB page; delete TEST upload png in Elect's Drive folder; move Core Electrics' old bucket photo to Drive; resend marketplace notes.
+
+**Why:** she loses the thread across devices and long days. **How to apply:** open with this list, then start the next item unless she says otherwise.
