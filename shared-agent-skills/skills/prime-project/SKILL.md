@@ -3,7 +3,7 @@ name: prime-project
 description: Load full project context at the start of a session so no manual re-explanation is needed
 ---
 
-Read-only. This skill gathers context and reports it. It must not edit, create, delete,
+Read-only, apart from bringing a clean, behind copy up to date (step 2). This skill gathers context and reports it. It must not edit, create, delete,
 commit, push, deploy, or call any external service. The one exception is `git fetch`, which only
 downloads what is on GitHub and changes nothing locally: always run it first so the report reads
 the latest code (Charlotte, 2026-10-03). The other exception is one short message to each other
@@ -39,6 +39,11 @@ and report the other as a stale duplicate. Never trust a handoff just because it
 - `git branch --show-current`, `git status --porcelain`, `git stash list`, `git worktree list`.
 - `git fetch -q` first, then drift against the remote: `git rev-list --left-right --count HEAD...origin/<default>`.
   If the fetch fails (offline, auth), say so and give the age of the last fetch (`.git/FETCH_HEAD`).
+- **Bring the copy up to date (Charlotte, 2026-10-10).** If you are on the default branch, behind, with no local
+  commits ahead and `git status --porcelain` empty, run `git merge --ff-only -q origin/<default>` so every read
+  sees the latest code. It can't lose anything. Otherwise (another branch, commits ahead, or unsaved files) leave it:
+  report "N changes behind, not updated because ..." as a blocker, and read the docs from `origin/<default>`
+  (`git show origin/<default>:<path>`) instead of the stale copy. Do this before step 1's reads.
 - Commits on no remote branch: `git log --branches --not --remotes --oneline | head`.
 - Files modified in the last 3 hours (`find . -newermt '-3 hours' -type f`, excluding `.git`,
   `node_modules` and build output). These mean a live or recent session shares the tree.

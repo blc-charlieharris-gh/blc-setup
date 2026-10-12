@@ -13,3 +13,5 @@ Root case: Erin's Safari tab from before #1281 reopened 3 held Brand "Build camp
 
 
 2026-10-06: a one-off browser-console script writing creative_assets with Charlotte's token got 400 P0001 "tab is out of date" until it sent `X-Client-Info: hub-web build/<id>` with the id from `/version.json` (hub_min_build.min_built_at must be older than the build). Pattern lives in meta-access `outputs/library-fixes-2026-10-06/replace-library-v2.js`. Give such scripts a new filename + a console.log version line: Charlotte re-pasted a stale TextEdit copy once.
+
+**NEVER set min_built_at = now() (10-10 incident).** The live build is always made BEFORE you raise the guard, so now() makes the brand-new build count as an old tab: every Hub write refused for ~12 min until an unrelated redeploy. Always: curl https://internal.installrhub.com/version.json, decode `new Date(parseInt(id,36))`, and set min_built_at to that exact time (or a minute before).

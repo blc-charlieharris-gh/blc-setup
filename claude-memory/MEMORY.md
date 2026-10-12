@@ -101,7 +101,7 @@
 - ["On the list" = in the repo (10-04)](feedback_on_the_list_means_in_repo.md): check audit README/known-issues before saying…
 - [Analysis page roadmap (10-01)](project_analysis_page_roadmap.md): main page pulling creative analysis…
 - [IH n8n payload fields (10-01)](reference_installrhub_n8n_payload_fields.md): per-form field names, GHL key mcsstatus, add…
-- [Old-tab guard (10-02)](reference_old_tab_guard_client_info.md): X-Client-Info hub-web build/<id>, trigger…
+- [Old-tab guard (10-02)](reference_old_tab_guard_client_info.md): NEVER now(), use live version.json build time; X-Client-Info hub-web build/<id>, trigger…
 - [Bounce pause = hard only (10-02)](feedback_bounce_pause_hard_bounces_only.md): Transient bounces never pause a broadcast…
 - [IH sign-up vs lead rule (10-03)](feedback_installrhub_signup_vs_lead_rule.md): lead magnets=sign-ups, offer forms=leads…
 - [meta-sync CC fallback (10-03)](reference_meta_sync_custom_conversion_fallback.md): no-Lead ads sum all custom conversions; IH…
@@ -126,11 +126,11 @@
 - [No peer PR links to Charlotte (10-06)](feedback_no_peer_pr_links.md): never relay another session's PR links; peers send them to the repo owner, tell her in plain words only
 - [Client booking pages (10-06)](project_client_booking_pages.md): /catch-up + /access-call live, open without link, untagged so not leads
 - [Messages self-contained, chat resets (10-06)](feedback_messages_self_contained_chat_resets.md): her view loses earlier messages; every ask restates its context, answer every point
-- [Client area plan (10-06)](project_client_area_plan.md): CREW dashboard -> real per-client page by personal link; Email client = update + one button; after builders merge + audit invariants
+- [Client area plan (10-06, 10-11)](project_client_area_plan.md): one page per client by link; 10-11 one key, products under /<slug>/website etc, one Crew frame, one Add media pop-up: next batch after B3b
 - [No pbcopy while a peer deploys (10-06)](feedback_no_pbcopy_while_peer_deploying.md): my script got pasted as the broadcasts edge fn; file paths only when other sessions run
 - [New marketplace AS codes (10-06)](project_new_marketplace_as_codes.md): ad set per tech+region on GT, one AS code in name; AS01 = Solar NW (Kcglinks), next AS02
 - [Meta lead form API limits (10-06)](reference_meta_lead_form_api_limits.md): logic/DQ page + rename UI-only, archived names reserved, pixel via tracking_specs, CRM events not in API
-- [PRESENT at next start: open items (10-08 eve)](project_open_items_2026_10_06.md): ask D1/D3/D8, retro batch 3 (28 open), redeploy 2 edge fns, Creative Testing audit; source = marketing-agent current-handoff
+- [PRESENT at next start: open items](project_open_items_2026_10_06.md): superseded 10-10, see Stock-take queue + marketing-agent current-handoff (step-6 clicks, 3 decisions, live check, Goals audit)
 - [GT lead to installer chain (10-06)](reference_greentide_lead_to_installer_chain.md): Meta -> GT GHL -> utm_content ad id -> AS code -> installer; bookings copy every 30 min
 - [Timed reminders capped 100/5min (10-06)](feedback_timed_reminders_batch_cap.md): nurture-run before_date must send all due at once; no-mobile = skip
 - [Meet webinar files (10-07)](reference_google_meet_webinar_files.md): recording/attendance/chat in Brad's Meet Recordings; emails masked in-file; chat = who typed 1; yt-dlp_macos for frames
@@ -139,7 +139,22 @@
 - [Check every home before saying "missing" (10-07)](feedback_check_all_homes_before_saying_missing.md): grep code + all JSON columns (criteria etc.) before "we don't ask/store X"
 - [Elect: say grant + "up to" (10-07)](project_elect_grant_wording_rule.md): never "discount", up to £X everywhere incl forms/designs; new form needs Hub lead route
 - [Client Drive build (10-08)](project_client_drive_build.md): parent folder 1y5f6W6D..., page upload -> client Drive folder, staff pick into client footage, Cloud steps pending
-- [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect = B (self-edits)
+- [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect home-only too since 10-09
 - [GPT writes all content (10-08)](feedback_gpt_writes_all_content.md): planner, posts, page words on openai/gpt via OpenRouter; FB page changes by hand for now
 - [Social set-up area (10-08)](project_social_setup_area.md): Crew social job live, photos first then GPT Image 2, FB page edits by hand until Full control; CREW audit with Hub session
 - [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
+- [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
+- [Marketplace client model (10-08)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; we track+report only; pack used up = pause + card
+- [Confirm understanding before fixing (10-08)](feedback_confirm_understanding_before_fixing.md): play back her issue + planned fix, get OK, then build
+- [Stock-take queue (10-09)](project_stocktake_1009.md): drafts box (video draft required), Status walk-through, Goals card, build follow-ups, before Creative Testing audit
+- [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
+- [Audit scope checklist (10-09)](feedback_audit_scope_checklist.md): every audit covers security, speed/mobile, one source of truth, app-safe, linked/hidden pages, cross-page, bugs, accuracy, no hardwiring
+- [One report at the end (10-09)](feedback_one_report_at_end.md): long runs -> single self-contained final report, no relying on interim messages
+- [Awareness spend counts in CPL (10-09)](feedback_awareness_spend_in_cpl.md): TOF/MOF fuel lead campaigns; out of lists, never out of the money
+- [Cost of supply = cost us, split by surveys (10-10)](feedback_cost_of_supply_is_cost_not_charge.md): never 'charged'; shared code split by surveys, confirm leads/zero cases
+- [Broadcast + nurture = one send-rules area (10-10)](feedback_broadcast_nurture_same_list_rules.md): every send rule shared; only trigger vs set time differs; overlap via filters; bookings via calendar classification
+- [REMIND: link older ads, then remove catch-up (10-10)](project_library_older_ads_catchup.md): say it at every prime until she says done; then remove Library catch-up view
+- [InstallrScore -> installrhub.com homepage (10-11)](project_installrscore_on_installrhub_homepage.md): tell site-installrhub session; crew. is internal, its public pages redirect
+- [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
+- [Prospect audits rules (10-11)](project_prospect_audits_rules.md): prospects only, 30-day did-this-close flag, name-match + merge into client; clients only from the app; build in crew B6
+- [SWH go-live ranking (10-11)](project_swh_golive_ranking_2026_10_11.md): redirects one list, blog+towns kept, 99-100 speed, strict CSP, blc-vercel deploy; waiting on SWH business details
