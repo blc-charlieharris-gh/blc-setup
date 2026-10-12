@@ -1,6 +1,6 @@
 ---
 name: project-swh-golive-ranking-2026-10-11
-description: "SWH go-live ranking work 10-11 (redirects, blog + town pages kept, speed 99-100, strict CSP) all merged + live; waiting on SWH business-details answer"
+description: "SWH go-live ranking work 10-11 (redirects, blog + town pages kept, speed 99-100, strict CSP) all merged + live; business details settled 10-12, nothing waiting on SWH"
 metadata:
   node_type: memory
   type: project
@@ -16,7 +16,7 @@ SWH sent a "don't lose our Google ranking" checklist on 2026-10-11. All of it wa
 - **Scripts.** All page scripts are generated into `assets/site.js`, so the CSP's script-src is `'self'` only.
 - **Fonts.** Down to 4 weights. This cleared both items deferred in [[project-swh-final-updates-2026-09-25]].
 - **Business details.** The MCS (IAA10017) and TrustMark (TMRN256) numbers came from SWH's 3 Sep preview reply. SWH are not RECC or HIES members.
-- **Still waiting.** SWH haven't answered their business-details preview question (ICO, NICEIC, NAPIT numbers).
+- **Business details settled (Charlotte 2026-10-12).** We have what we need from SWH. Don't chase them for ICO, NICEIC or NAPIT numbers, and don't list it as waiting.
 
 **Deploy:** use `~/code/blc-setup/bin/blc-vercel deploy --prod --yes --scope blc-promotions` from a clean origin/main checkout of the folder. Plain `vercel` on this Mac is signed in to PULSET.
 

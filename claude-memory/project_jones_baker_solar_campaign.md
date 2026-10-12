@@ -13,7 +13,7 @@ don't offer it). The page-backed IG 17841476747402942 already existed.
 
 Ads (10-03, all on form 1785836795954230, Charlotte's edit with logic + passcode): 120251928822940551, 120251928826930551, 120251928830320551 (ads ON, ad set + campaign OFF,
 so switching on needs BOTH campaign and ad set). Duplicates from an overlapping run were deleted by Charlotte.
-**Before switch-on:** the Hub clients.meta_ad_account_id is null for J&B, and the page isn't confirmed in Lead Intake, so leads may not route.
+**10-12 update:** clients.meta_ad_account_id is now act_2619450408402209 and the form route (meta_lead_form_routes, form 1785836795954230 -> n8n jonesbakersolar) is active. Still blocked: clients.is_tracked=false, so meta-sync skips it (no campaigns, no sync_runs). Charlotte turns tracked on in the Hub, then run a one-client sync. Not going live yet (Charlotte 10-12).
 Also on 10-03: J&B's onboarding prices were typed into the wrong boxes by them (note "Solar and battery" on
 row 1, empty label on row 2). Meant: solar from £5,999, solar + battery from £7,999. The company record is
 named "Ryan Jones".

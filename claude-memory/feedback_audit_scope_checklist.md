@@ -24,6 +24,9 @@ Added the same day:
 11. **Every change leaves a trail:** History with who and when.
 12. **Personal data is safe:** shown only to those who need it, public links never expose others' data, nothing kept longer than needed.
 
+Added 2026-10-12:
+13. **Outdated and duplicated features:** two buttons or paths doing the same job (e.g. a job page's own email button beside the one Email the client), or an older way left on the page after a newer one replaced it. One way per thing: fold what the old one did (its side effects, e.g. moving the job's stage) into the one way, then remove the old. Also check live data that every box/field/button is actually used (Performance creative "Purpose & notes": 0 of 2,108 ever filled); never used = propose removal.
+
 She turned down per-page automated smoke tests as an audit item ("if it's blank I just ask you to fix").
 
 **Why:** "we've done so much" and bugs keep landing between audits. She wants one complete pass, not repeat rounds.
