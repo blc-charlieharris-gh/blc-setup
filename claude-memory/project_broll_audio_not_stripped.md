@@ -1,16 +1,18 @@
 ---
 name: project-broll-audio-not-stripped
-description: "PRESENT at next start (10-12): Charlotte says every general b-roll clip still has its original audio; stripping (lib/brollSound, 10-05) and Tidy older clips miss them"
+description: "RESOLVED 10-13: all 16 general B-roll clips re-stored picture-only (clip-silent); B-roll sound (10-12, fix 10-13): strip now always remuxes picture-only, cleaned files named clip-silent; verify every B-roll file_path has clip-silent after Charlotte runs Remove sound"
 metadata:
   node_type: memory
   type: project
-  originSessionId: 2ce9a8c2-9e9c-4e30-a7d9-643584af5866
-  modified: 2026-10-12T20:42:10.584Z
+  originSessionId: b62ab90b-7e0e-451a-a273-d6fc21fe85f9
+  modified: 2026-10-13T12:36:32.621Z
 ---
 
-Charlotte 2026-10-12 night: "b roll should be stripped of audio, yet all the clips have original audio". Raise at the next marketing-agent prime and fix first.
+Charlotte 10-12 and again 10-13 (angry, asked many times): B-roll must have NO audio. 10-13 finding: the 10-03 clips got new thumbnails from Tidy but their files were never re-stored, so lib/brollSound's "any audio track?" check returned none on them and skipped them; every upload since 10-05 went through the same check.
 
-Found so far (read only): creative_broll has 16 general clips (client_id null, 2026-10-03 to 10-06) and 22 client footage clips (2026-10-01, keep sound on purpose). Stripping on upload (src/lib/brollSound.js withoutSound, src/hooks/useBroll.js ~152) only started 10-05. "Tidy older clips" (lib/broll needsTidy -> soundLeftOn) only spots a clip by the `/clip-sound.<ext>` name marker, which none of the 16 has, so the 10-03/04 ones are never redone. If the 10-05/06 uploads also have sound, withoutSound itself isn't working.
+Fix (branch fix/broll-always-silent-1013): withoutSound always rebuilds the video track only (verified with ffprobe on aac and pcm test videos: output video-only); cleaned files are `<id>/clip-silent[-<t>].<ext>`; lib/broll mustBeSilent = any video of kind broll (general AND a client's B-roll; client interviews/installs keep sound); Tidy shows "Remove sound from B-roll (N)".
 
 **Why:** b-roll is reused across ads; original audio leaks into edits.
-**How to apply:** download a 10-04 and a 10-06 clip from the b-roll bucket and probe for an audio track; fix the strip if needed; make Tidy detect audio from the file (or re-strip every general clip once) rather than the filename; client footage untouched. Related: [[project_client_drive_build]].
+**How to apply:** once merged and Charlotte clicks Remove sound on B-roll and Client footage, check by SQL that every `creative_broll` video with kind broll has `clip-silent` in file_path; any left = report the error shown. No service key locally, so files can't be probed directly. Related: [[project_client_drive_build]].
+
+**Resolved 2026-10-13:** SQL check showed 16/16 general B-roll videos with clip-silent paths after Charlotte ran Remove sound. Client footage keeps sound by design (#1805); clips with sound left show red (#last-two).
