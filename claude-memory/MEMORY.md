@@ -118,7 +118,7 @@
 - [Social set-up area (10-08)](project_social_setup_area.md): Crew social job live, photos first then GPT Image 2, FB page edits by hand until Full control; CREW audit with Hub session
 - [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
 - [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
-- [Marketplace client model (10-08)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; we track+report only; pack used up = pause + card
+- [Marketplace client model (10-08, 10-13)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; portal shows leads (per-lead, retainer lead-only) or surveys (per-survey, retainer calling); no Leads tab yet
 - [Confirm understanding before fixing (10-08)](feedback_confirm_understanding_before_fixing.md): play back her issue + planned fix, get OK, then build
 - [Stock-take queue (10-09)](project_stocktake_1009.md): drafts box (video draft required), Status walk-through, Goals card, build follow-ups, before Creative Testing audit
 - [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
@@ -141,3 +141,4 @@
 - [Seedance garbles UI text (10-13)](feedback_seedance_garbles_ui_text.md): HTML-animated screens for how-tos, Seedance only word-free, text as overlays
 - [Higgsfield/OpenRouter media quirks (10-13)](reference_higgsfield_openrouter_media_quirks.md): CLI foreground only + workspace set, voice ids, Gemini text-only, Lyria stream
 - [Access how-to videos (10-13)](project_access_videos.md): FB + Google videos live in marketing-agent; source meta-access/access-videos, v3 brief there
+- [Client asks after site ready; DNS handover (10-13)](feedback_client_asks_after_site_ready_dns_handover.md): gaps go with the preview, never ask Wix/domain logins, live = DNS instructions
