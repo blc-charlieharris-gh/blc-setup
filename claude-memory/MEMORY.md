@@ -138,3 +138,6 @@
 - [B-roll sound RESOLVED (10-13)](project_broll_audio_not_stripped.md): always remux picture-only, clip-silent names, 16/16 cleaned; client footage keeps sound
 - [Webinar booking stats by SQL (10-13)](reference_webinar_booking_stats_sql.md): on-webinar = booking_attribution event utm; outside = tag pool, Discovery=triage; no screen yet
 - [IH brand from site tokens (10-13)](feedback_installrhub_brand_from_site_tokens.md): prospect pages use installrhub.com css tokens; check logos vs backgrounds; no invented palette, no fake-looking cards
+- [Seedance garbles UI text (10-13)](feedback_seedance_garbles_ui_text.md): HTML-animated screens for how-tos, Seedance only word-free, text as overlays
+- [Higgsfield/OpenRouter media quirks (10-13)](reference_higgsfield_openrouter_media_quirks.md): CLI foreground only + workspace set, voice ids, Gemini text-only, Lyria stream
+- [Access how-to videos (10-13)](project_access_videos.md): FB + Google videos live in marketing-agent; source meta-access/access-videos, v3 brief there
