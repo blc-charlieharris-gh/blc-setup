@@ -16,4 +16,6 @@ Meta error 3858013 "Phone number required: You need to verify a phone number for
 - Paused ads keep showing the error after verifying; it only re-checks when the ad is switched on (status ACTIVE -> IN_PROCESS/PENDING_REVIEW, error gone).
 - API can't do the verification (needs SMS). Find the error via ads `issues_info`.
 
+2026-10-14: came back on Elect after a creative swap (swapform) knocked the ads to PAUSED/WITH_ISSUES. No new SMS needed: setting each ad ACTIVE via API cleared it (IN_PROCESS/PENDING_REVIEW).
+
 Related: [[meta-api-create-payload-gotchas]], [[log-client-meta-changes-in-hub]]

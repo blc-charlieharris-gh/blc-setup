@@ -7,7 +7,7 @@ metadata:
 
 Serafim's model (cross_agent_notes 03474fe0 + 15135356, 2026-10-05/06): New marketplace and pay-per-lead clients get no campaign of their own. Each Meta ad set on the Green Tide account covers one tech + region and carries ONE code "AS" + 2-4 digits in its name (space/pipe separated, never glued to letters). The code is never changed or reused on a live ad set. InstallrHub links installers to codes (direct_booking_adset_links) and splits spend by surveys. No per-client form and no UTMs. NM codes are retired.
 
-The Hub doesn't issue codes yet, so we pick the next number. AS98/AS99 are Serafim's test rows. **AS01** = "GT | Solar | North West | Finance | AS01" (ad set 120251554204730201, built 2026-10-06 for Kcglinks, OFF). **Next free: AS02.**
+(Before 14 Oct we picked numbers by hand.) AS98/AS99 are Serafim's test rows (hidden in the Hub). **AS01** = "GT | Solar | North West | Finance | AS01" (ad set 120251554204730201, built 2026-10-06 for Kcglinks, OFF). AS02 = GT | ASHP | Sussex | Finance (Plumb Guys), AS03 = GT | Solar | South Coast | Finance (Southern Solar), both live 14 Oct 2026 at £60/day; AS01 paused 14 Oct (Kcglinks covered). **Next free: AS04.** Since 14 Oct the Hub issues codes (Clients > Meta set-up > Ad set codes) with postcode areas, tech and finance, and recommends/pauses per installer forecast.
 
 2026-10-06 evening: the Hub session added a Hub step that links clients to AS codes in Serafim's direct_booking_adset_links (migration 20261007002000_hub_as_code_links.sql: adds or soft-removes rows only, his rules still decide). Charlotte sent it to Serafim to check; Kcglinks -> AS01 is the first link.
 
