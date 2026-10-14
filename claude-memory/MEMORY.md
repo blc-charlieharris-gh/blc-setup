@@ -126,3 +126,4 @@
 - [Hub-managed = Hub code (10-14)](feedback_hub_managed_lives_in_hub_code.md): any fn the Hub runs gets its source moved into marketing-agent first; Serafim refuse-list note
 - [Website rule book (10-14)](project_website_rulebook.md): premium NEW sites (research, design, copy), SWH+Arktek benchmark, client+audience research, Elect first
 - [Vercel bot challenge on rapid polling (10-14)](feedback_vercel_bot_challenge_rapid_polling.md): 15s curl loop -> 403 challenge; one delayed check instead
+- [Elect site from scratch (10-14)](project_elect_site_from_scratch.md): no template for Elect; rule book design rules cover spacing, layout, colour, gradients, texture
