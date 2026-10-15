@@ -102,7 +102,7 @@
 - [Build all that was approved, never re-ask (10-14)](feedback_build_everything_approved_dont_reask.md): list every approved point incl mid-turn asks, build in one go
 - [Hub test lead = real lead shape (10-14)](reference_hub_test_lead_keys_and_phone.md): option keys + unique 07700 900xxx phone (meta-lead-webhook v47); trace path
 - [Hub-managed = Hub code (10-14)](feedback_hub_managed_lives_in_hub_code.md): any fn the Hub runs gets its source moved into marketing-agent first; Serafim refuse-list note
-- [Website rule book (10-14)](project_website_rulebook.md): premium NEW sites (research, design, copy), SWH+Arktek benchmark, client+audience research, Elect first
+- [Website rule book (10-14, all 7 stages 10-15)](project_website_rulebook.md): premium NEW sites, SWH+Arktek benchmark; stages done, rollout J&B done, Gas Worx next
 - [Vercel bot challenge on rapid polling (10-14)](feedback_vercel_bot_challenge_rapid_polling.md): 15s curl loop -> 403 challenge; one delayed check instead
 - [Elect site from scratch (10-14)](project_elect_site_from_scratch.md): no template for Elect; rule book design rules cover spacing, layout, colour, gradients, texture
 - [Check `date` before dating files (10-14)](feedback_check_date_before_dating_files.md): migrations, What's new, comments; pass real date to subagents
@@ -115,7 +115,7 @@
 - [Client preview Vercel address (10-15)](reference_client_preview_vercel_address.md): vercel domains add <name>.vercel.app from the linked folder is public; alias set lands behind SSO
 - [Always give the merge link (10-15)](feedback_always_give_merge_link.md): PR + preview links every time; if she says merged and it's open, merge it
 - [IH KPIs journey page (10-15)](project_ih_kpis_journey_page.md): one row per person by first entry, funnel rates, source tabs, Awareness Feeds, /kpis share link; frozen CEO snapshot offered
-- [Rule book roadmap (10-15)](project_rulebook_rollout_then_hub_design.md): finish stages, apply to every site in build + future, then Hub site design for Erin
+- [Rule book roadmap (10-15)](project_rulebook_rollout_then_hub_design.md): all in-build sites to standard, no exemptions, transferred = done; J&B done, Gas Worx next; then Hub site design for Erin
 - [Test a brand-new first sign-in before "accounts work" (10-15)](feedback_test_brand_new_signin_before_saying_accounts_work.md): first magic link failed for new clients after her email; test day-one paths live first
 - [Client status = client_onboarding.status (10-15)](reference_client_status_lives_in_client_onboarding.md): Live/Onboarding/Paused lives there, not companies.paused_at; leave paused out of every list
 - [Hub visual polish in the audit (10-15)](project_hub_visual_polish.md): sidebar stays, portal look, wider one width, one spacing/type scale; after portal retro, before Funnels
@@ -125,3 +125,5 @@
 - [New bank question needs SQL (10-15)](feedback_new_bank_question_needs_sql.md): saved Parameters list hides new code defaults; ship an append SQL with each
 - [IH KPIs test questions (10-15)](project_ih_kpis_test_questions.md): 9 questions to check the pick-your-view page; ask which she ran, SQL-check surprises; Feeds + CEO report open
 - [New-services questions go by Email client (10-15)](reference_new_services_questions_email_route.md): auto welcome skips not-needed clients; add-on No form ticked by default; card Send onboarding questions
+- [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
+- [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps

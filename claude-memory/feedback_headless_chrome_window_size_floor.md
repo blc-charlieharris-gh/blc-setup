@@ -36,3 +36,5 @@ with `setViewport` instead. For desktop-width screenshots (≥~500px), the plain
 was used successfully many times this same session.
 
 **Quicker alternative (2026-10-07, worked)**: no install needed. Write a scratch wrapper page served by the same local static server with `<iframe src="/page?preview=1" style="width:390px;height:1500px;border:0">` (several side by side for 390/768), and screenshot the wrapper with the plain CLI at a wide window. Inside an iframe the page's viewport is the iframe's width, so media queries hit phone widths exactly. Caveat: a tall iframe makes `min-height:100vh` sections tall, so extra space above centred content is an artifact. Delete the wrapper before committing.
+
+Full-page shots (10-15): a tall --window-size stretches 100vh heroes, so use puppeteer-core with system Chrome (scratchpad `npm i puppeteer-core@23.11.1`, setViewport 1440x900 or 390x844, scroll the page slowly ~250ms per 600px so scroll-in reveals fire, then fullPage). Slice with PIL to ~1200px tall pieces to read them.
