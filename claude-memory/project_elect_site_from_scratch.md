@@ -12,5 +12,7 @@ Charlotte 2026-10-14 (Website rule book Stage 1 + 2): "rules need to also make s
 
 Hosting (Charlotte 2026-10-14): own site at electenergy.co.uk, hosted by us (Vercel, like SWH), with one "Heating your own home?" link from theelect.group. NOT inside Squarespace, even though Elect's onboarding note (14 Oct) asked for theelect.group/energy in Squarespace: tell Elect why. Elect says it sent a mock-up, brand guidelines and playbook; not in Charlotte's email/Drive, she will find and share them.
 
+Status 2026-10-15: built and live as a preview at elect-energy.vercel.app (Vercel project "elect"), source website-factory/clients/elect (build-pages.mjs, design rationale in _client/). Brand taken from their own sites (no files from Elect): navy, Elect green #00B81C, Group pipework lines, Poppins. GPT copy pulled from hub_clients.generated_copy into _client/copy.json; the build holds after-grant prices (GRANT_CONFIRMED=false), Trustpilot scores/quotes (TRUSTPILOT_WIDGETS=false) and internal notes. Waiting on Elect: grant, trading company, form key, Trustpilot widgets, Google link, photos, tracking.
+
 **Why:** premium, distinct sites; templates were producing look-alikes (DES-07 distinctness).
 **How to apply:** the Website rule book (`src/lib/websiteRules.js` in marketing-agent) carries DES rules for spacing scale, layout grid, colour ratios, gradients, texture/depth and a written design rationale; Elect's build starts from a blank page in the Elect Group look. Related: [[project_website_rulebook]], [[project_elect_grant_wording_rule]].
