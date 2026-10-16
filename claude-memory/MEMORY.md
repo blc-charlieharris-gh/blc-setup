@@ -127,3 +127,4 @@
 - [New-services questions go by Email client (10-15)](reference_new_services_questions_email_route.md): auto welcome skips not-needed clients; add-on No form ticked by default; card Send onboarding questions
 - [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
 - [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps
+- [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
