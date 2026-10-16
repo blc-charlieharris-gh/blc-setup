@@ -64,3 +64,12 @@
 - [Vercel runs eslint (10-03)](feedback_vercel_runs_eslint_lint_changed_files.md): vite build green isn't enough; eslint the…
 - [Handoff brief = just start (10-03)](feedback_handoff_next_steps_just_start.md): job briefed + she expects it done -> branch+PR…
 - [PR frozen once 'ready to merge' (10-03)](feedback_no_commits_after_ready_to_merge.md): never push more to a PR she's told to merge…
+
+
+## Moved 2026-10-16 (10-05/10-06 project + reference pointers)
+- [Webinar page runs itself (10-05)](project_webinar_page_automation.md): Hub event drives /webinar states incl. replay (hours count from END), calendar beside replay video; new webinar = event + tick only
+- [Edge fn bundle + boot check (10-05)](reference_edge_fn_bundle_and_boot_check.md): bundle-edge-fn.mjs direct, npx -y deno to boot, pkill leftovers
+- [Client booking pages (10-06)](project_client_booking_pages.md): /catch-up + /access-call live, open without link, untagged so not leads
+- [New marketplace AS codes (10-06)](project_new_marketplace_as_codes.md): ad set per tech+region on GT, one AS code in name; AS01 NW (paused), AS02 Sussex HP, AS03 South Coast solar; next AS04; Hub issues codes
+- [Meta lead form API limits (10-06)](reference_meta_lead_form_api_limits.md): logic/DQ page + rename UI-only, archived names reserved, pixel via tracking_specs, CRM events not in API
+- [GT lead to installer chain (10-06)](reference_greentide_lead_to_installer_chain.md): Meta -> GT GHL -> utm_content ad id -> AS code -> installer; bookings copy every 30 min

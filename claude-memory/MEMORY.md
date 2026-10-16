@@ -9,7 +9,7 @@
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
-- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -19,7 +19,6 @@
 - [New-client onboarding reality](project_new_client_onboarding_reality.md): act_ prefix trap, no on-add sync, 14D lag
 - **Green Tide:** [is our PPS+PPL account, AS ad sets stay in its numbers](project_greentide_account_is_pps_ppl.md) · [core](project_greentide.md) · [lead pipeline](project_greentide_lead_pipeline.md) · [lead tracking](project_greentide_lead_tracking.md) · [split-testing gap](project_greentide_split_testing_gap.md) · [solar landing gap](project_greentide_solar_landing_tracking_gap.md) · [claims vs bookings lag](feedback_greentide_claims_vs_bookings.md) · [two Meta accounts](reference_greentide_meta_accounts.md) · [UTM attribution](reference_greentide_utm_attribution.md) · [targeting](project_greentide_targeting_rework.md)
 - [mirror_to_ingest=false hides leads](feedback_mirror_to_ingest_hides_leads.md): delivered but never in lead_intake_events
-- [Webinar page runs itself (10-05)](project_webinar_page_automation.md): Hub event drives /webinar states incl. replay (hours count from END), calendar beside replay video; new webinar = event + tick only
 - [Source is first-touch only (10-04)](feedback_source_first_touch_classify_on_page.md): classify forms on Converted Page first; booking…
 - [Lead counting model](reference_lead_counting_model.md): our leads = every lead landed, untagged…
 - [Nurture engine](reference_nurture_engine.md): delay_minutes now, before_date+SMS via GHL…
@@ -45,19 +44,14 @@
 - [Handoff = commit + merge (10-05)](feedback_handoff_includes_commit_and_merge.md): PR and merge the handoff file before closing, don't ask
 - [Rules, not one-off fixes (10-05)](feedback_rules_not_one_off_fixes.md): anything that would need redoing next time goes in code, SQL only for backfill
 - [One answer, not two (10-05)](feedback_one_answer_not_two.md): one sentence holding both facts; name which similar thing you mean
-- [Edge fn bundle + boot check (10-05)](reference_edge_fn_bundle_and_boot_check.md): bundle-edge-fn.mjs direct, npx -y deno to boot, pkill leftovers
 
 - [CREW audit build gotchas (10-05)](feedback_crew_audit_build_gotchas.md): page not JSON, helix build-report for raster logos, verify HTML text renders
 - [One step at a time, clipboard (10-05)](feedback_one_step_at_a_time_clipboard.md): pbcopy each SQL/deploy, verify live before next
 - [whatsNew conflicts: one PR (10-05)](feedback_whatsnew_conflicts_one_pr.md): same-day Hub PRs combined, else every merge conflicts
 - [No peer PR links to Charlotte (10-06)](feedback_no_peer_pr_links.md): never relay another session's PR links; peers send them to the repo owner, tell her in plain words only
-- [Client booking pages (10-06)](project_client_booking_pages.md): /catch-up + /access-call live, open without link, untagged so not leads
 - [Messages self-contained, chat resets (10-06)](feedback_messages_self_contained_chat_resets.md): her view loses earlier messages; every ask restates its context, answer every point
 - [Client area plan (10-06, 10-11)](project_client_area_plan.md): one page per client by link; 10-11 one key, products under /<slug>/website etc, one Crew frame, one Add media pop-up: next batch after B3b
 - [No pbcopy while a peer deploys (10-06)](feedback_no_pbcopy_while_peer_deploying.md): my script got pasted as the broadcasts edge fn; file paths only when other sessions run
-- [New marketplace AS codes (10-06)](project_new_marketplace_as_codes.md): ad set per tech+region on GT, one AS code in name; AS01 NW (paused), AS02 Sussex HP, AS03 South Coast solar; next AS04; Hub issues codes
-- [Meta lead form API limits (10-06)](reference_meta_lead_form_api_limits.md): logic/DQ page + rename UI-only, archived names reserved, pixel via tracking_specs, CRM events not in API
-- [GT lead to installer chain (10-06)](reference_greentide_lead_to_installer_chain.md): Meta -> GT GHL -> utm_content ad id -> AS code -> installer; bookings copy every 30 min
 - [Timed reminders capped 100/5min (10-06)](feedback_timed_reminders_batch_cap.md): nurture-run before_date must send all due at once; no-mobile = skip
 - [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
 - [Ads Manager "unpublished" = drafts (10-07)](feedback_ads_manager_unpublished_drafts.md): API-live objects show unpublished; snapshot, discard drafts, recheck; addrafts unreadable
@@ -128,3 +122,7 @@
 - [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
 - [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps
 - [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
+- [Ad copy: standard enhancements (10-16)](reference_meta_ad_copy_standard_enhancements.md): /copies refused: use existing creative_id; 1487083 ForceRunStatus = cv_transformation on video, rebuild OPT_OUT
+- [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
+- [TextEdit shows stale paste files (10-16)](feedback_textedit_stale_window_paste_deploy.md): fresh file name for a second paste; diff live code vs file after every deploy
+- [Next sessions plan + call summaries ours (10-16)](project_next_session_plan_1016.md): 10-item order (portal p2, Hub p2 from Funnels, Raise, texts we, emails into Email client, KPIs, J&B, Elect summaries ALL ours, L W ads row), then rest of audit, our issues, Serafim batch last
