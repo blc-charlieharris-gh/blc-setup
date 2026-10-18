@@ -126,3 +126,6 @@
 - [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
 - [TextEdit shows stale paste files (10-16)](feedback_textedit_stale_window_paste_deploy.md): fresh file name for a second paste; diff live code vs file after every deploy
 - [Next sessions plan + call summaries ours (10-16)](project_next_session_plan_1016.md): 10-item order (portal p2, Hub p2 from Funnels, Raise, texts we, emails into Email client, KPIs, J&B, Elect summaries ALL ours, L W ads row), then rest of audit, our issues, Serafim batch last
+- [Out-of-area retainer leads -> marketplace (10-18)](project_out_of_area_retainer_leads_go_to_marketplace.md): by design, not ours; never flag
+- [Vercel invites = Brad (10-18)](reference_vercel_team_invites_brad.md): blc-promotions team members added by Brad
+- [Leaving GHL: our own booking emails (10-18)](project_leaving_ghl_calendar_emails.md): every calendar booking triggers our emails; staff portal bookings silent
