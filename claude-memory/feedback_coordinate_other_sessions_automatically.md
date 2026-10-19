@@ -32,3 +32,5 @@ handoff, collect their summaries and tell them when done. Built into
 the shared prime-project/handoff skills (blc-setup/shared-agent-skills, 10-03); marketing-agent's own handoff skill
 (Serafim's) doesn't have it, so do it from this memory there. Related: [[feedback_peer_session_coordination_not_handoff]],
 [[feedback_shared_scratch_docs_get_clobbered]], [[feedback_charlotte_plain_explanations]].
+
+**Missed 2026-10-19:** a J&B website session went straight to work without ListAgents/messages; Charlotte had to remind me ("this is part of our working system"). Do it in the FIRST turn of every session, before any repo work, even when the user just says "put me in <repo>".

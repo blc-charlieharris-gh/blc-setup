@@ -28,7 +28,7 @@
 - [internal.installrhub = marketing-agent](reference_internal_installrhub_is_marketing_agent.md): old repo archived
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based…
 - **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) · [InstallrHub Git Repo](reference_installrhub_git.md) · [Git Auth](reference_git_auth.md) · [InstallrHub domains](reference_installrhub_domains.md)
-- [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions
+- [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions; tell peers + agree handoff order FIRST (10-19)
 - [Cleanup Requests](feedback_cleanup_requests.md): action flagged issues immediately, not later
 - [Serafim sign-off & handoffs](feedback_serafim_signoff_and_handoffs.md): never bypass sign-off, surgical notes only
 - [Check git history before building](feedback_check_history_before_building.md): features get added then removed; search log/-G…
@@ -129,3 +129,12 @@
 - [Out-of-area retainer leads -> marketplace (10-18)](project_out_of_area_retainer_leads_go_to_marketplace.md): by design, not ours; never flag
 - [Vercel invites = Brad (10-18)](reference_vercel_team_invites_brad.md): blc-promotions team members added by Brad
 - [Leaving GHL: our own booking emails (10-18)](project_leaving_ghl_calendar_emails.md): every calendar booking triggers our emails; staff portal bookings silent
+- [Grant wording slips not urgent (10-19)](feedback_grant_wording_not_urgent.md): answer the ask first, wording issues one line at the end at most
+- [My Energy Care not live (10-19)](project_my_energy_care_not_live.md): leave out of client analyses; check client status first
+- [Meta per-text results (10-19)](reference_meta_copy_performance_breakdowns.md): body_asset/title_asset breakdowns, in-ad index, AI text not flaggable; _paginate first page only
+- [n8n steps plain + TextEdit (10-19)](feedback_n8n_steps_plain_textedit.md): numbered click-steps, code in a file, no "may"
+- [IH Analytics page (10-19)](project_ih_demographics_tab.md): /ih-analytics, Meta age/gender/bookings, CAPI bookings, form progress; n8n audit in [[reference_installrhub_n8n_payload_fields]]
+- [Portal: one band height, one width (10-19)](feedback_portal_one_band_height_one_width.md): every portal screen incl Home + onboarding; nothing jumps between tabs/steps
+- [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
+- [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
+- [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests

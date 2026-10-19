@@ -20,7 +20,7 @@ NEXT SESSION:
 6b. hub-action-alerts 2am back-up still makes one 'Tag the live ad' card per test (emails may still be per test): rename to the one 'Ads to tag' card, Hub-only paste-deploy.
 6c. 6 designs already waiting on Charlotte (Save £9,000: 2, Solar inspo: 4) need approving once; the drafts bug (finals not auto-approved after drafts approved) is fixed in useTasks.js.
 7. Warning/alert emails (hub-action-alerts etc.): polish to Email client quality; they don't go via Email builder or portal (maybe fine).
-8. Jones and Baker site final tweaks (website-factory; ask her for the list).
+8. DONE 10-19 (blc-83): Jones and Baker to the rule book, published; waiting on the client.
 9. Portal phase 2: Surveys to the D3 Surveys design (needs her OK), then other inner screens.
 10. Hub phase 2 via the audit (row 17 Funnels onward), page insides onto ui/hub.jsx.
 11. Rule book rollout (Elect, Gas Worx, Harvard, Core, L W Heating, SWH + drafts).

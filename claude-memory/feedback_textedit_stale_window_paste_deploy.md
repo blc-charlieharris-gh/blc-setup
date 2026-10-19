@@ -12,4 +12,4 @@ metadata:
 
 **Why:** the paste file name was reused within one session, and TextEdit doesn't reload on open.
 
-**How to apply:** for a second paste of the same function in a session, copy to a fresh name (`<fn>-<date>b.ts`) before `open -e`, and after every paste-deploy compare the live code (get_edge_function) against the local file rather than trusting the version number. Related: [[feedback_paste_deploy_open_the_file]]
+**How to apply:** for a second paste of the same function in a session, copy to a fresh name (`<fn>-<date>b.ts`) before `open -e`, and after every paste-deploy compare the live code (get_edge_function) against the local file rather than trusting the version number. Also (2026-10-19): words typed into the open TextEdit window land in the paste file itself ("did i // @ts-nocheck" failed to bundle). Tell her not to type in that window, and if a deploy fails to parse, rebuild a fresh copy from the repo (bundle-edge-fn.py), never reuse the edited file. Related: [[feedback_paste_deploy_open_the_file]]

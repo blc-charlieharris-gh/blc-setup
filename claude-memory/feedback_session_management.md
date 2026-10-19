@@ -15,3 +15,5 @@ Session start and session end are Claude's responsibility, not the user's. Never
 - When the user says "put me in [project]", load that project's context and proceed — no further questions.
 
 **Correction (2026-09-03):** The `session-end.sh` / `session-start.sh` scripts this memory originally referenced (run from `/Users/charlotteharris/Documents/BLC/`) no longer exist — only a stale copy of the old slash commands survives in `.claude-backup/commands/session-end.md` and `session-start.md`, and the live `.claude/commands/` dir is empty. Don't try to run a script on session-end; just write the summary straight into memory files as described above.
+
+**Peers at start (2026-10-19):** at the start of EVERY session (including "put me in X"), run ListAgents, SendMessage each live peer saying what I'm doing and which clients/files/accounts I'll touch, and propose a handoff order (oldest session first, read-only sessions last). Do it before the first piece of real work. Charlotte had to remind me; it's part of the working system.
