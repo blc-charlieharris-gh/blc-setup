@@ -138,3 +138,4 @@
 - [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
 - [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
 - [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests
+- [n8n replacement 10-20 (10-19)](project_n8n_replacement_session_1020.md): Charlotte pulled it forward to the 10-20 session
