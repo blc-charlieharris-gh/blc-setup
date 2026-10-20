@@ -15,3 +15,5 @@ Green Tide's Meta ads are split across **two** ad accounts, both readable via th
 When asked to check/edit "the backup" campaign, point queries at `act_1278923346535596`, not the default account. The `meta_api.py` helpers are hardcoded to the main account, so hit the backup account with direct `requests` to the Graph API.
 
 The meta-access token can READ and EDIT adset targeting, but CANNOT create saved audiences (Graph error #3, "application does not have the capability"). Saving an audience is a manual Ads Manager step. See [[reference_resend_installer_sends]] for the other GT tooling token.
+
+2026-10-20: GT Testing (main, £30/day) and GT Back Up England (£20/day) target the SAME 6 radii (Crewe, Chester, Northwich, Warrington, Liverpool, Manchester), same Page and form, so they compete in the auction. Charlotte said leave as is for now; AS04 (CW4, CW9-12) overlaps too.

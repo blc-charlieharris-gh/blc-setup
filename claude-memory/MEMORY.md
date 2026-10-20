@@ -9,7 +9,7 @@
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
-- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16; 10-13/10-14 pointers moved 10-20
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -56,7 +56,6 @@
 - [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
 - [Ads Manager "unpublished" = drafts (10-07)](feedback_ads_manager_unpublished_drafts.md): API-live objects show unpublished; snapshot, discard drafts, recheck; addrafts unreadable
 - [Check every home before saying "missing" (10-07)](feedback_check_all_homes_before_saying_missing.md): grep code + all JSON columns (criteria etc.) before "we don't ask/store X"
-- [Heat pump grant amounts (10-13)](project_heat_pump_grant_amounts.md): up to £9,000 for oil/LPG homes until March 2027, else up to £7,500; src/lib/grantFacts.js
 - [Elect: say grant + "up to" (10-07)](project_elect_grant_wording_rule.md): never "discount", up to £X everywhere incl forms/designs; new form needs Hub lead route
 - [Client Drive build (10-08)](project_client_drive_build.md): parent folder 1y5f6W6D..., page upload -> client Drive folder, staff pick into client footage, Cloud steps pending
 - [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect home-only too since 10-09
@@ -81,25 +80,6 @@
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Sales kit (10-12)](project_sales_kit.md): INSTALLRHUB page, reviews bank + ONE portfolio (absorbs installrhub.com/portfolio) + Crew features guide; GHL-contact packs; guide + reviews bank + quote graphic LIVE 10-12; next Portfolio + /p/ links
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
-- [B-roll sound RESOLVED (10-13)](project_broll_audio_not_stripped.md): always remux picture-only, clip-silent names, 16/16 cleaned; client footage keeps sound
-- [Webinar booking stats by SQL (10-13)](reference_webinar_booking_stats_sql.md): on-webinar = booking_attribution event utm; outside = tag pool, Discovery=triage; no screen yet
-- [IH brand from site tokens (10-13)](feedback_installrhub_brand_from_site_tokens.md): prospect pages use installrhub.com css tokens; check logos vs backgrounds; no invented palette, no fake-looking cards
-- [Seedance garbles UI text (10-13)](feedback_seedance_garbles_ui_text.md): HTML-animated screens for how-tos, Seedance only word-free, text as overlays
-- [Higgsfield/OpenRouter media quirks (10-13)](reference_higgsfield_openrouter_media_quirks.md): CLI foreground only + workspace set, voice ids, Gemini text-only, Lyria stream
-- [Access how-to videos (10-13)](project_access_videos.md): FB + Google videos live in marketing-agent; source meta-access/access-videos, v3 brief there
-- [Client asks after site ready; DNS handover (10-13)](feedback_client_asks_after_site_ready_dns_handover.md): gaps go with the preview, never ask Wix/domain logins, live = DNS instructions
-- [Crew deliverables -> skills -> Hub buttons (10-14)](project_crew_deliverables_to_skills_to_hub.md): nail each deliverable, then Claude skills per deliverable, then one-button Hub features from them
-- [Onboarding preview = real picker (10-14)](feedback_onboarding_preview_matches_picker.md): every picker card shared + on both pages; parity test guards it
-- [Never swap client Web3Forms keys (10-14)](feedback_never_swap_client_web3forms_keys.md): handed-over sites keep the client key; grep access_key before/after every change
-- [Sales add-ons intake page (10-14)](project_sales_addons_intake.md): temp /sales-addons, waiting on sales feedback, then build into onboarding+portal and remove
-- [Solar marketplace route drops re-enquiries (10-14)](project_solar_marketplace_route_drops_reenquiries.md): GHL phone match = re-enquiry, n8n solar route never passes it to the app; fix when leaving n8n
-- [Build all that was approved, never re-ask (10-14)](feedback_build_everything_approved_dont_reask.md): list every approved point incl mid-turn asks, build in one go
-- [Hub test lead = real lead shape (10-14)](reference_hub_test_lead_keys_and_phone.md): option keys + unique 07700 900xxx phone (meta-lead-webhook v47); trace path
-- [Hub-managed = Hub code (10-14)](feedback_hub_managed_lives_in_hub_code.md): any fn the Hub runs gets its source moved into marketing-agent first; Serafim refuse-list note
-- [Website rule book (10-14, all 7 stages 10-15)](project_website_rulebook.md): premium NEW sites, SWH+Arktek benchmark; stages done, rollout J&B done, Gas Worx next
-- [Vercel bot challenge on rapid polling (10-14)](feedback_vercel_bot_challenge_rapid_polling.md): 15s curl loop -> 403 challenge; one delayed check instead
-- [Elect site from scratch (10-14)](project_elect_site_from_scratch.md): no template for Elect; rule book design rules cover spacing, layout, colour, gradients, texture
-- [Check `date` before dating files (10-14)](feedback_check_date_before_dating_files.md): migrations, What's new, comments; pass real date to subagents
 - [Client gets own approvals (10-15)](feedback_client_gets_own_approvals.md): finance/compliance sign-offs are the client's job; approved wording only, never offer to chase
 - [Client-facing = portal, full sweep first (10-15)](feedback_client_facing_means_portal_full_sweep.md): inventory every client page/link in all repos before saying sorted; one complete list
 - [Portal MOT with upsells, very end (10-15)](project_portal_mot_with_upsells.md): Client MOT moves into portal for all clients, upsells for what they lack; at the end of the WHOLE audit with Serafim's batch
@@ -138,4 +118,8 @@
 - [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
 - [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
 - [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests
-- [n8n replacement 10-20 (10-19)](project_n8n_replacement_session_1020.md): Charlotte pulled it forward to the 10-20 session
+- [n8n replaced, DONE 10-20](project_n8n_replacement_session_1020.md): all forms on lead-ingest; delete paused flows, rotate lead password
+- [Results end yesterday, orders live (10-20)](feedback_results_end_yesterday_orders_live.md): all performance figures to latestCompleteDay (UK day); survey order counts live; only Dashboard Today panel shows today
+- [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; token cannot read billing; hourly breakdown finds stop
+- [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
+- [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): 7-day test, review 10-27 reach/leads/out-of-area; Meta writes approved

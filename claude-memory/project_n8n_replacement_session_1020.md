@@ -1,16 +1,13 @@
 ---
 name: project-n8n-replacement-session-1020
-description: "Charlotte set the n8n replacement (Hub takes every lead path that writes GHL contacts) for the 2026-10-20 session, pulled forward from end-of-audit"
+description: "DONE 2026-10-20: every lead form moved off n8n to the Hub's lead-ingest; what's left (delete paused flows, rotate lead password)"
 metadata:
   node_type: memory
   type: project
-  originSessionId: 3d56f543-db31-43f6-b82d-fc9f0f0dedca
-  modified: 2026-10-19T18:46:51.623Z
 ---
 
-On 2026-10-19 Charlotte said "we will be replacing n8n in tomorrow's session", so the n8n replacement now happens on 2026-10-20 instead of at the end of the audit.
+Done on 2026-10-20 (blc-27): every live Meta and website form (clients, Green Tide, National Eco, InstallrHub DTO + 10 installrhub.com forms) goes to lead-ingest, each tested, n8n workflows paused, n8n removed from Hub set-up and installrhub.com fallbacks. Details: repo memory [[reference-lead-routing-ghl-accounts]], hub-audit README End deliverables.
 
-The spec is in the hub-audit README under "End deliverables" and the row 23 queue: source and first touch are set only on NEW contacts, blanks never wipe a field, and answers update. The GHL nurture workflows get switched off at the same time.
+Left: delete the paused n8n flows after a few days; rotate LEAD_INGEST_SECRET once n8n is deleted; NIBE/HQ/Eco Green deliberately left on n8n links (paused/churned). GHL nurture workflows are GHL, not n8n: separate item, not done.
 
-**Why:** she pulled it forward from the end-of-audit list.
-**How to apply:** at 10-20 priming, lead with n8n replacement. Related: [[project-solar-marketplace-route-drops-reenquiries]], [[reference-installrhub-n8n-payload-fields]].
+**How to apply:** a new client's form = Lead intake > Send to Lead ingest + Advanced settings (or Connect their area ad set > "Set up like Green Tide's form"); never an n8n link. Related: [[project-solar-marketplace-route-drops-reenquiries]] (fixed 10-20).

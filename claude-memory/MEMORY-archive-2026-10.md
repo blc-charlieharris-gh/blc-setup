@@ -73,3 +73,25 @@
 - [New marketplace AS codes (10-06)](project_new_marketplace_as_codes.md): ad set per tech+region on GT, one AS code in name; AS01 NW (paused), AS02 Sussex HP, AS03 South Coast solar; next AS04; Hub issues codes
 - [Meta lead form API limits (10-06)](reference_meta_lead_form_api_limits.md): logic/DQ page + rename UI-only, archived names reserved, pixel via tracking_specs, CRM events not in API
 - [GT lead to installer chain (10-06)](reference_greentide_lead_to_installer_chain.md): Meta -> GT GHL -> utm_content ad id -> AS code -> installer; bookings copy every 30 min
+
+## Moved 2026-10-20: 10-13 and 10-14 pointers
+- [Heat pump grant amounts (10-13)](project_heat_pump_grant_amounts.md): up to £9,000 for oil/LPG homes until March 2027, else up to £7,500; src/lib/grantFacts.js
+- [B-roll sound RESOLVED (10-13)](project_broll_audio_not_stripped.md): always remux picture-only, clip-silent names, 16/16 cleaned; client footage keeps sound
+- [Webinar booking stats by SQL (10-13)](reference_webinar_booking_stats_sql.md): on-webinar = booking_attribution event utm; outside = tag pool, Discovery=triage; no screen yet
+- [IH brand from site tokens (10-13)](feedback_installrhub_brand_from_site_tokens.md): prospect pages use installrhub.com css tokens; check logos vs backgrounds; no invented palette, no fake-looking cards
+- [Seedance garbles UI text (10-13)](feedback_seedance_garbles_ui_text.md): HTML-animated screens for how-tos, Seedance only word-free, text as overlays
+- [Higgsfield/OpenRouter media quirks (10-13)](reference_higgsfield_openrouter_media_quirks.md): CLI foreground only + workspace set, voice ids, Gemini text-only, Lyria stream
+- [Access how-to videos (10-13)](project_access_videos.md): FB + Google videos live in marketing-agent; source meta-access/access-videos, v3 brief there
+- [Client asks after site ready; DNS handover (10-13)](feedback_client_asks_after_site_ready_dns_handover.md): gaps go with the preview, never ask Wix/domain logins, live = DNS instructions
+- [Crew deliverables -> skills -> Hub buttons (10-14)](project_crew_deliverables_to_skills_to_hub.md): nail each deliverable, then Claude skills per deliverable, then one-button Hub features from them
+- [Onboarding preview = real picker (10-14)](feedback_onboarding_preview_matches_picker.md): every picker card shared + on both pages; parity test guards it
+- [Never swap client Web3Forms keys (10-14)](feedback_never_swap_client_web3forms_keys.md): handed-over sites keep the client key; grep access_key before/after every change
+- [Sales add-ons intake page (10-14)](project_sales_addons_intake.md): temp /sales-addons, waiting on sales feedback, then build into onboarding+portal and remove
+- [Solar marketplace route drops re-enquiries (10-14)](project_solar_marketplace_route_drops_reenquiries.md): GHL phone match = re-enquiry, n8n solar route never passes it to the app; fix when leaving n8n
+- [Build all that was approved, never re-ask (10-14)](feedback_build_everything_approved_dont_reask.md): list every approved point incl mid-turn asks, build in one go
+- [Hub test lead = real lead shape (10-14)](reference_hub_test_lead_keys_and_phone.md): option keys + unique 07700 900xxx phone (meta-lead-webhook v47); trace path
+- [Hub-managed = Hub code (10-14)](feedback_hub_managed_lives_in_hub_code.md): any fn the Hub runs gets its source moved into marketing-agent first; Serafim refuse-list note
+- [Website rule book (10-14, all 7 stages 10-15)](project_website_rulebook.md): premium NEW sites, SWH+Arktek benchmark; stages done, rollout J&B done, Gas Worx next
+- [Vercel bot challenge on rapid polling (10-14)](feedback_vercel_bot_challenge_rapid_polling.md): 15s curl loop -> 403 challenge; one delayed check instead
+- [Elect site from scratch (10-14)](project_elect_site_from_scratch.md): no template for Elect; rule book design rules cover spacing, layout, colour, gradients, texture
+- [Check `date` before dating files (10-14)](feedback_check_date_before_dating_files.md): migrations, What's new, comments; pass real date to subagents
