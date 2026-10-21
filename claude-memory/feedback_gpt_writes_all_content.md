@@ -14,3 +14,5 @@ All content for clients is planned and written by ChatGPT (OpenRouter `openai/..
 **How to apply:** any new content-writing feature uses the GPT writer; never switch it back to an Anthropic model. When picking a slug, check https://openrouter.ai/api/v1/models for the newest openai/gpt-* (they use dots). Images stay on the image model (Gemini) unless she says otherwise.
 
 Related: changing the Facebook page itself (picture, cover, intro) is done by hand for now; automating it is a future upgrade ([[project-social-setup-area]]).
+
+10-21: ALL AI pictures (posts, covers) = GPT Image 2 (openai/gpt-5.4-image-2), now the code default; all copy = GPT. Parameters had nothing saved, so pictures silently ran on the 10-14 Gemini default for a week. Check ai_usage_log model before saying which model runs.

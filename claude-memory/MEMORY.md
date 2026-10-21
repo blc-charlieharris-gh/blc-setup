@@ -59,7 +59,7 @@
 - [Elect: say grant + "up to" (10-07)](project_elect_grant_wording_rule.md): never "discount", up to £X everywhere incl forms/designs; new form needs Hub lead route
 - [Client Drive build (10-08)](project_client_drive_build.md): parent folder 1y5f6W6D..., page upload -> client Drive folder, staff pick into client footage, Cloud steps pending
 - [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect home-only too since 10-09
-- [GPT writes all content (10-08)](feedback_gpt_writes_all_content.md): planner, posts, page words on openai/gpt via OpenRouter; FB page changes by hand for now
+- [GPT writes all content (10-08)](feedback_gpt_writes_all_content.md): copy GPT, pictures GPT Image 2 (10-21); FB page changes by hand for now
 - [Social set-up area (10-08)](project_social_setup_area.md): Crew social job live, photos first then GPT Image 2, FB page edits by hand until Full control; CREW audit with Hub session
 - [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
 - [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
@@ -122,4 +122,8 @@
 - [Results end yesterday, orders live (10-20)](feedback_results_end_yesterday_orders_live.md): all performance figures to latestCompleteDay (UK day); survey order counts live; only Dashboard Today panel shows today
 - [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; token cannot read billing; hourly breakdown finds stop
 - [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
+- [Claim statuses separate, not profit (10-20)](feedback_claim_status_separate_not_profit.md): Claimed/Refunded/Cancelled/Unclaimed never combined; answer rates asked; new marketplace (NM05/06/08) excluded
+- [Installer payments not in app (10-20)](reference_installer_payments_not_in_app.md): legacy claims on account, 105/113 negative balances, £200/credit is list price not revenue
 - [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): 7-day test, review 10-27 reach/leads/out-of-area; Meta writes approved
+- [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
+- [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
