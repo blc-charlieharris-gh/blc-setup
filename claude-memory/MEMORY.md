@@ -1,15 +1,12 @@
 # Memory Index
 
-- [Nothing device-linked (10-05)](feedback_nothing_device_linked.md): no Mac- or laptop-only keys/state; use shared auth or git
-- [Log client Meta changes in Hub (10-05)](feedback_log_client_meta_changes_in_hub.md): every client-account change -> python3 meta-access/hub_note.py (notes-only fn), SQL fallback
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only…
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md)…
 - [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
-- [Build check every PR (10-06)](feedback_build_check_every_pr.md): audit checklist scoped to the PR, live data, walk the job as Erin; retros never partial
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
-- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16; 10-13/10-14 pointers moved 10-20
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16; 10-13/10-14 pointers moved 10-20; 10-05 to 10-08 pointers moved 10-21
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -41,30 +38,11 @@
 - [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always…
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
 - ["On the list" = in the repo (10-04)](feedback_on_the_list_means_in_repo.md): check audit README/known-issues before saying…
-- [Handoff = commit + merge (10-05)](feedback_handoff_includes_commit_and_merge.md): PR and merge the handoff file before closing, don't ask
-- [Rules, not one-off fixes (10-05)](feedback_rules_not_one_off_fixes.md): anything that would need redoing next time goes in code, SQL only for backfill
-- [One answer, not two (10-05)](feedback_one_answer_not_two.md): one sentence holding both facts; name which similar thing you mean
 
-- [CREW audit build gotchas (10-05)](feedback_crew_audit_build_gotchas.md): page not JSON, helix build-report for raster logos, verify HTML text renders
-- [One step at a time, clipboard (10-05)](feedback_one_step_at_a_time_clipboard.md): pbcopy each SQL/deploy, verify live before next
-- [whatsNew conflicts: one PR (10-05)](feedback_whatsnew_conflicts_one_pr.md): same-day Hub PRs combined, else every merge conflicts
-- [No peer PR links to Charlotte (10-06)](feedback_no_peer_pr_links.md): never relay another session's PR links; peers send them to the repo owner, tell her in plain words only
-- [Messages self-contained, chat resets (10-06)](feedback_messages_self_contained_chat_resets.md): her view loses earlier messages; every ask restates its context, answer every point
 - [Client area plan (10-06, 10-11)](project_client_area_plan.md): one page per client by link; 10-11 one key, products under /<slug>/website etc, one Crew frame, one Add media pop-up: next batch after B3b
-- [No pbcopy while a peer deploys (10-06)](feedback_no_pbcopy_while_peer_deploying.md): my script got pasted as the broadcasts edge fn; file paths only when other sessions run
-- [Timed reminders capped 100/5min (10-06)](feedback_timed_reminders_batch_cap.md): nurture-run before_date must send all due at once; no-mobile = skip
 - [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
-- [Ads Manager "unpublished" = drafts (10-07)](feedback_ads_manager_unpublished_drafts.md): API-live objects show unpublished; snapshot, discard drafts, recheck; addrafts unreadable
-- [Check every home before saying "missing" (10-07)](feedback_check_all_homes_before_saying_missing.md): grep code + all JSON columns (criteria etc.) before "we don't ask/store X"
-- [Elect: say grant + "up to" (10-07)](project_elect_grant_wording_rule.md): never "discount", up to £X everywhere incl forms/designs; new form needs Hub lead route
-- [Client Drive build (10-08)](project_client_drive_build.md): parent folder 1y5f6W6D..., page upload -> client Drive folder, staff pick into client footage, Cloud steps pending
-- [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect home-only too since 10-09
-- [GPT writes all content (10-08)](feedback_gpt_writes_all_content.md): copy GPT, pictures GPT Image 2 (10-21); FB page changes by hand for now
-- [Social set-up area (10-08)](project_social_setup_area.md): Crew social job live, photos first then GPT Image 2, FB page edits by hand until Full control; CREW audit with Hub session
-- [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
-- [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
+- [Headless canvas checks (10-21)](feedback_headless_chrome_canvas_tests.md): compositor flag for SVG decode, serve storage files locally, shrink big PNGs, data URL not screenshot
 - [Marketplace client model (10-08, 10-13)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; portal shows leads (per-lead, retainer lead-only) or surveys (per-survey, retainer calling); no Leads tab yet
-- [Confirm understanding before fixing (10-08)](feedback_confirm_understanding_before_fixing.md): play back her issue + planned fix, get OK, then build
 - [Stock-take queue (10-09)](project_stocktake_1009.md): drafts box (video draft required), Status walk-through, Goals card, build follow-ups, before Creative Testing audit
 - [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
 - [Audit scope checklist (10-09)](feedback_audit_scope_checklist.md): every audit covers security, speed/mobile, one source of truth, app-safe, linked/hidden pages, cross-page, bugs, accuracy, no hardwiring, outdated + duplicated features (10-12)
@@ -127,3 +105,8 @@
 - [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): 7-day test, review 10-27 reach/leads/out-of-area; Meta writes approved
 - [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
+- [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
+- [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; KPIs + Sales Model done, Analytics waiting on A/B/C
+- [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
+- [GHL removal from the Hub (10-21)](project_ghl_removal_hub.md): complete removal, phases InstallrHub > Green Tide > clients; keep features working until replaced; WhatsApp is Serafim's
+- [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next

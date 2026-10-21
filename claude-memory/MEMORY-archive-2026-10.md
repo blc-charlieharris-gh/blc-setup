@@ -95,3 +95,32 @@
 - [Vercel bot challenge on rapid polling (10-14)](feedback_vercel_bot_challenge_rapid_polling.md): 15s curl loop -> 403 challenge; one delayed check instead
 - [Elect site from scratch (10-14)](project_elect_site_from_scratch.md): no template for Elect; rule book design rules cover spacing, layout, colour, gradients, texture
 - [Check `date` before dating files (10-14)](feedback_check_date_before_dating_files.md): migrations, What's new, comments; pass real date to subagents
+
+
+## Moved from MEMORY.md 2026-10-21 (10-05 to 10-07 pointers)
+- [Nothing device-linked (10-05)](feedback_nothing_device_linked.md): no Mac- or laptop-only keys/state; use shared auth or git
+- [Log client Meta changes in Hub (10-05)](feedback_log_client_meta_changes_in_hub.md): every client-account change -> python3 meta-access/hub_note.py (notes-only fn), SQL fallback
+- [Build check every PR (10-06)](feedback_build_check_every_pr.md): audit checklist scoped to the PR, live data, walk the job as Erin; retros never partial
+- [Handoff = commit + merge (10-05)](feedback_handoff_includes_commit_and_merge.md): PR and merge the handoff file before closing, don't ask
+- [Rules, not one-off fixes (10-05)](feedback_rules_not_one_off_fixes.md): anything that would need redoing next time goes in code, SQL only for backfill
+- [One answer, not two (10-05)](feedback_one_answer_not_two.md): one sentence holding both facts; name which similar thing you mean
+- [CREW audit build gotchas (10-05)](feedback_crew_audit_build_gotchas.md): page not JSON, helix build-report for raster logos, verify HTML text renders
+- [One step at a time, clipboard (10-05)](feedback_one_step_at_a_time_clipboard.md): pbcopy each SQL/deploy, verify live before next
+- [whatsNew conflicts: one PR (10-05)](feedback_whatsnew_conflicts_one_pr.md): same-day Hub PRs combined, else every merge conflicts
+- [No peer PR links to Charlotte (10-06)](feedback_no_peer_pr_links.md): never relay another session's PR links; peers send them to the repo owner, tell her in plain words only
+- [Messages self-contained, chat resets (10-06)](feedback_messages_self_contained_chat_resets.md): her view loses earlier messages; every ask restates its context, answer every point
+- [No pbcopy while a peer deploys (10-06)](feedback_no_pbcopy_while_peer_deploying.md): my script got pasted as the broadcasts edge fn; file paths only when other sessions run
+- [Timed reminders capped 100/5min (10-06)](feedback_timed_reminders_batch_cap.md): nurture-run before_date must send all due at once; no-mobile = skip
+- [Ads Manager "unpublished" = drafts (10-07)](feedback_ads_manager_unpublished_drafts.md): API-live objects show unpublished; snapshot, discard drafts, recheck; addrafts unreadable
+- [Check every home before saying "missing" (10-07)](feedback_check_all_homes_before_saying_missing.md): grep code + all JSON columns (criteria etc.) before "we don't ask/store X"
+- [Elect: say grant + "up to" (10-07)](project_elect_grant_wording_rule.md): never "discount", up to £X everywhere incl forms/designs; new form needs Hub lead route
+- [Living in only = API only (10-07)](feedback_living_in_only_api_only.md): Ads Manager #1870194 on home-only; keep A via API, edits through Claude; Elect home-only too since 10-09
+
+
+## Moved from MEMORY.md 2026-10-21 (10-05 to 10-08 pointers)
+- [Client Drive build (10-08)](project_client_drive_build.md): parent folder 1y5f6W6D..., page upload -> client Drive folder, staff pick into client footage, Cloud steps pending
+- [GPT writes all content (10-08)](feedback_gpt_writes_all_content.md): copy GPT, pictures GPT Image 2 (10-21); FB page changes by hand for now
+- [Social set-up area (10-08)](project_social_setup_area.md): Crew social job live, photos first then GPT Image 2, FB page edits by hand until Full control; CREW audit with Hub session
+- [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
+- [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
+- [Confirm understanding before fixing (10-08)](feedback_confirm_understanding_before_fixing.md): play back her issue + planned fix, get OK, then build
