@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-22 (php2shell security cleanup)
+
+### Security
+- Checked all repos, Vercel projects and Cloudflare domains for the PHP php2shell flaw: no PHP in our stack. Old GHL WordPress sites deleted (incl. Lead Gen Mastery), ~130 dead DNS records removed. [project: blc]
+- blc-promotions.com and blcpromotions.co.uk moved off WordPress to a new Vercel one-pager (site-blcpromotions/). apply.home-upgrades.co and eco-grants.org redirect to greentideenergy.com. Retrofit told to get their host patched. [project: blc]
+
 ## 2026-10-01 (Gas Worx)
 
 ### Gas Worx website

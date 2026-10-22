@@ -72,7 +72,7 @@
 - [Client status = client_onboarding.status (10-15)](reference_client_status_lives_in_client_onboarding.md): Live/Onboarding/Paused lives there, not companies.paused_at; leave paused out of every list
 - [Hub visual polish in the audit (10-15)](project_hub_visual_polish.md): sidebar stays, portal look, wider one width, one spacing/type scale; after portal retro, before Funnels
 - [Say what the audit already covers (10-15)](feedback_say_what_audit_already_covers.md): inventory api/_audit check keys before calling a rule/check new; report existing vs new
-- [Paste deploy: open the file for her (10-15)](feedback_paste_deploy_open_the_file.md): open -e + first line to check; a bare path got SQL pasted into an edge fn
+- [Paste deploy: hand over, then verify live (10-15, 10-22)](feedback_paste_deploy_open_the_file.md): open -e fresh file; after Deploy diff live fn vs bundle + logs after a real visit; stray key broke the portal
 - [Select list must cover filter columns (10-15)](feedback_select_list_must_cover_filter_columns.md): missing client_id dropped every campaign; check DB rows before blaming sync
 - [New bank question needs SQL (10-15)](feedback_new_bank_question_needs_sql.md): saved Parameters list hides new code defaults; ship an append SQL with each
 - [IH KPIs test questions (10-15)](project_ih_kpis_test_questions.md): 9 questions to check the pick-your-view page; ask which she ran, SQL-check surprises; Feeds + CEO report open
@@ -110,3 +110,8 @@
 - [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
 - [GHL removal from the Hub (10-21)](project_ghl_removal_hub.md): complete removal, phases InstallrHub > Green Tide > clients; keep features working until replaced; WhatsApp is Serafim's
 - [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
+- [php2shell cleanup (10-22)](project_php2shell_cleanup_1022.md): no PHP in our stack; Cloudflare done, IONOS .co.uk + wpdns.site host deletion + Retrofit email pending
+- [No test ask when reusing a proven system (10-22)](feedback_no_test_ask_when_reusing_proven_system.md): verify the join myself, don't ask her to test
+- [Check feedback before status SQL (10-22)](feedback_check_feedback_before_status_sql.md): read notes/feedback and ask before SQL that changes a client's status; J&B site moved to approval mid-changes
+- [Meta finance category rules (10-22)](reference_meta_finance_special_category_rules.md): no postcodes, 10mi pins min, age + living-in ok, 7 of 17 solar interests pass
+- [meta-sync skips untracked clients (10-22)](reference_meta_sync_skips_untracked_clients.md): no campaigns in Hub until Live; ask Meta via meta-assets-discover build_status
