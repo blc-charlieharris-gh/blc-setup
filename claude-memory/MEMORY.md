@@ -119,3 +119,5 @@
 - [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
 - [GT new leads not reaching telesales (10-22)](project_greentide_new_leads_not_reaching_telesales_1022.md): no real new GT lead landed since 10-20 switch, only tests; Re-send works around; GHL side unconfirmed
 - [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does
+- [Test-row cleanup needs no Serafim (10-23)](feedback_test_row_cleanup_no_serafim.md): removing Hub test leads from app tables is ours; flag only real app behaviour changes
+- [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
