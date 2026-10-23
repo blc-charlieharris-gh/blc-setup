@@ -108,10 +108,14 @@
 - [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
 - [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; KPIs + Sales Model done, Analytics waiting on A/B/C
 - [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
-- [GHL removal from the Hub (10-21)](project_ghl_removal_hub.md): complete removal, phases InstallrHub > Green Tide > clients; keep features working until replaced; WhatsApp is Serafim's
+- [GHL removal from the Hub (10-21, +10-23)](project_ghl_removal_hub.md): complete removal, phases InstallrHub > Green Tide > clients; 23 Oct adds lead-ingest-first, dialer id, retest
 - [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
 - [php2shell cleanup (10-22)](project_php2shell_cleanup_1022.md): no PHP in our stack; Cloudflare done, IONOS .co.uk + wpdns.site host deletion + Retrofit email pending
 - [No test ask when reusing a proven system (10-22)](feedback_no_test_ask_when_reusing_proven_system.md): verify the join myself, don't ask her to test
 - [Check feedback before status SQL (10-22)](feedback_check_feedback_before_status_sql.md): read notes/feedback and ask before SQL that changes a client's status; J&B site moved to approval mid-changes
 - [Meta finance category rules (10-22)](reference_meta_finance_special_category_rules.md): no postcodes, 10mi pins min, age + living-in ok, 7 of 17 solar interests pass
 - [meta-sync skips untracked clients (10-22)](reference_meta_sync_skips_untracked_clients.md): no campaigns in Hub until Live; ask Meta via meta-assets-discover build_status
+- [Check Meta activity log before saying who made an ad (10-22)](feedback_check_meta_activity_log_before_blaming.md): Erin made the "Test -" ads, not Meta; read act_<id>/activities actor_name first
+- [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
+- [GT new leads not reaching telesales (10-22)](project_greentide_new_leads_not_reaching_telesales_1022.md): no real new GT lead landed since 10-20 switch, only tests; Re-send works around; GHL side unconfirmed
+- [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does

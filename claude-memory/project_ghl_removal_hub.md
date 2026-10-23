@@ -16,3 +16,10 @@ are deliberate until phase 1 moves them), and WhatsApp isn't Hub scope.
 **How to apply:** work phase by phase; within a phase, keep features working until their replacement exists; app-side
 pieces (person id, contacts home, calendar engine, homeowner texts switch, dialer) are Serafim's. Related:
 [[project_leaving_ghl_calendar_emails]].
+
+**Added 23 Oct (from the Green Tide lead break, see [[project_greentide_new_leads_not_reaching_telesales_1022]]):**
+1. lead-ingest writes our lead record BEFORE the GHL upsert, so a GHL outage can't stop telesales.
+2. The dialer keys on our lead id, not ghl_contact_id (dialer_feed_from_intake skips rows with no GHL id): Serafim.
+3. InstallrHub installer forms go through lead-ingest straight to sales_lead_intake_events (today via InstallrHub GHL's webhook).
+4. Delete the GT GHL workflow's webhook step to n8n.
+5. After each phase, re-run the strict Send test lead on every live form (it fails anything that arrives via GHL/n8n).
