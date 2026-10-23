@@ -123,3 +123,4 @@
 - [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
 - [Hub publish-to-Meta button (10-23)](project_hub_publish_to_meta_button.md): long-term fix for living-in-only blocking Ads Manager; Arktek dropped to home+recent 10-23; staging route rejected
 - [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
+- [Meta spend limit stops silently (10-23)](reference_meta_spend_cap_silent_stop.md): amount_spent = spend_cap, all Active; client-owned accounts need MANAGE to reset, client does it
