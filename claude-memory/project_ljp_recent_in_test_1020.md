@@ -14,3 +14,5 @@ Baseline (home-only): audience ~371-437k, LJP leads 2-4/week since the 10-06 are
 
 **Why:** Charlotte felt living-in-only ([[feedback_living_in_only_api_only]]) was hurting reach; data said no, LJP chosen as it struggles most and the ad set was 1 day old.
 **How to apply:** on/after 10-27 compare reach, leads and out-of-area postcode share vs the prior week, then ask her keep or revert. She said "you can make meta changes" (10-20): Meta API writes are approved, still log each in the Hub.
+
+**Outcome (Charlotte 2026-10-23): KEEP living in or recently in. No 27/10 review.**

@@ -102,7 +102,7 @@
 - [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
 - [Claim statuses separate, not profit (10-20)](feedback_claim_status_separate_not_profit.md): Claimed/Refunded/Cancelled/Unclaimed never combined; answer rates asked; new marketplace (NM05/06/08) excluded
 - [Installer payments not in app (10-20)](reference_installer_payments_not_in_app.md): legacy claims on account, 105/113 negative balances, £200/credit is list price not revenue
-- [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): 7-day test, review 10-27 reach/leads/out-of-area; Meta writes approved
+- [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): KEPT 10-23, no review
 - [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
 - [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
@@ -117,7 +117,9 @@
 - [meta-sync skips untracked clients (10-22)](reference_meta_sync_skips_untracked_clients.md): no campaigns in Hub until Live; ask Meta via meta-assets-discover build_status
 - [Check Meta activity log before saying who made an ad (10-22)](feedback_check_meta_activity_log_before_blaming.md): Erin made the "Test -" ads, not Meta; read act_<id>/activities actor_name first
 - [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
-- [GT new leads not reaching telesales (10-22)](project_greentide_new_leads_not_reaching_telesales_1022.md): no real new GT lead landed since 10-20 switch, only tests; Re-send works around; GHL side unconfirmed
+- [GT leads to telesales (10-22, fixed 10-23)](project_greentide_new_leads_not_reaching_telesales_1022.md): dialer opens with the call-centre key; v41 makes a call-centre copy, row takes its id
 - [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does
 - [Test-row cleanup needs no Serafim (10-23)](feedback_test_row_cleanup_no_serafim.md): removing Hub test leads from app tables is ours; flag only real app behaviour changes
 - [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
+- [Hub publish-to-Meta button (10-23)](project_hub_publish_to_meta_button.md): long-term fix for living-in-only blocking Ads Manager; Arktek dropped to home+recent 10-23; staging route rejected
+- [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
