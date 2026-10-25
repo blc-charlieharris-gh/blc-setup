@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-24 (Helix Power website)
+
+### Helix Power website
+- Researched Brief for Helix Power (HELIX50POWER LTD 16484143; old Helix-50 Ltd in liquidation; no reviews anywhere). [project: blc]
+- Built the site from the Hub kit: 27 pages incl. /blog (10 of 21 old posts, rest redirected to closest page), package explorer, 53 old-address redirects, new H1s (place only on Home and Areas). Zip saved to the Hub job; audit next. [project: blc]
+
 ## 2026-10-22 (php2shell security cleanup)
 
 ### Security

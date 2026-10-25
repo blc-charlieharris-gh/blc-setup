@@ -2,7 +2,9 @@
 
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only…
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md)…
+- [Whole impact before any change (10-24)](feedback_whole_impact_before_any_change.md): every change/add/remove → sweep every reader of the same thing, fix all in one change, list them; shared AS01 fix missed Targeting reach column
 - [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
+- [Hub git: no co-author, no gh (10-24)](feedback_marketing_agent_git_rules_override_harness.md): CLAUDE.md beats the harness reminder; git push + pull/new link
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
@@ -108,7 +110,7 @@
 - [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
 - [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; KPIs + Sales Model done, Analytics waiting on A/B/C
 - [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
-- [GHL removal from the Hub (10-21, +10-23)](project_ghl_removal_hub.md): complete removal, phases InstallrHub > Green Tide > clients; 23 Oct adds lead-ingest-first, dialer id, retest
+- [GHL removal from the Hub (10-21, +10-25)](project_ghl_removal_hub.md): GHL out altogether, calendars last; 10-25 FULL GHL audit first; no duplicates; plan-ghl-removal-1024.md
 - [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
 - [php2shell cleanup (10-22)](project_php2shell_cleanup_1022.md): no PHP in our stack; Cloudflare done, IONOS .co.uk + wpdns.site host deletion + Retrofit email pending
 - [No test ask when reusing a proven system (10-22)](feedback_no_test_ask_when_reusing_proven_system.md): verify the join myself, don't ask her to test
@@ -121,6 +123,14 @@
 - [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does
 - [Test-row cleanup needs no Serafim (10-23)](feedback_test_row_cleanup_no_serafim.md): removing Hub test leads from app tables is ours; flag only real app behaviour changes
 - [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
-- [Hub publish-to-Meta button (10-23)](project_hub_publish_to_meta_button.md): long-term fix for living-in-only blocking Ads Manager; Arktek dropped to home+recent 10-23; staging route rejected
+- [Meta in the Hub (10-23, planned 10-24)](project_hub_publish_to_meta_button.md): publish, tests, off/on, budgets, locations, set-ups, spend limits; meta_write tick; plan-meta-in-hub.md, 5 stages, next = Stage 1
+- [Meta in the Hub test list (10-24)](project_meta_in_hub_test_list.md): off/on tested; budget, go-live switch, connect step 6, used-up pause + each new stage still to try
 - [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
 - [Meta spend limit stops silently (10-23)](reference_meta_spend_cap_silent_stop.md): amount_spent = spend_cap, all Active; client-owned accounts need MANAGE to reset, client does it
+- [Build gates never need Claude (10-24)](feedback_build_gates_must_never_need_claude.md): research checks ask covered not has; pre-build never waits on site check; badges only confirmed; sweep all gates at once
+- [H1 names the place only on Home and Areas (10-24)](feedback_h1_place_only_home_and_areas.md): other H1s say what the homeowner gets; place stays in title + intro
+- [Wix old blog extraction (10-24)](reference_wix_old_site_blog_extraction.md): post-description body, 11062b_ = Wix-only stock, read every post first
+- [Erin-facing info at the top (10-25)](feedback_erin_facing_info_at_top.md): summary box + Next line + board card, never a grey brief line
+- [Keep a running test list (10-25)](feedback_keep_running_test_list.md): marketing-agent .claude/docs/meta-in-hub-test-list.md, every PR adds checks, real-life cycles, open items in each report
+- [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
+- [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon

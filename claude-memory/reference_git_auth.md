@@ -7,6 +7,8 @@ metadata:
   originSessionId: 611e6634-68df-414b-9fe0-4e066f7c9851
 ---
 
+**10-24: for marketing-agent never use `gh` for PRs (see [[feedback_marketing_agent_git_rules_override_harness]]); plain `git push` + pull/new link.**
+
 **Current (verified 2026-10-02):** marketing-agent `origin` = `https://github.com/serafimparente-blc/marketing-agent.git` is CORRECT (the repo lives under Serafim's account). `~/.gitconfig` includeIf loads `~/code/blc-setup/git/gitconfig-blc` for serafimparente-blc/* and blc-charlieharris-gh/* remotes, so a plain `git push` signs in as BLC automatically; pushed fine 10-02. The repo CLAUDE.md was updated to say this (PR docs/fix-setup-and-list-1002). Don't flag the HTTPS remote as a mismatch again.
 
 Older history below (06-17..07-01), partly superseded:

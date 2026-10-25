@@ -1,6 +1,6 @@
 ---
 name: project_ghl_removal_hub
-description: Hub is removing GHL completely (10-21), phases InstallrHub then Green Tide then clients; plan in marketing-agent hub-audit README "GHL removal"
+description: Hub removes GHL altogether (10-21, decisions 10-24, audit-first 10-25); plan in marketing-agent .claude/docs/plan-ghl-removal-1024.md
 metadata:
   type: project
 ---
@@ -23,3 +23,16 @@ pieces (person id, contacts home, calendar engine, homeowner texts switch, diale
 3. InstallrHub installer forms go through lead-ingest straight to sales_lead_intake_events (today via InstallrHub GHL's webhook).
 4. Delete the GT GHL workflow's webhook step to n8n.
 5. After each phase, re-run the strict Send test lead on every live form (it fails anything that arrives via GHL/n8n).
+
+**Added 24-25 Oct (blc-e5), plan now `.claude/docs/plan-ghl-removal-1024.md`:**
+- GHL goes altogether; only booking into GHL calendars stays until our own booking pages send to Google calendars
+  (instructions ~w/c 10-27). Bookings may keep creating GHL contacts meanwhile. Existing contacts keep the GHL id as
+  person id; new ids only once on our systems. Confirmations, reminders, booked-call sequences come into the Hub.
+  Dialer: Serafim's design, agree before touching it. Cancel GHL 30 days after the last piece is off (export first).
+- No duplicates during the changeover: never two live senders (Hub in log-only mode first), same ids so second
+  writes are ignored, daily duplicate check.
+- **10-25: a FULL GHL audit comes first** (our code/site/app/crons → GHL, then inside GHL: workflows, triggers,
+  steps, tags, fields, calendars via her browser or screenshots, then match-up, then order). Don't start Stage A
+  before it.
+- Serafim's "IH leads already in Supabase" is half true: raw form data yes (site_form_submissions /
+  meta_lead_events), but sales_lead_intake_events + installer_prospects only via app ghl-installr-lead-webhook (GHL-fired).
