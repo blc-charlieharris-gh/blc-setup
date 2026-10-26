@@ -5,10 +5,10 @@
 - [Whole impact before any change (10-24)](feedback_whole_impact_before_any_change.md): every change/add/remove → sweep every reader of the same thing, fix all in one change, list them; shared AS01 fix missed Targeting reach column
 - [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
 - [Hub git: no co-author, no gh (10-24)](feedback_marketing_agent_git_rules_override_harness.md): CLAUDE.md beats the harness reminder; git push + pull/new link
+- [Merge link for everything (10-15, 10-26)](feedback_always_give_merge_link.md): PRs AND the handoff go on a branch, pushed, close leads with the link; never "commit these yourself"
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
-- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16; 10-13/10-14 pointers moved 10-20; 10-05 to 10-08 pointers moved 10-21
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -22,7 +22,7 @@
 - [Lead counting model](reference_lead_counting_model.md): our leads = every lead landed, untagged…
 - [Nurture engine](reference_nurture_engine.md): delay_minutes now, before_date+SMS via GHL…
 - [Beacon undercounts](feedback_beacon_undercounts_dont_use_for_traffic.md): catches ~10-25% of arrivals, use link_clicks
-- **Ads/Creative Testing gotchas:** [Meta breakdown combos](feedback_meta_breakdown_combos.md) · [Creative Testing model](feedback_creative_testing_model.md) · [Meta Lead Counting](feedback_meta_lead_counting.md) · [VisualKey mergeMap](feedback_visualkey_mergemap_collapse.md) · [Reconcile asymmetric](feedback_reconcile_direction_asymmetric.md) · [Creative Testing identity](project_creative_testing_identity_leadbasis.md) · [identity is visual-only](feedback_never_use_ad_names.md) · [lead_only blanks CPBL](feedback_lead_only_blanks_cpbl.md)
+- **Ads/Creative Testing gotchas:** [Meta breakdown combos](feedback_meta_breakdown_combos.md) · [Creative Testing model](feedback_creative_testing_model.md) · [Meta leads: count `lead` only, never sum](feedback_meta_lead_counting.md) · [VisualKey mergeMap](feedback_visualkey_mergemap_collapse.md) · [Reconcile asymmetric](feedback_reconcile_direction_asymmetric.md) · [Creative Testing identity](project_creative_testing_identity_leadbasis.md) · [identity is visual-only](feedback_never_use_ad_names.md) · [lead_only blanks CPBL](feedback_lead_only_blanks_cpbl.md)
 - [Budget 100x won't-fix](feedback_budget_100x_wontfix.md): budget_cents stored 100x high, dashboard reads…
 - [internal.installrhub = marketing-agent](reference_internal_installrhub_is_marketing_agent.md): old repo archived
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based…
@@ -60,27 +60,6 @@
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Sales kit (10-12)](project_sales_kit.md): INSTALLRHUB page, reviews bank + ONE portfolio (absorbs installrhub.com/portfolio) + Crew features guide; GHL-contact packs; guide + reviews bank + quote graphic LIVE 10-12; next Portfolio + /p/ links
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
-- [Client gets own approvals (10-15)](feedback_client_gets_own_approvals.md): finance/compliance sign-offs are the client's job; approved wording only, never offer to chase
-- [Client-facing = portal, full sweep first (10-15)](feedback_client_facing_means_portal_full_sweep.md): inventory every client page/link in all repos before saying sorted; one complete list
-- [Portal MOT with upsells, very end (10-15)](project_portal_mot_with_upsells.md): Client MOT moves into portal for all clients, upsells for what they lack; at the end of the WHOLE audit with Serafim's batch
-- [API edit = false design swap (10-15)](feedback_meta_api_edit_false_design_swap.md): form/copy edit re-uploads videos, links close; use Same design, keep its link
-- [Marketplace: Paused is the switch (10-15)](project_marketplace_pause_is_the_switch.md): Hub Paused/Live only, unlink doesn't stop leads, pacing tasks, Live needs ad set on
-- [Explain as who-does-what table (10-15)](feedback_explain_process_as_who_does_what_table.md): stage table Hub/you/telesales; never swap her mechanism silently
-- [Client preview Vercel address (10-15)](reference_client_preview_vercel_address.md): vercel domains add <name>.vercel.app from the linked folder is public; alias set lands behind SSO
-- [Always give the merge link (10-15)](feedback_always_give_merge_link.md): PR + preview links every time; if she says merged and it's open, merge it
-- [IH KPIs journey page (10-15)](project_ih_kpis_journey_page.md): one row per person by first entry, funnel rates, source tabs, Awareness Feeds, /kpis share link; frozen CEO snapshot offered
-- [Rule book roadmap (10-15)](project_rulebook_rollout_then_hub_design.md): all in-build sites to standard, no exemptions, transferred = done; J&B done, Gas Worx next; then Hub site design for Erin
-- [Test a brand-new first sign-in before "accounts work" (10-15)](feedback_test_brand_new_signin_before_saying_accounts_work.md): first magic link failed for new clients after her email; test day-one paths live first
-- [Client status = client_onboarding.status (10-15)](reference_client_status_lives_in_client_onboarding.md): Live/Onboarding/Paused lives there, not companies.paused_at; leave paused out of every list
-- [Hub visual polish in the audit (10-15)](project_hub_visual_polish.md): sidebar stays, portal look, wider one width, one spacing/type scale; after portal retro, before Funnels
-- [Say what the audit already covers (10-15)](feedback_say_what_audit_already_covers.md): inventory api/_audit check keys before calling a rule/check new; report existing vs new
-- [Paste deploy: hand over, then verify live (10-15, 10-22)](feedback_paste_deploy_open_the_file.md): open -e fresh file; after Deploy diff live fn vs bundle + logs after a real visit; stray key broke the portal
-- [Select list must cover filter columns (10-15)](feedback_select_list_must_cover_filter_columns.md): missing client_id dropped every campaign; check DB rows before blaming sync
-- [New bank question needs SQL (10-15)](feedback_new_bank_question_needs_sql.md): saved Parameters list hides new code defaults; ship an append SQL with each
-- [IH KPIs test questions (10-15)](project_ih_kpis_test_questions.md): 9 questions to check the pick-your-view page; ask which she ran, SQL-check surprises; Feeds + CEO report open
-- [New-services questions go by Email client (10-15)](reference_new_services_questions_email_route.md): auto welcome skips not-needed clients; add-on No form ticked by default; card Send onboarding questions
-- [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
-- [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps
 - [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
 - [Ad copy: standard enhancements (10-16)](reference_meta_ad_copy_standard_enhancements.md): /copies refused: use existing creative_id; 1487083 ForceRunStatus = cv_transformation on video, rebuild OPT_OUT
 - [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
@@ -134,3 +113,11 @@
 - [Keep a running test list (10-25)](feedback_keep_running_test_list.md): marketing-agent .claude/docs/meta-in-hub-test-list.md, every PR adds checks, real-life cycles, open items in each report
 - [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
 - [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon
+- [Serafim Claude note = SQL (10-26)](feedback_serafim_claude_note_is_sql.md): short message for him + cross_agent_notes INSERT for his Claude, both up front; verify by ref_id
+- [Run eslint before push (10-26)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build; #2525 failed on no-sparse-arrays
+- [Lead forms: verify number always (10-26)](feedback_lead_forms_verify_number_always.md): is_phone_sms_verify_enabled true, write-only; conditional logic not in API, Ads Manager only
+- [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
+- [Handoff: commit, don't ask (10-26)](feedback_handoff_commit_without_asking.md): commit + push this session's handoff/CHANGELOG myself; she closes sessions without noticing a question
+- [Client site changes = save zip on the job, never a merge (10-26)](feedback_client_site_changes_via_hub_not_merge.md): old repo-built sites (J&B) switch on first save; check source.zip first
+- [Grid place-items collapses img to 0x0 (10-26)](feedback_grid_place_items_collapses_img.md): badge tiles blank; flex centring fixes; check naturalWidth/rect before blaming headless
+- [access@ mailbox forwarding (10-26)](reference_access_mailbox_forwarding.md): client invite address; switch -> Charlotte, filters -> Erin/Brad/Serafim; Google invites sign in as access@

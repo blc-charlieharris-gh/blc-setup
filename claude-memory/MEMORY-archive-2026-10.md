@@ -124,3 +124,27 @@
 - [Meta "Phone number required" fix (10-08)](reference_meta_phone_number_required_fix.md): Ad account settings > Contact info mobile, partner login works, clears on switch-on; use a company number
 - [Tell Serafim when his ask is fixed (10-08)](feedback_tell_serafim_when_his_ask_fixed.md): cross_agent_notes SQL same day it's live, not at handoff
 - [Confirm understanding before fixing (10-08)](feedback_confirm_understanding_before_fixing.md): play back her issue + planned fix, get OK, then build
+
+## Moved 10-26 (10-15 pointers)
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older pointers: 09-30 to 10-02, site deploys, Meta/GHL/n8n refs (10-15), plus Vercel/GHL/Supabase/Git/onboarding gotchas, RLS, survey truth, IH tracking (moved 10-14); 10-03 pointers moved 10-15; 10-05/06 project+reference pointers moved 10-16; 10-13/10-14 pointers moved 10-20; 10-05 to 10-08 pointers moved 10-21
+- [Client gets own approvals (10-15)](feedback_client_gets_own_approvals.md): finance/compliance sign-offs are the client's job; approved wording only, never offer to chase
+- [Client-facing = portal, full sweep first (10-15)](feedback_client_facing_means_portal_full_sweep.md): inventory every client page/link in all repos before saying sorted; one complete list
+- [Portal MOT with upsells, very end (10-15)](project_portal_mot_with_upsells.md): Client MOT moves into portal for all clients, upsells for what they lack; at the end of the WHOLE audit with Serafim's batch
+- [API edit = false design swap (10-15)](feedback_meta_api_edit_false_design_swap.md): form/copy edit re-uploads videos, links close; use Same design, keep its link
+- [Marketplace: Paused is the switch (10-15)](project_marketplace_pause_is_the_switch.md): Hub Paused/Live only, unlink doesn't stop leads, pacing tasks, Live needs ad set on
+- [Explain as who-does-what table (10-15)](feedback_explain_process_as_who_does_what_table.md): stage table Hub/you/telesales; never swap her mechanism silently
+- [Client preview Vercel address (10-15)](reference_client_preview_vercel_address.md): vercel domains add <name>.vercel.app from the linked folder is public; alias set lands behind SSO
+- [Always give the merge link (10-15)](feedback_always_give_merge_link.md): PR + preview links every time; if she says merged and it's open, merge it
+- [IH KPIs journey page (10-15)](project_ih_kpis_journey_page.md): one row per person by first entry, funnel rates, source tabs, Awareness Feeds, /kpis share link; frozen CEO snapshot offered
+- [Rule book roadmap (10-15)](project_rulebook_rollout_then_hub_design.md): all in-build sites to standard, no exemptions, transferred = done; J&B done, Gas Worx next; then Hub site design for Erin
+- [Test a brand-new first sign-in before "accounts work" (10-15)](feedback_test_brand_new_signin_before_saying_accounts_work.md): first magic link failed for new clients after her email; test day-one paths live first
+- [Client status = client_onboarding.status (10-15)](reference_client_status_lives_in_client_onboarding.md): Live/Onboarding/Paused lives there, not companies.paused_at; leave paused out of every list
+- [Hub visual polish in the audit (10-15)](project_hub_visual_polish.md): sidebar stays, portal look, wider one width, one spacing/type scale; after portal retro, before Funnels
+- [Say what the audit already covers (10-15)](feedback_say_what_audit_already_covers.md): inventory api/_audit check keys before calling a rule/check new; report existing vs new
+- [Paste deploy: hand over, then verify live (10-15, 10-22)](feedback_paste_deploy_open_the_file.md): open -e fresh file; after Deploy diff live fn vs bundle + logs after a real visit; stray key broke the portal
+- [Select list must cover filter columns (10-15)](feedback_select_list_must_cover_filter_columns.md): missing client_id dropped every campaign; check DB rows before blaming sync
+- [New bank question needs SQL (10-15)](feedback_new_bank_question_needs_sql.md): saved Parameters list hides new code defaults; ship an append SQL with each
+- [IH KPIs test questions (10-15)](project_ih_kpis_test_questions.md): 9 questions to check the pick-your-view page; ask which she ran, SQL-check surprises; Feeds + CEO report open
+- [New-services questions go by Email client (10-15)](reference_new_services_questions_email_route.md): auto welcome skips not-needed clients; add-on No form ticked by default; card Send onboarding questions
+- [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
+- [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps
