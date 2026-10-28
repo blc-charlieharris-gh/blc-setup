@@ -16,3 +16,6 @@ from another session: don't kill other sessions' ones). Port-free way: prepend
 `const __s = Deno.serve; (Deno as any).serve = (a: any, b?: any) => typeof a === "function" ? __s({ port: 0 }, a) : __s({ ...a, port: 0 }, b);`
 to the copy, run in a scratchpad temp dir, then kill only deno pids whose cwd (lsof -d cwd) is that temp dir.
 A fresh worktree also needs node_modules and .env/.env.local symlinked from marketing-agent for bundling and vitest.
+
+10-27: never `pkill -f deno` to free :8000 (blc-0b did once with two other sessions live; it can kill their checks).
+Use the port-0 prepend above, or kill only the pid whose cwd is your own temp dir.

@@ -110,14 +110,21 @@
 - [H1 names the place only on Home and Areas (10-24)](feedback_h1_place_only_home_and_areas.md): other H1s say what the homeowner gets; place stays in title + intro
 - [Wix old blog extraction (10-24)](reference_wix_old_site_blog_extraction.md): post-description body, 11062b_ = Wix-only stock, read every post first
 - [Erin-facing info at the top (10-25)](feedback_erin_facing_info_at_top.md): summary box + Next line + board card, never a grey brief line
-- [Keep a running test list (10-25)](feedback_keep_running_test_list.md): marketing-agent .claude/docs/meta-in-hub-test-list.md, every PR adds checks, real-life cycles, open items in each report
+- [Keep a running test list (10-25)](feedback_keep_running_test_list.md): marketing-agent .claude/docs/test-list.md (one list, all areas, from 10-28), every PR adds checks, real-life cycles, open items in each report
 - [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
 - [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon
 - [Serafim Claude note = SQL (10-26)](feedback_serafim_claude_note_is_sql.md): short message for him + cross_agent_notes INSERT for his Claude, both up front; verify by ref_id
 - [Run eslint before push (10-26)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build; #2525 failed on no-sparse-arrays
+- [Gas Worx sync 'Blocked' = Hub, harmless (10-27)](reference_gasworx_sync_blocked_hub_deploy.md): bot commit blocked on marketing-agent; site deploys fine; gas-worx.co.uk is still Wix
+- [Finance category = choice, suggest not enforce (10-27)](feedback_finance_category_choice_not_enforced.md): Set it up in Meta offers both, suggested from the copied ad set
 - [Lead forms: verify number always (10-26)](feedback_lead_forms_verify_number_always.md): is_phone_sms_verify_enabled true, write-only; conditional logic not in API, Ads Manager only
 - [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
 - [Handoff: commit, don't ask (10-26)](feedback_handoff_commit_without_asking.md): commit + push this session's handoff/CHANGELOG myself; she closes sessions without noticing a question
 - [Client site changes = save zip on the job, never a merge (10-26)](feedback_client_site_changes_via_hub_not_merge.md): old repo-built sites (J&B) switch on first save; check source.zip first
 - [Grid place-items collapses img to 0x0 (10-26)](feedback_grid_place_items_collapses_img.md): badge tiles blank; flex centring fixes; check naturalWidth/rect before blaming headless
 - [access@ mailbox forwarding (10-26)](reference_access_mailbox_forwarding.md): client invite address; switch -> Charlotte, filters -> Erin/Brad/Serafim; Google invites sign in as access@
+- [Webinar 4 Nov partners (10-27)](project_installrhub_webinar_partners_1027.md): Brad only presenter, FinMatch finance partner never speaks, EasyPV partner; November launch = speculation
+- [Copy rewrites: keep what worked (10-27)](feedback_copy_rewrite_keep_what_worked.md): keep last headline, hedge "told me" facts, ask partner roles; she writes copy in her ChatGPT
+- [Test list at prime + handoff (10-28)](feedback_test_list_in_prime_and_handoff.md): repo file only, counts at every prime/handoff until all ticked; no page; don't rename marketing-sync-meta
+- [Client portal final parts (10-28)](project_client_portal_final_parts_1028.md): design sweep per page (Home first, mockup + OK), portal What's new, welcome videos; portal first, then GHL removal, then audit
+- [Hub order after 10-28](project_hub_order_after_1028.md): portal final sweep, then GHL removal, then resume the audit
