@@ -151,6 +151,38 @@ move the oldest section into a dated archive file beside it and leave a pointer.
 Check for an existing file covering the same fact and update it rather than adding a
 duplicate. Skip this step entirely if the session held no surprises.
 
+## 3b. Daily clean-up (Charlotte 2026-10-29: "clean data hygiene", nothing piles up)
+
+Once a day on each device (iMac and MacBook Air alike): the first handoff of the day on that device does this,
+whichever folder the session is in. Skip it when `~/code/BLC/.last-cleanup` already holds today's date; write today's
+date there when done (the file is per device, never synced: each device clears its own leftovers, and GitHub's are
+cleared by whichever device gets there first). The point is that both devices, GitHub and the docs only hold what's
+still in use. Only remove what is provably finished; anything unclear is listed for Charlotte, never guessed.
+
+Which repos: the `REPOS` list in `~/code/blc-setup/bin/blc-sync` (the one list both devices use) plus
+`~/code/blc-setup` itself, plus any other git folder under `~/code/BLC` (`find ~/code/BLC -maxdepth 3 -name .git`),
+for example a stray worktree folder like `site-installrhub/.wt-*`. In each:
+1. **Local branches** other than the default: `git fetch --prune` first. Safe to remove = its upstream is gone, or it
+   is on origin and its last commit is over 2 days old (the PR is merged or the work lives on GitHub). Never remove a
+   branch with commits that are on no remote branch (`git log <b> --not --remotes`): list it with what it holds.
+2. **Branches on GitHub** over 7 days old whose PR is merged (squash merges: check the PR, or the branch's commit
+   message in `origin/main`'s log). List with the command; Charlotte runs it. If "Automatically delete head
+   branches" is on in the repo's GitHub settings this list stays empty.
+3. **Worktrees**: `git worktree prune`; a worktree that is clean and whose branch is merged is removed.
+4. **Stashes** over 7 days old: list each with what it holds; Charlotte says keep or drop.
+5. **`~/code/BLC/_deploy`**: paste files and SQL over 7 days old (they're rebuilt for every deploy, never reused).
+6. **Scratchpad / temp**: `/private/tmp/claude-$(id -u)/*` folders from sessions over 2 days old.
+7. **Docs that stack up** (done by Claude in the handoff commit, no deletes needed): handoff sections older than
+   yesterday leave `current-handoff.md` (the CHANGELOG already has them); known-issues Fixed items over 14 days old and
+   test-list items marked tried move to their archive files; a memory index over ~200 lines gets its oldest lines
+   moved to a dated archive file.
+
+Claude's branch and file deletes are refused on this Mac (memory reference_blocked_actions_give_command), so write
+items 1 to 6 as ONE script naming each exact branch and file (`git branch -D <name>`, `git worktree remove <path>`,
+`rm <file>`), save it in the scratchpad, and give Charlotte `zsh <path>` with a count per item in plain words
+("12 old branches on this Mac, 30 old paste files"). Never `rm -rf` a folder by pattern, never a branch with
+unpushed work, never anything another live session is using (check other sessions first, step 0).
+
 ## 4. Close
 
 Confirm what was written, in one line per file. Then state plainly what has **not** been

@@ -130,3 +130,4 @@
 - [Hub order after 10-28](project_hub_order_after_1028.md): portal final sweep, then GHL removal, then resume the audit
 - [Client copy: only if it strengthens (10-29)](feedback_client_copy_only_if_strengthens.md): no accuracy nits or weakening facts on client sites
 - [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
+- [Daily clean-up at handoff (10-29)](feedback_daily_cleanup_at_handoff.md): first handoff of the day per device clears branches/worktrees/stashes/_deploy/temp/stacked docs; one zsh script for her
