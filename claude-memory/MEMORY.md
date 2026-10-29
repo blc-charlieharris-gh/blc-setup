@@ -128,3 +128,5 @@
 - [Test list at prime + handoff (10-28)](feedback_test_list_in_prime_and_handoff.md): repo file only, counts at every prime/handoff until all ticked; no page; don't rename marketing-sync-meta
 - [Client portal final parts (10-28)](project_client_portal_final_parts_1028.md): design sweep per page (Home first, mockup + OK), portal What's new, welcome videos; portal first, then GHL removal, then audit
 - [Hub order after 10-28](project_hub_order_after_1028.md): portal final sweep, then GHL removal, then resume the audit
+- [Client copy: only if it strengthens (10-29)](feedback_client_copy_only_if_strengthens.md): no accuracy nits or weakening facts on client sites
+- [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
