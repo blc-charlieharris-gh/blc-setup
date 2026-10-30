@@ -9,6 +9,7 @@
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older Oct lines (client area plan, sales kit, portal, SWH, stock-take, prospects)
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -41,24 +42,16 @@
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
 - ["On the list" = in the repo (10-04)](feedback_on_the_list_means_in_repo.md): check audit README/known-issues before saying…
 
-- [Client area plan (10-06, 10-11)](project_client_area_plan.md): one page per client by link; 10-11 one key, products under /<slug>/website etc, one Crew frame, one Add media pop-up: next batch after B3b
 - [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
 - [Headless canvas checks (10-21)](feedback_headless_chrome_canvas_tests.md): compositor flag for SVG decode, serve storage files locally, shrink big PNGs, data URL not screenshot
-- [Marketplace client model (10-08, 10-13)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; portal shows leads (per-lead, retainer lead-only) or surveys (per-survey, retainer calling); no Leads tab yet
-- [Stock-take queue (10-09)](project_stocktake_1009.md): drafts box (video draft required), Status walk-through, Goals card, build follow-ups, before Creative Testing audit
 - [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
 - [Audit scope checklist (10-09)](feedback_audit_scope_checklist.md): every audit covers security, speed/mobile, one source of truth, app-safe, linked/hidden pages, cross-page, bugs, accuracy, no hardwiring, outdated + duplicated features (10-12)
 - [One report at the end (10-09)](feedback_one_report_at_end.md): long runs -> single self-contained final report, no relying on interim messages
 - [Awareness spend counts in CPL (10-09)](feedback_awareness_spend_in_cpl.md): TOF/MOF fuel lead campaigns; out of lists, never out of the money
 - [Cost of supply = cost us, split by surveys (10-10)](feedback_cost_of_supply_is_cost_not_charge.md): never 'charged'; shared code split by surveys, confirm leads/zero cases
 - [Broadcast + nurture = one send-rules area (10-10)](feedback_broadcast_nurture_same_list_rules.md): every send rule shared; only trigger vs set time differs; overlap via filters; bookings via calendar classification
-- [InstallrScore -> installrhub.com homepage (10-11)](project_installrscore_on_installrhub_homepage.md): tell site-installrhub session; crew. is internal, its public pages redirect
 - [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
-- [Prospect audits rules (10-11)](project_prospect_audits_rules.md): prospects only, 30-day did-this-close flag, name-match + merge into client; clients only from the app; build in crew B6
-- [SWH go-live ranking (10-11)](project_swh_golive_ranking_2026_10_11.md): redirects one list, blog+towns kept, 99-100 speed, strict CSP, blc-vercel deploy; business details settled 10-12, nothing waiting
-- [Client portal is ours (10-12)](project_client_portal_ours.md): magic link on crew., Serafim's leads fns are the engine via Hub client-portal fn, his /leads pages retire; plan in repo
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
-- [Sales kit (10-12)](project_sales_kit.md): INSTALLRHUB page, reviews bank + ONE portfolio (absorbs installrhub.com/portfolio) + Crew features guide; GHL-contact packs; guide + reviews bank + quote graphic LIVE 10-12; next Portfolio + /p/ links
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
 - [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
 - [Ad copy: standard enhancements (10-16)](reference_meta_ad_copy_standard_enhancements.md): /copies refused: use existing creative_id; 1487083 ForceRunStatus = cv_transformation on video, rebuild OPT_OUT
@@ -131,3 +124,6 @@
 - [Client copy: only if it strengthens (10-29)](feedback_client_copy_only_if_strengthens.md): no accuracy nits or weakening facts on client sites
 - [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
 - [Daily clean-up at handoff (10-29)](feedback_daily_cleanup_at_handoff.md): first handoff of the day per device clears branches/worktrees/stashes/_deploy/temp/stacked docs; one zsh script for her
+- [Don't relay other sessions (10-29)](feedback_dont_relay_other_sessions.md): only my own work and what it needs from her; others' updates go quietly into the handoff
+- [Cut video at word edges (10-29)](reference_video_cut_at_word_edges.md): embeds trim ends only; faster-whisper word times + ffmpeg concat; YouTube captions via XHR hook
+- [New worktree needs env link (10-29)](feedback_new_worktree_needs_env_link.md): link node_modules + .env/.env.local from marketing-agent or vitest fails 'supabaseUrl is required'

@@ -148,3 +148,11 @@
 - [New-services questions go by Email client (10-15)](reference_new_services_questions_email_route.md): auto welcome skips not-needed clients; add-on No form ticked by default; card Send onboarding questions
 - [Don't relay other sessions' steps (10-15)](feedback_dont_relay_other_sessions_steps.md): just say "<session> has instructions for you"; tell peers the same
 - [Other session's steps: just point (10-15)](feedback_other_session_instructions_just_point.md): say "<session> has instructions for you", only my own steps
+- [Client area plan (10-06, 10-11)](project_client_area_plan.md): one page per client by link; 10-11 one key, products under /<slug>/website etc, one Crew frame, one Add media pop-up: next batch after B3b
+- [Marketplace client model (10-08, 10-13)](project_marketplace_client_model.md): surveys|leads x fixed|ongoing x brand or not; portal shows leads (per-lead, retainer lead-only) or surveys (per-survey, retainer calling); no Leads tab yet
+- [Stock-take queue (10-09)](project_stocktake_1009.md): drafts box (video draft required), Status walk-through, Goals card, build follow-ups, before Creative Testing audit
+- [InstallrScore -> installrhub.com homepage (10-11)](project_installrscore_on_installrhub_homepage.md): tell site-installrhub session; crew. is internal, its public pages redirect
+- [Prospect audits rules (10-11)](project_prospect_audits_rules.md): prospects only, 30-day did-this-close flag, name-match + merge into client; clients only from the app; build in crew B6
+- [SWH go-live ranking (10-11)](project_swh_golive_ranking_2026_10_11.md): redirects one list, blog+towns kept, 99-100 speed, strict CSP, blc-vercel deploy; business details settled 10-12, nothing waiting
+- [Client portal is ours (10-12)](project_client_portal_ours.md): magic link on crew., Serafim's leads fns are the engine via Hub client-portal fn, his /leads pages retire; plan in repo
+- [Sales kit (10-12)](project_sales_kit.md): INSTALLRHUB page, reviews bank + ONE portfolio (absorbs installrhub.com/portfolio) + Crew features guide; GHL-contact packs; guide + reviews bank + quote graphic LIVE 10-12; next Portfolio + /p/ links

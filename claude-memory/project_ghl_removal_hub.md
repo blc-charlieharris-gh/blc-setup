@@ -36,3 +36,8 @@ pieces (person id, contacts home, calendar engine, homeowner texts switch, diale
   before it.
 - Serafim's "IH leads already in Supabase" is half true: raw form data yes (site_form_submissions /
   meta_lead_events), but sales_lead_intake_events + installer_prospects only via app ghl-installr-lead-webhook (GHL-fired).
+
+**10-29 (ghl-audit-1029):** audit done (`.claude/docs/ghl-audit-2026-10-29.md`). B1 (lead-ingest writes InstallrHub
+lead rows) live in check mode, lead-ingest v49; Charlotte set the switch to live for **2 Nov**; daily task
+`ghl-b1-daily-check`. National Eco off our GHL key (their CRM link only). Next: A list (Hub code calling GHL), then
+calendars. Ask Brad whether client GHL sub-accounts sit under our agency before any cancel.

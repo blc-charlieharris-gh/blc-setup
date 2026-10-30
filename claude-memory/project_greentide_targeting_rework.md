@@ -9,6 +9,8 @@ metadata:
 
 **CURRENT (2026-09-25):** Brad (WhatsApp 09-23) switched Green Tide ASHP to North West only. Both live heat pump ad sets (main `120241104767920201` £30/day, backup `120243550688750152` £20/day) target 6 pins: Manchester +15mi, Liverpool +12, Warrington +10, Chester +10, Northwich +8, Crewe +10. Exclusions: Scotland, NI, Wales, Devon, Cornwall, IoW only. No solar ad sets live. This overrides the July finding that NW is weak for ASHP, so watch claim rate. Details + rollback in meta-access `docs/CHANGELOG.md`.
 
+**2026-10-29:** Charlotte asked that these two ad sets target only Richard Irvin FM + Impact Energy areas. The same 6 pins are still live, and every postcode area they reach is in both installers' lists (RI declares all UK; it actually took M/BL/CH/CW/SK). Left as is, no change.
+
 **History below (July, superseded):**
 
 2026-07-04/05: reworked Green Tide Meta geo targeting using **claim rate by postcode area** (claimed vs available marketplace slots, cancelled excluded, dual-tech split via `slots.technologies`) cross-checked against **active installers who actually claimed** (distinct `slots.claimed_by` in 30d, NOT declared `companies.postcode_areas` coverage). Windows: 30d = matured/decision base, 7d = immature (claims lag booking ~60% surveys still future), so low 7d that climbs = maturing not weak.
