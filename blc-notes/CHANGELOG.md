@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-30 (device clean-up plan)
+
+### Devices
+- Checked ~/code/BLC on the iMac read-only: every repo pushed, no stashes, no scheduled jobs. Plan to make nothing depend on one device saved in docs/plan-device-cleanup-2026-10-30.md; check on the laptop and approve before any move or delete. [project: blc]
+
 ## 2026-10-24 (Helix Power website)
 
 ### Helix Power website
