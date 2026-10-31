@@ -3,10 +3,10 @@
 Status: **waiting on Charlotte to check on both devices and approve.** Nothing moved or deleted yet.
 Goal: if either the iMac or the MacBook Air died, the other carries on with nothing lost. Clear out what isn't needed.
 
-The list below was checked on the **iMac** only. On the **MacBook Air**, ask Claude to "check the device clean-up plan
-on this machine": same read-only checks, add anything that differs under "Laptop" at the bottom.
+The list below was checked on the **MacBook Air** only. On the **iMac**, ask Claude to "check the device clean-up plan
+on this machine": same read-only checks, add anything that differs under "iMac" at the bottom.
 
-## What was checked on the iMac (read-only)
+## What was checked on the MacBook Air (read-only)
 
 - Every git repo is fetched, with 0 stashes and 0 unpushed commits on any branch: blc-setup, site-greentide,
   meta-access, installrhub-static, creative-library, marketing-agent.
@@ -15,7 +15,7 @@ on this machine": same read-only checks, add anything that differs under "Laptop
   Claude's Supabase tool token. The README "Setting up a new machine" covers making each one.
 - Tools (Node, Python, sharp, deno via npx) install from the README or fetch themselves.
 
-## Move (only on the iMac today)
+## Move (only on the MacBook Air today)
 
 1. `~/code/BLC/.claude/skills/meta-clone-campaign/` is a real folder, not in any repo. Move into
    `blc-setup/shared-agent-skills/skills/` and link it back, so both devices get it.
@@ -46,6 +46,6 @@ on this machine": same read-only checks, add anything that differs under "Laptop
 13. Loose screenshots in BLC root, `.DS_Store` files.
 14. `meta-access/outputs` (2.8MB scratch from the J&B clone, AS05 fix, Elect site score; scripts are in git).
 
-## Laptop
+## iMac
 
 (not checked yet)
