@@ -129,3 +129,4 @@
 - [Creative test needs 2 designs (10-31)](feedback_creative_test_needs_two_designs.md): Hub refuses a one-design new test; joining a running test is fine
 - [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; local sign-in lost with the tab, check live instead
 - [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over in the move
+- [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
