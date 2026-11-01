@@ -10,7 +10,6 @@ SETUP="$CODE/blc-setup"
 REPOS=(
   "$CODE/BLC/marketing-hub/marketing-agent"
   "$CODE/BLC/meta-access"
-  "$CODE/BLC/site-greentide"
   "$CODE/BLC/site-installrhub/installrhub-static"
   "$CODE/BLC/site-installrhub/creative-library"
 )

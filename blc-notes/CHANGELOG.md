@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-01 (device clean-up, MacBook Air)
+
+### Devices
+- MacBook Air cleaned out: meta-clone-campaign skill moved into blc-setup, site-greentide off the sync list (GitHub only), all 11 client site zips confirmed on the Hub, delete script for old zips, decks, scratch and _deploy files. The iMac still needs the same check (plan-device-cleanup-2026-10-30.md, "iMac"). [project: blc]
+
 ## 2026-10-30 (device clean-up plan)
 
 ### Devices

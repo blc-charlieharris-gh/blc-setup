@@ -1,10 +1,22 @@
 # Plan: nothing in BLC depends on one device (made 30 Oct 2026)
 
-Status: **waiting on Charlotte to check on both devices and approve.** Nothing moved or deleted yet.
+Status (1 Nov): **MacBook Air done** (approved by Charlotte 1 Nov: "get rid of anything we dont need on this
+device"). **iMac still to do**: see "iMac" at the bottom.
 Goal: if either the iMac or the MacBook Air died, the other carries on with nothing lost. Clear out what isn't needed.
 
-The list below was checked on the **MacBook Air** only. On the **iMac**, ask Claude to "check the device clean-up plan
+The list below was checked on the **MacBook Air**. On the **iMac**, ask Claude to "check the device clean-up plan
 on this machine": same read-only checks, add anything that differs under "iMac" at the bottom.
+
+## Done on the MacBook Air, 1 Nov
+
+- `meta-clone-campaign` skill moved into `blc-setup/shared-agent-skills/skills/`, linked back (now on both devices
+  after `blc-sync pull`).
+- `site-greentide` taken out of `blc-sync` and `blc-setup-machine` (GitHub only; clone when needed).
+- All 11 client site zips confirmed on their Hub jobs (`client-site-files/<client>/source.zip`), so the local zip
+  folders can go.
+- Delete script (Charlotte runs it): site-greentide, ZIPFILES, site-zips-2026-10-31, the Helix folder + zip, the two old
+  deck exports, empty `deck/`, `meta-access/outputs`, `vt.log`, two screenshots, 93 old `_deploy` files, `.DS_Store`.
+- Still Charlotte's: copy the key-file secrets (Move item 2) into the password manager.
 
 ## What was checked on the MacBook Air (read-only)
 
@@ -48,4 +60,6 @@ on this machine": same read-only checks, add anything that differs under "iMac" 
 
 ## iMac
 
-(not checked yet)
+**Not checked yet.** On the iMac: `blc-sync pull`, then "check the device clean-up plan on this machine". Claude runs
+the same read-only checks (unpushed work, stashes, worktrees, Mac-only files), lists what differs here, and once
+Charlotte OKs it writes the same kind of delete script (site-greentide, zip folders, old `_deploy`, scratch).
