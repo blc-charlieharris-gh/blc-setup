@@ -14,7 +14,7 @@ on this machine": same read-only checks, add anything that differs under "iMac" 
 - `site-greentide` taken out of `blc-sync` and `blc-setup-machine` (GitHub only; clone when needed).
 - All 11 client site zips confirmed on their Hub jobs (`client-site-files/<client>/source.zip`), so the local zip
   folders can go.
-- Delete script (Charlotte runs it): site-greentide, ZIPFILES, site-zips-2026-10-31, the Helix folder + zip, the two old
+- Delete scripts run by Charlotte (BLC 4.1G to 2.3G; round 2 also cleared finished worktrees, old branches, dist and creative-library, now off the sync list): site-greentide, ZIPFILES, site-zips-2026-10-31, the Helix folder + zip, the two old
   deck exports, empty `deck/`, `meta-access/outputs`, `vt.log`, two screenshots, 93 old `_deploy` files, `.DS_Store`.
 - Still Charlotte's: copy the key-file secrets (Move item 2) into the password manager.
 
