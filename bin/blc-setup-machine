@@ -9,7 +9,7 @@ clone https://github.com/serafimparente-blc/marketing-agent.git          "$CODE/
 clone https://github.com/blc-charlieharris-gh/meta-access.git            "$CODE/BLC/meta-access"
 # site-greentide: on GitHub only since 2026-11-01 (clone it when needed: blc-charlieharris-gh/site-greentide)
 clone https://github.com/blc-charlieharris-gh/site-installrhub.git       "$CODE/BLC/site-installrhub/installrhub-static"
-clone https://github.com/blc-charlieharris-gh/installrhub-creative-library.git "$CODE/BLC/site-installrhub/creative-library"
+# creative-library (portfolio deck): on GitHub only since 2026-11-01 (clone when editing: blc-charlieharris-gh/installrhub-creative-library into site-installrhub/creative-library)
 
 # Skills: BLC's prime-project / handoff only inside BLC, generic ones everywhere else (see blc-link-skills).
 "$SETUP/bin/blc-link-skills"

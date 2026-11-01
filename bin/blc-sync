@@ -11,7 +11,6 @@ REPOS=(
   "$CODE/BLC/marketing-hub/marketing-agent"
   "$CODE/BLC/meta-access"
   "$CODE/BLC/site-installrhub/installrhub-static"
-  "$CODE/BLC/site-installrhub/creative-library"
 )
 cmd="${1:-status}"
 report() {
