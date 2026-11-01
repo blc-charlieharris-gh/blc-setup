@@ -63,3 +63,8 @@ on this machine": same read-only checks, add anything that differs under "iMac" 
 **Not checked yet.** On the iMac: `blc-sync pull`, then "check the device clean-up plan on this machine". Claude runs
 the same read-only checks (unpushed work, stashes, worktrees, Mac-only files), lists what differs here, and once
 Charlotte OKs it writes the same kind of delete script (site-greentide, zip folders, old `_deploy`, scratch).
+
+Also check on the iMac (round 2 on the laptop, 1 Nov): finished Hub worktrees and old local branches (clean, on
+GitHub), `marketing-agent/dist`, old Claude temp folders, and whether `site-installrhub/creative-library` (419MB, the
+portfolio deck, last changed 23 Sep, deploys from GitHub) is still needed on the device. Note: the first delete script
+removed two `.DS_Store` files that installrhub-static tracks; check `git status` there after any `.DS_Store` sweep.
