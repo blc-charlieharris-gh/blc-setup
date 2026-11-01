@@ -41,3 +41,5 @@ pieces (person id, contacts home, calendar engine, homeowner texts switch, diale
 lead rows) live in check mode, lead-ingest v49; Charlotte set the switch to live for **2 Nov**; daily task
 `ghl-b1-daily-check`. National Eco off our GHL key (their CRM link only). Next: A list (Hub code calling GHL), then
 calendars. Ask Brad whether client GHL sub-accounts sit under our agency before any cancel.
+
+**11-01:** B1 LIVE (lead-ingest v54 writes InstallrHub lead rows + prospects; rows carry raw.fill_ad_id) and A1 LIVE (MAILING_LIST_MODE 'live', list built from our records). Serafim's B1 review owed (note in _deploy/serafim-note-b1-live-1101.sql). Agreed person id: keep GHL ids, mint `ih_...` for new people once GHL stops receiving them. Next: GHL webhook step out (~11-03), A17 bookings recorded by us, CRM door (Serafim/owner), then stop sending to GHL. Best long-term list = live view on the person id.

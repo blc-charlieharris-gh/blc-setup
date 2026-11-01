@@ -12,3 +12,5 @@ Charlotte (2026-11-01): "we're leaving supabase soon for cloudflare, its fine fo
 
 **Why:** a planned platform move, not yet scheduled in anything I've seen.
 **How to apply:** don't chase Supabase usage warnings or plan big Supabase-only investments. Anything stored in Supabase storage (client site build zips in `client-site-files/<hub_client_id>/source.zip` and `site.zip`, see [[feedback_client_site_changes_via_hub_not_merge]]) must be carried over in the move.
+
+The Vercel project tidy-up list (11-01) is in the Hub audit's Before/at end of audit (`.claude/docs/hub-audit/README.md`); the move may cover it.

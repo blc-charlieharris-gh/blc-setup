@@ -77,7 +77,7 @@
 - [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
 - [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
-- [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; KPIs + Sales Model done, Analytics waiting on A/B/C
+- [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; superseded 11-01 by one Marketing page (repo memory project_ih_marketing_page_1101)
 - [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
 - [GHL removal from the Hub (10-21, +10-25)](project_ghl_removal_hub.md): GHL out altogether, calendars last; 10-25 FULL GHL audit first; no duplicates; plan-ghl-removal-1024.md
 - [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
@@ -105,7 +105,6 @@
 - [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon
 - [Serafim Claude note = SQL (10-26)](feedback_serafim_claude_note_is_sql.md): short message for him + cross_agent_notes INSERT for his Claude, both up front; verify by ref_id
 - [Run eslint before push (10-26)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build; #2525 failed on no-sparse-arrays
-- [Gas Worx sync 'Blocked' = Hub, harmless (10-27)](reference_gasworx_sync_blocked_hub_deploy.md): bot commit blocked on marketing-agent; site deploys fine; gas-worx.co.uk is still Wix
 - [Finance category = choice, suggest not enforce (10-27)](feedback_finance_category_choice_not_enforced.md): Set it up in Meta offers both, suggested from the copied ad set
 - [Lead forms: verify number always (10-26)](feedback_lead_forms_verify_number_always.md): is_phone_sms_verify_enabled true, write-only; conditional logic not in API, Ads Manager only
 - [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
@@ -128,5 +127,7 @@
 - [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
 - [Creative test needs 2 designs (10-31)](feedback_creative_test_needs_two_designs.md): Hub refuses a one-design new test; joining a running test is fine
 - [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; local sign-in lost with the tab, check live instead
-- [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over in the move
+- [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over
 - [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
+- [All sites live on their Hub jobs (11-01)](project_all_sites_on_hub_jobs.md): no client folders in the repo or on devices; Hub daily run keeps hosted blogs
+- [Website job steps loop (11-01)](feedback_website_job_steps_loop.md): You're-on box, 6 Build and check <-> 7 Ask the client, one Download the kit, "Upload zip"
