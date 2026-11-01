@@ -156,3 +156,8 @@
 - [SWH go-live ranking (10-11)](project_swh_golive_ranking_2026_10_11.md): redirects one list, blog+towns kept, 99-100 speed, strict CSP, blc-vercel deploy; business details settled 10-12, nothing waiting
 - [Client portal is ours (10-12)](project_client_portal_ours.md): magic link on crew., Serafim's leads fns are the engine via Hub client-portal fn, his /leads pages retire; plan in repo
 - [Sales kit (10-12)](project_sales_kit.md): INSTALLRHUB page, reviews bank + ONE portfolio (absorbs installrhub.com/portfolio) + Crew features guide; GHL-contact packs; guide + reviews bank + quote graphic LIVE 10-12; next Portfolio + /p/ links
+- [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
+- [Ad copy: standard enhancements (10-16)](reference_meta_ad_copy_standard_enhancements.md): /copies refused: use existing creative_id; 1487083 ForceRunStatus = cv_transformation on video, rebuild OPT_OUT
+- [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
+- [TextEdit shows stale paste files (10-16)](feedback_textedit_stale_window_paste_deploy.md): fresh file name for a second paste; diff live code vs file after every deploy
+- [Next sessions plan + call summaries ours (10-16)](project_next_session_plan_1016.md): 10-item order (portal p2, Hub p2 from Funnels, Raise, texts we, emails into Email client, KPIs, J&B, Elect summaries ALL ours, L W ads row), then rest of audit, our issues, Serafim batch last

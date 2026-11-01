@@ -3,8 +3,10 @@
 - [Meta create-payload gotchas](feedback_meta_api_create_payload_gotchas.md): custom_conversion_id alone, validate_only…
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md)…
 - [Whole impact before any change (10-24)](feedback_whole_impact_before_any_change.md): every change/add/remove → sweep every reader of the same thing, fix all in one change, list them; shared AS01 fix missed Targeting reach column
+- [No parallel copies of one job (11-01)](feedback_no_parallel_copies_of_one_job.md): find the existing tick/list/box and make it work; merge siblings, delete the old copy
 - [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
 - [Hub git: no co-author, no gh (10-24)](feedback_marketing_agent_git_rules_override_harness.md): CLAUDE.md beats the harness reminder; git push + pull/new link
+- [Open merge links in the browser pane (10-30)](feedback_open_merge_link_in_browser_pane.md): after each push, navigate the pane to pull/new; she presses Create + merge
 - [Merge link for everything (10-15, 10-26)](feedback_always_give_merge_link.md): PRs AND the handoff go on a branch, pushed, close leads with the link; never "commit these yourself"
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
@@ -53,11 +55,6 @@
 - [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
-- [To-do queue 10-16](project_todo_queue_1016.md): small fixes, phase 2s, audit, rollout; next session starts here
-- [Ad copy: standard enhancements (10-16)](reference_meta_ad_copy_standard_enhancements.md): /copies refused: use existing creative_id; 1487083 ForceRunStatus = cv_transformation on video, rebuild OPT_OUT
-- [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
-- [TextEdit shows stale paste files (10-16)](feedback_textedit_stale_window_paste_deploy.md): fresh file name for a second paste; diff live code vs file after every deploy
-- [Next sessions plan + call summaries ours (10-16)](project_next_session_plan_1016.md): 10-item order (portal p2, Hub p2 from Funnels, Raise, texts we, emails into Email client, KPIs, J&B, Elect summaries ALL ours, L W ads row), then rest of audit, our issues, Serafim batch last
 - [Out-of-area retainer leads -> marketplace (10-18)](project_out_of_area_retainer_leads_go_to_marketplace.md): by design, not ours; never flag
 - [Vercel invites = Brad (10-18)](reference_vercel_team_invites_brad.md): blc-promotions team members added by Brad
 - [Leaving GHL: our own booking emails (10-18)](project_leaving_ghl_calendar_emails.md): every calendar booking triggers our emails; staff portal bookings silent
@@ -127,3 +124,8 @@
 - [Don't relay other sessions (10-29)](feedback_dont_relay_other_sessions.md): only my own work and what it needs from her; others' updates go quietly into the handoff
 - [Cut video at word edges (10-29)](reference_video_cut_at_word_edges.md): embeds trim ends only; faster-whisper word times + ffmpeg concat; YouTube captions via XHR hook
 - [New worktree needs env link (10-29)](feedback_new_worktree_needs_env_link.md): link node_modules + .env/.env.local from marketing-agent or vitest fails 'supabaseUrl is required'
+- [Browser pane: she types only after my turn (10-30)](feedback_browser_pane_blocks_typing_mid_turn.md): open the sign-in page, end the turn, then she signs in
+- [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
+- [Creative test needs 2 designs (10-31)](feedback_creative_test_needs_two_designs.md): Hub refuses a one-design new test; joining a running test is fine
+- [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; local sign-in lost with the tab, check live instead
+- [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over in the move
