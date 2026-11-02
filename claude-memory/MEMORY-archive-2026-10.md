@@ -161,3 +161,16 @@
 - [All client emails via Email client (10-16)](feedback_all_client_emails_from_email_builder.md): warnings/notices are Email client sections opened pre-ticked, never standalone emails
 - [TextEdit shows stale paste files (10-16)](feedback_textedit_stale_window_paste_deploy.md): fresh file name for a second paste; diff live code vs file after every deploy
 - [Next sessions plan + call summaries ours (10-16)](project_next_session_plan_1016.md): 10-item order (portal p2, Hub p2 from Funnels, Raise, texts we, emails into Email client, KPIs, J&B, Elect summaries ALL ours, L W ads row), then rest of audit, our issues, Serafim batch last
+- [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions; tell peers + agree handoff order FIRST (10-19)
+- [Out-of-area retainer leads -> marketplace (10-18)](project_out_of_area_retainer_leads_go_to_marketplace.md): by design, not ours; never flag
+- [Vercel invites = Brad (10-18)](reference_vercel_team_invites_brad.md): blc-promotions team members added by Brad
+- [Leaving GHL: our own booking emails (10-18)](project_leaving_ghl_calendar_emails.md): every calendar booking triggers our emails; staff portal bookings silent
+- [Grant wording slips not urgent (10-19)](feedback_grant_wording_not_urgent.md): answer the ask first, wording issues one line at the end at most
+- [My Energy Care not live (10-19)](project_my_energy_care_not_live.md): leave out of client analyses; check client status first
+- [Meta per-text results (10-19)](reference_meta_copy_performance_breakdowns.md): body_asset/title_asset breakdowns, in-ad index, AI text not flaggable; _paginate first page only
+- [n8n steps plain + TextEdit (10-19)](feedback_n8n_steps_plain_textedit.md): numbered click-steps, code in a file, no "may"
+- [IH Analytics page (10-19)](project_ih_demographics_tab.md): /ih-analytics, Meta age/gender/bookings, CAPI bookings, form progress; n8n audit in [[reference_installrhub_n8n_payload_fields]]
+- [Portal: one band height, one width (10-19)](feedback_portal_one_band_height_one_width.md): every portal screen incl Home + onboarding; nothing jumps between tabs/steps
+- [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
+- [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
+- [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests

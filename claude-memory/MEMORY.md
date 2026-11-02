@@ -7,11 +7,12 @@
 - [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
 - [Hub git: no co-author, no gh (10-24)](feedback_marketing_agent_git_rules_override_harness.md): CLAUDE.md beats the harness reminder; git push + pull/new link
 - [Open merge links in the browser pane (10-30)](feedback_open_merge_link_in_browser_pane.md): after each push, navigate the pane to pull/new; she presses Create + merge
+- [Open the SQL editor in the browser pane (11-02)](feedback_open_sql_editor_in_browser_pane.md): any SQL for her -> pane on supabase.com/dashboard/project/ozmy.../sql/new, she presses Run
 - [Merge link for everything (10-15, 10-26)](feedback_always_give_merge_link.md): PRs AND the handoff go on a branch, pushed, close leads with the link; never "commit these yourself"
 - [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
-- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older Oct lines (client area plan, sales kit, portal, SWH, stock-take, prospects)
+- [Archive, Oct 2026](MEMORY-archive-2026-10.md): older Oct lines incl 10-18/10-19 (client area plan, sales kit, portal, SWH, stock-take, prospects)
 - [GHL mirror is hourly, sync before broadcasts](feedback_ghl_mirror_is_hourly_before_broadcasts.md): audience reads the Hub mirror not GHL live, up…
 - **Lead ingest gotchas:** [unique slug collides](feedback_unique_slug_from_content.md) · [silent fallbacks hide dead features](feedback_silent_fallbacks_hide_dead_features.md) · [Destination inert](feedback_landing_route_lookup_keys_empty.md) · [raw whitelists drop payloads](feedback_hardcoded_raw_whitelists_drop_payloads.md)
 - [Companies flag semantics](reference_retainer_client_coding_inconsistent.md): is_active=marketplace, is_retainer=calling
@@ -30,7 +31,6 @@
 - [internal.installrhub = marketing-agent](reference_internal_installrhub_is_marketing_agent.md): old repo archived
 - [Project: InstallrHub](project_installrhub.md): heat pump survey marketplace, credits-based…
 - **Infra/domains reference:** [Vercel Prod Domains](reference_vercel_domains.md) · [InstallrHub Git Repo](reference_installrhub_git.md) · [Git Auth](reference_git_auth.md) · [InstallrHub domains](reference_installrhub_domains.md)
-- [Session Management](feedback_session_management.md): session start/end are Claude's job, no questions; tell peers + agree handoff order FIRST (10-19)
 - [Cleanup Requests](feedback_cleanup_requests.md): action flagged issues immediately, not later
 - [Serafim sign-off & handoffs](feedback_serafim_signoff_and_handoffs.md): never bypass sign-off, surgical notes only
 - [Check git history before building](feedback_check_history_before_building.md): features get added then removed; search log/-G…
@@ -55,18 +55,6 @@
 - [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
-- [Out-of-area retainer leads -> marketplace (10-18)](project_out_of_area_retainer_leads_go_to_marketplace.md): by design, not ours; never flag
-- [Vercel invites = Brad (10-18)](reference_vercel_team_invites_brad.md): blc-promotions team members added by Brad
-- [Leaving GHL: our own booking emails (10-18)](project_leaving_ghl_calendar_emails.md): every calendar booking triggers our emails; staff portal bookings silent
-- [Grant wording slips not urgent (10-19)](feedback_grant_wording_not_urgent.md): answer the ask first, wording issues one line at the end at most
-- [My Energy Care not live (10-19)](project_my_energy_care_not_live.md): leave out of client analyses; check client status first
-- [Meta per-text results (10-19)](reference_meta_copy_performance_breakdowns.md): body_asset/title_asset breakdowns, in-ad index, AI text not flaggable; _paginate first page only
-- [n8n steps plain + TextEdit (10-19)](feedback_n8n_steps_plain_textedit.md): numbered click-steps, code in a file, no "may"
-- [IH Analytics page (10-19)](project_ih_demographics_tab.md): /ih-analytics, Meta age/gender/bookings, CAPI bookings, form progress; n8n audit in [[reference_installrhub_n8n_payload_fields]]
-- [Portal: one band height, one width (10-19)](feedback_portal_one_band_height_one_width.md): every portal screen incl Home + onboarding; nothing jumps between tabs/steps
-- [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
-- [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
-- [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests
 - [n8n replaced, DONE 10-20](project_n8n_replacement_session_1020.md): all forms on lead-ingest; delete paused flows, rotate lead password
 - [Results end yesterday, orders live (10-20)](feedback_results_end_yesterday_orders_live.md): all performance figures to latestCompleteDay (UK day); survey order counts live; only Dashboard Today panel shows today
 - [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
@@ -131,3 +119,9 @@
 - [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
 - [All sites live on their Hub jobs (11-01)](project_all_sites_on_hub_jobs.md): no client folders in the repo or on devices; Hub daily run keeps hosted blogs
 - [Website job steps loop (11-01)](feedback_website_job_steps_loop.md): You're-on box, 6 Build and check <-> 7 Ask the client, one Download the kit, "Upload zip"
+- [SWH name unknown (11-02)](feedback_swh_name_unknown_dont_expand.md): write "SWH", never expand client initials
+- [Webinar questions (11-02)](project_webinar_questions_1102.md): emails link /webinar/question not thank-you (Meta Lead); telesales Log a question; CRM note waits on CRM owner
+- [Grants: ended schemes out, not over strict (11-02)](feedback_grants_ended_schemes_not_over_strict.md): BUS + Warm Homes live; ECO4/GHG/RHI never written, old pages redirect; council grant work fine
+- [CRM crossover additive only (11-02)](feedback_crm_crossover_additive_only.md): never stop app/GHL activity until Charlotte confirms the app is off; web bookings already CRM-only
+- [Vercel cert not issued after DNS (11-02)](reference_vercel_cert_not_issued_after_dns.md): domain added before DNS moved, https dead, http fine; Charlotte runs blc-vercel certs issue
+- [Resend direct client email (11-02)](reference_resend_direct_client_email.md): key in .env.local, brad@installrhub.com, composeClientEmail via vite-node; not in Hub History
