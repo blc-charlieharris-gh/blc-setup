@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-02 (Elect boilers)
+
+### Elect website
+- Boiler wording softened on 11 pages; new Boilers and heating page at /boilers-and-heating (Vaillant, central heating, repairs); heading ARIA fix. Page words and site map added in the Hub by SQL; zip uploaded in step 6. docs/handoff-elect-boilers-2026-11-02.md. [project: blc]
+
 ## 2026-11-01 (device clean-up, MacBook Air)
 
 ### Devices
