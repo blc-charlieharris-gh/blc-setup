@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-03 (Webinar 2 reel ad)
+
+### Ads / Webinar
+- 29.8s 9:16 Reels ad cut from Webinar 2 VSL: face-tracked crop, punch-in zooms, word-by-word captions, Lyria music bed, "LAST DAY TO REGISTER" + Wed 4 Nov 6pm banner. Turn off after 3 Nov. docs/handoff-webinar2-reel-2026-11-03.md. [project: blc]
+
 ## 2026-11-03 (Elect round 2 + EcoHeat rename)
 
 ### Hub / Elect website

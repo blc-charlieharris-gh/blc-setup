@@ -174,3 +174,9 @@
 - [MCP role can't run Hub report RPCs (10-19)](reference_mcp_role_cant_run_hub_rpcs.md): hub_as_codes_overview, adset_codes, ad_windowed_totals denied; ask Charlotte to compare a row
 - [Deno via npx for boot checks (10-19)](reference_deno_via_npx_boot_check.md): no deno on the Mac; npx -y deno@2.1.4 run -A, kill after
 - [Her tab runs old code after a merge (10-19)](feedback_her_tab_runs_old_code_after_merge.md): confirm the live bundle, then say hard reload before she tests
+- [n8n replaced, DONE 10-20](project_n8n_replacement_session_1020.md): all forms on lead-ingest; delete paused flows, rotate lead password
+- [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
+- [Claim statuses separate, not profit (10-20)](feedback_claim_status_separate_not_profit.md): Claimed/Refunded/Cancelled/Unclaimed never combined; answer rates asked; new marketplace (NM05/06/08) excluded
+- [Installer payments not in app (10-20)](reference_installer_payments_not_in_app.md): legacy claims on account, 105/113 negative balances, £200/credit is list price not revenue
+- [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): KEPT 10-23, no review
+- [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks

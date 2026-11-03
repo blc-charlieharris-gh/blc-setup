@@ -12,3 +12,5 @@ On 2026-10-12 blc-36 (prospect_audits) and blc-5a (sales_reviews) each created `
 
 **Why:** sessions branch from main at different times and pick "next round number" timestamps independently.
 **How to apply:** when another session is live in the same repo, `git fetch` and `ls supabase/migrations | grep <today>` immediately before naming a migration, pick an odd minute (e.g. ...210500), and re-check before merge. Related: [[feedback_whatsnew_conflicts_one_pr]], [[feedback_coordinate_other_sessions_automatically]].
+
+11-03 again: 20261103235900 was used by both the turned-off migration and client_update_part2 (both merged same night); renamed ours to 20261104000100. Fetch main and ls migrations right before naming, even late at night.

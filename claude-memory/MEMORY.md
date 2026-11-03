@@ -55,14 +55,8 @@
 - [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
-- [n8n replaced, DONE 10-20](project_n8n_replacement_session_1020.md): all forms on lead-ingest; delete paused flows, rotate lead password
 - [Results end yesterday, orders live (10-20, 11-02)](feedback_results_end_yesterday_orders_live.md): period figures to latestCompleteDay (UK day); since-the-start totals include today (Meta hourly); survey order counts live
 - [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
-- [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
-- [Claim statuses separate, not profit (10-20)](feedback_claim_status_separate_not_profit.md): Claimed/Refunded/Cancelled/Unclaimed never combined; answer rates asked; new marketplace (NM05/06/08) excluded
-- [Installer payments not in app (10-20)](reference_installer_payments_not_in_app.md): legacy claims on account, 105/113 negative balances, £200/credit is list price not revenue
-- [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): KEPT 10-23, no review
-- [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
 - [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
 - [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; superseded 11-01 by one Marketing page (repo memory project_ih_marketing_page_1101)
@@ -109,7 +103,7 @@
 - [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
 - [Daily clean-up at handoff (10-29)](feedback_daily_cleanup_at_handoff.md): first handoff of the day per device clears branches/worktrees/stashes/_deploy/temp/stacked docs; one zsh script for her
 - [Don't relay other sessions (10-29)](feedback_dont_relay_other_sessions.md): only my own work and what it needs from her; others' updates go quietly into the handoff
-- [Cut video at word edges (10-29)](reference_video_cut_at_word_edges.md): embeds trim ends only; faster-whisper word times + ffmpeg concat; YouTube captions via XHR hook
+- [Cut video at word edges (10-29, +11-03 reels)](reference_video_cut_at_word_edges.md): RMS-dip cuts, test each cut alone; inpaint burned captions; face-track crop; PIL text; Lyria no-ending prompt
 - [New worktree needs env link (10-29)](feedback_new_worktree_needs_env_link.md): link node_modules + .env/.env.local from marketing-agent or vitest fails 'supabaseUrl is required'
 - [Browser pane: she types only after my turn (10-30)](feedback_browser_pane_blocks_typing_mid_turn.md): open the sign-in page, end the turn, then she signs in
 - [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
@@ -126,6 +120,12 @@
 - [Vercel cert not issued after DNS (11-02)](reference_vercel_cert_not_issued_after_dns.md): domain added before DNS moved, https dead, http fine; Charlotte runs blc-vercel certs issue
 - [Resend direct client email (11-02)](reference_resend_direct_client_email.md): key in .env.local, brad@installrhub.com, composeClientEmail via vite-node; not in Hub History
 - [OpenRouter key + Playwright python on this Mac (11-02)](reference_openrouter_key_and_playwright_python.md) — key in ~/Code/BLC/.env.local (strip \\n); python3 without -I
-- [Webinar deck figures (11-02)](project_webinar_deck_figures_1102.md): all-bookings basis (her choice), oil ad = Heat pump 11 (grant-named), GasWorx/Elect/clip sources
-- [Elect kit zips: remove at handoff (11-02)](project_elect_kit_zips_remove_at_handoff_1102.md): delete the kit zip + elect-energy-site zip in ~/Code/BLC once saved on the job
+- [Webinar deck figures (11-02, +11-03)](project_webinar_deck_figures_1102.md): all-bookings basis, oil ad = Heat pump 11; 11-03 2,000+/£10k+, built-in calculator, Brad notes keyed by note hash
 - [No photo: AI image, not a question (11-02)](feedback_no_photos_use_ai_images_not_questions.md): list it in _client/ai-images.json; never a photo ask in missing.md
+- [GHL is never a fallback (11-03)](feedback_ghl_never_a_fallback.md): remove the GHL path completely, plain error instead; sweep every place offering the same thing
+- [pbcopy needs UTF-8 (11-03)](feedback_pbcopy_needs_utf8.md): always LANG=en_US.UTF-8 pbcopy; plain pbcopy turned £ — emoji into ¬£ ‚Äî üé• in pasted SQL/edge fns
+- [Check the real client file before saying fixed (11-03)](feedback_check_real_client_file_before_saying_fixed.md): Energe dark logo took 4 merges; reproduce her exact button on the stored file first
+- [Replace every job, not every piece (11-03)](feedback_replace_every_job_not_every_piece.md): switch-overs list every job the old system did and prove each replacement live; direct website bookers were lost
+- [Fix THIS-ROUND items in the same zip (11-03)](feedback_do_this_round_items_too.md): kit reds + her ask in one upload, never "next round"
+- [Supabase MCP + Meta token on this Mac (11-03)](reference_supabase_mcp_and_meta_token_on_mac.md) — f958 MCP reads hub fns + logs; meta-access/.env token for live Meta reads
+- [Webinar after-event checks (11-03)](project_webinar_after_event_checks_1103.md): replay sequence on as it ends (15-min lookback), share links no cid, copy matches replay_hours

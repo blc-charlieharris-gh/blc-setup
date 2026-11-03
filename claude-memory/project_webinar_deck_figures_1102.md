@@ -15,5 +15,9 @@ Webinar deck for 4 Nov 2026 (site `webinar-deck/`, published to marketing-agent 
 - Lowest performer = Elect (heat pump, North West). The old card was SWH, not "Architect".
 - Slide 48 client videos are YouTube (Impact j36Qz9rXIfQ from 0:28, Smartway blqT48N5jxk, GasWorx aMcx_rOaCP0), click to play with sound; online only.
 
+- 3 Nov feedback round (69 slides): slide 3 = 2,000+ surveys + £10k+ potential per booking (Charlotte's figures, "this year" dropped: Hub had 1,898 to 2 Nov); LJP job shown incl. grant (£5,188 + £9,000 = £14,188); slide 50 third tile = Q Smart podcast J6ADmqrmXaI, "Lead partner for MCS Umbrella"; Elect card says "North of England" (Elect join the webinar).
+- Slide 64 ROI calculator is a built-in copy of the app's Fixed Retainer maths/defaults (cpl £110 on 3 Nov), not an iframe: the app admin sign-in (app.installrhub.com) does not hold in the browser pane, so an embed showed the login page. If app pricing changes, update parts/05.html + deck.js.
+- Brad's saved notes (deck_notes_get, deck 'loan-scheme-ready') are keyed by a hash of the built note. NEVER overwrite or hide them (Charlotte 11-03: "we can't overwrite his changes or this won't work"). build.py stops if a rebuild would hide one (site-installrhub branch fix/deck-keep-brad-notes-1103); the fix is putting his text into that slide's note in parts/, never bypassing the check. 3 Nov: only slide 1 saved (14:51); 2 orphaned rows from 6 Oct. Before telling anyone notes carried over, check the rows against the live deck.
+
 **Why:** a helper spent ~10 minutes of queries working these out; the basis choice changes every survey figure.
 **How to apply:** any future deck/webinar refresh reuses these sources and the all-bookings basis unless Charlotte says otherwise. Related: [[project_installrhub_webinar_partners_1027]], [[project_webinar_questions_1102]].

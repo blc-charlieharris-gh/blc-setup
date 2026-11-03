@@ -12,4 +12,4 @@ Charlotte 10-28: keep the merged test list (marketing-agent `.claude/docs/test-l
 
 **Why:** one list, one place, checked as part of the normal session rhythm.
 
-**How to apply:** at prime, read test-list.md and report the counts plus anything checkable from live data; at handoff, add new items and tick what was seen working. See [[feedback_keep_running_test_list]].
+**How to apply:** at prime, read test-list.md and report the counts plus anything checkable from live data; at handoff, add new items and tick what was seen working. 11-03: she asked for the data check to be part of the routine. The repo handoff skill now has it: every handoff checks the lines for areas the session touched, and the first handoff of the day checks the whole list with up to 4 read-only subagents (Tried OK to the archive with evidence, Failed with a fix offered, part seen noted). Prime shows the counts and when the last check was. See [[feedback_keep_running_test_list]].
