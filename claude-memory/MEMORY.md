@@ -129,3 +129,4 @@
 - [Fix THIS-ROUND items in the same zip (11-03)](feedback_do_this_round_items_too.md): kit reds + her ask in one upload, never "next round"
 - [Supabase MCP + Meta token on this Mac (11-03)](reference_supabase_mcp_and_meta_token_on_mac.md) — f958 MCP reads hub fns + logs; meta-access/.env token for live Meta reads
 - [Webinar after-event checks (11-03)](project_webinar_after_event_checks_1103.md): replay sequence on as it ends (15-min lookback), share links no cid, copy matches replay_hours
+- [Never checkout main over uncommitted work (11-03)](feedback_never_checkout_main_over_uncommitted.md) — `checkout origin/main -- .` wiped edits; compare in a temp worktree
