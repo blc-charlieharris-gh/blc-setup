@@ -56,7 +56,7 @@
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
 - [n8n replaced, DONE 10-20](project_n8n_replacement_session_1020.md): all forms on lead-ingest; delete paused flows, rotate lead password
-- [Results end yesterday, orders live (10-20)](feedback_results_end_yesterday_orders_live.md): all performance figures to latestCompleteDay (UK day); survey order counts live; only Dashboard Today panel shows today
+- [Results end yesterday, orders live (10-20, 11-02)](feedback_results_end_yesterday_orders_live.md): period figures to latestCompleteDay (UK day); since-the-start totals include today (Meta hourly); survey order counts live
 - [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
 - [Calendar bookings become prospects (10-20)](reference_sales_appointments_sync_makes_prospects.md): app sync-sales-appointments makes Ring tasks for any InstallrHub GHL calendar, e.g. Interviews; Serafim fixes
 - [Claim statuses separate, not profit (10-20)](feedback_claim_status_separate_not_profit.md): Claimed/Refunded/Cancelled/Unclaimed never combined; answer rates asked; new marketplace (NM05/06/08) excluded
@@ -125,3 +125,7 @@
 - [CRM crossover additive only (11-02)](feedback_crm_crossover_additive_only.md): never stop app/GHL activity until Charlotte confirms the app is off; web bookings already CRM-only
 - [Vercel cert not issued after DNS (11-02)](reference_vercel_cert_not_issued_after_dns.md): domain added before DNS moved, https dead, http fine; Charlotte runs blc-vercel certs issue
 - [Resend direct client email (11-02)](reference_resend_direct_client_email.md): key in .env.local, brad@installrhub.com, composeClientEmail via vite-node; not in Hub History
+- [OpenRouter key + Playwright python on this Mac (11-02)](reference_openrouter_key_and_playwright_python.md) — key in ~/Code/BLC/.env.local (strip \\n); python3 without -I
+- [Webinar deck figures (11-02)](project_webinar_deck_figures_1102.md): all-bookings basis (her choice), oil ad = Heat pump 11 (grant-named), GasWorx/Elect/clip sources
+- [Elect kit zips: remove at handoff (11-02)](project_elect_kit_zips_remove_at_handoff_1102.md): delete the kit zip + elect-energy-site zip in ~/Code/BLC once saved on the job
+- [No photo: AI image, not a question (11-02)](feedback_no_photos_use_ai_images_not_questions.md): list it in _client/ai-images.json; never a photo ask in missing.md

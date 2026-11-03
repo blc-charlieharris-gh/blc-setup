@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-03 (Elect round 2 + EcoHeat rename)
+
+### Hub / Elect website
+- AI pictures for the pinned post and the 10 posts (#3057, merged); stuck Elect Facebook suggestions job cleared; Elect solar page now uses three AI solar pictures listed in ai-images.json; inline styles moved to classes; new zip ready for step 6. EcoHeat Plumbing, Heating & Renewables Ltd renamed EcoHeat Renewables Ltd in the CRM and Hub (checked). docs/handoff-elect-boilers-2026-11-02.md. [project: blc]
+
 ## 2026-11-02 (Elect boilers)
 
 ### Elect website
