@@ -180,3 +180,27 @@
 - [Installer payments not in app (10-20)](reference_installer_payments_not_in_app.md): legacy claims on account, 105/113 negative balances, £200/credit is list price not revenue
 - [LJP recently-in test (10-20)](project_ljp_recent_in_test_1020.md): KEPT 10-23, no review
 - [Claude sorts post images (10-20)](feedback_claude_sorts_post_images.md): pick photo per post myself, her part = minimal Hub clicks
+
+- [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
+- [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; superseded 11-01 by one Marketing page (repo memory project_ih_marketing_page_1101)
+- [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
+- [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
+- [php2shell cleanup (10-22)](project_php2shell_cleanup_1022.md): no PHP in our stack; Cloudflare done, IONOS .co.uk + wpdns.site host deletion + Retrofit email pending
+- [Meta finance category rules (10-22)](reference_meta_finance_special_category_rules.md): no postcodes, 10mi pins min, age + living-in ok, 7 of 17 solar interests pass
+- [meta-sync skips untracked clients (10-22)](reference_meta_sync_skips_untracked_clients.md): no campaigns in Hub until Live; ask Meta via meta-assets-discover build_status
+- [GT leads to telesales (10-22, fixed 10-23)](project_greentide_new_leads_not_reaching_telesales_1022.md): dialer opens with the call-centre key; v41 makes a call-centre copy, row takes its id
+- [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
+
+- [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
+- [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
+- [Source is first-touch only (10-04)](feedback_source_first_touch_classify_on_page.md): classify forms on Converted Page first; booking…
+- ["On the list" = in the repo (10-04)](feedback_on_the_list_means_in_repo.md): check audit README/known-issues before saying…
+- [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
+- [Audit scope checklist (10-09)](feedback_audit_scope_checklist.md): every audit covers security, speed/mobile, one source of truth, app-safe, linked/hidden pages, cross-page, bugs, accuracy, no hardwiring, outdated + duplicated features (10-12)
+- [One report at the end (10-09)](feedback_one_report_at_end.md): long runs -> single self-contained final report, no relying on interim messages
+- [Awareness spend counts in CPL (10-09)](feedback_awareness_spend_in_cpl.md): TOF/MOF fuel lead campaigns; out of lists, never out of the money
+- [Cost of supply = cost us, split by surveys (10-10)](feedback_cost_of_supply_is_cost_not_charge.md): never 'charged'; shared code split by surveys, confirm leads/zero cases
+- [Broadcast + nurture = one send-rules area (10-10)](feedback_broadcast_nurture_same_list_rules.md): every send rule shared; only trigger vs set time differs; overlap via filters; bookings via calendar classification
+- [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
+- [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
+- [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute

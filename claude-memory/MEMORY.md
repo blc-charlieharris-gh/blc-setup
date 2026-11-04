@@ -4,12 +4,10 @@
 - [IH standard URL tags](feedback_installrhub_standard_url_tags.md)…
 - [Whole impact before any change (10-24)](feedback_whole_impact_before_any_change.md): every change/add/remove → sweep every reader of the same thing, fix all in one change, list them; shared AS01 fix missed Targeting reach column
 - [No parallel copies of one job (11-01)](feedback_no_parallel_copies_of_one_job.md): find the existing tick/list/box and make it work; merge siblings, delete the old copy
-- [Hub page-by-page audit (10-04)](project_hub_page_audit.md): 1-11, 16, 28 done + retrospective 10-04…
 - [Hub git: no co-author, no gh (10-24)](feedback_marketing_agent_git_rules_override_harness.md): CLAUDE.md beats the harness reminder; git push + pull/new link
 - [Open merge links in the browser pane (10-30)](feedback_open_merge_link_in_browser_pane.md): after each push, navigate the pane to pull/new; she presses Create + merge
 - [Open the SQL editor in the browser pane (11-02)](feedback_open_sql_editor_in_browser_pane.md): any SQL for her -> pane on supabase.com/dashboard/project/ozmy.../sql/new, she presses Run
 - [Merge link for everything (10-15, 10-26)](feedback_always_give_merge_link.md): PRs AND the handoff go on a branch, pushed, close leads with the link; never "commit these yourself"
-- [Never commit agent worktrees (10-04)](feedback_never_commit_agent_worktrees.md): git add -A grabbed .claude/worktrees; now…
 - [Audit findings: simple + fix/pros/cons/impact](feedback_audit_findings_simple_with_options.md): numbered, plain words, no open-ended lists…
 - [Archive, Sep 2026](MEMORY-archive-2026-09.md): also Gas…
 - [Archive, Oct 2026](MEMORY-archive-2026-10.md): older Oct lines incl 10-18/10-19 (client area plan, sales kit, portal, SWH, stock-take, prospects)
@@ -22,7 +20,6 @@
 - [New-client onboarding reality](project_new_client_onboarding_reality.md): act_ prefix trap, no on-add sync, 14D lag
 - **Green Tide:** [is our PPS+PPL account, AS ad sets stay in its numbers](project_greentide_account_is_pps_ppl.md) · [core](project_greentide.md) · [lead pipeline](project_greentide_lead_pipeline.md) · [lead tracking](project_greentide_lead_tracking.md) · [split-testing gap](project_greentide_split_testing_gap.md) · [solar landing gap](project_greentide_solar_landing_tracking_gap.md) · [claims vs bookings lag](feedback_greentide_claims_vs_bookings.md) · [two Meta accounts](reference_greentide_meta_accounts.md) · [UTM attribution](reference_greentide_utm_attribution.md) · [targeting](project_greentide_targeting_rework.md)
 - [mirror_to_ingest=false hides leads](feedback_mirror_to_ingest_hides_leads.md): delivered but never in lead_intake_events
-- [Source is first-touch only (10-04)](feedback_source_first_touch_classify_on_page.md): classify forms on Converted Page first; booking…
 - [Lead counting model](reference_lead_counting_model.md): our leads = every lead landed, untagged…
 - [Nurture engine](reference_nurture_engine.md): delay_minutes now, before_date+SMS via GHL…
 - [Beacon undercounts](feedback_beacon_undercounts_dont_use_for_traffic.md): catches ~10-25% of arrivals, use link_clicks
@@ -42,38 +39,19 @@
 - [Merge checklist file](feedback_merge_checklist_file.md): many PRs in flight -> keep…
 - [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always…
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
-- ["On the list" = in the repo (10-04)](feedback_on_the_list_means_in_repo.md): check audit README/known-issues before saying…
 
 - [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
 - [Headless canvas checks (10-21)](feedback_headless_chrome_canvas_tests.md): compositor flag for SVG decode, serve storage files locally, shrink big PNGs, data URL not screenshot
-- [Never classify by typed titles (10-09)](feedback_never_classify_by_typed_titles.md): contact_source/form/ad names untrustworthy, use ad id, site form log, form key
-- [Audit scope checklist (10-09)](feedback_audit_scope_checklist.md): every audit covers security, speed/mobile, one source of truth, app-safe, linked/hidden pages, cross-page, bugs, accuracy, no hardwiring, outdated + duplicated features (10-12)
-- [One report at the end (10-09)](feedback_one_report_at_end.md): long runs -> single self-contained final report, no relying on interim messages
-- [Awareness spend counts in CPL (10-09)](feedback_awareness_spend_in_cpl.md): TOF/MOF fuel lead campaigns; out of lists, never out of the money
-- [Cost of supply = cost us, split by surveys (10-10)](feedback_cost_of_supply_is_cost_not_charge.md): never 'charged'; shared code split by surveys, confirm leads/zero cases
-- [Broadcast + nurture = one send-rules area (10-10)](feedback_broadcast_nurture_same_list_rules.md): every send rule shared; only trigger vs set time differs; overlap via filters; bookings via calendar classification
-- [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
-- [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
-- [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
 - [Results end yesterday, orders live (10-20, 11-02)](feedback_results_end_yesterday_orders_live.md): period figures to latestCompleteDay (UK day); since-the-start totals include today (Meta hourly); survey order counts live
 - [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
-- [Staff logins still @blc-promotions (10-21)](reference_staff_logins_still_blc_promotions.md): @installrhub.com gets silent "sent", no portal link; changing logins is Serafim's
-- [InstallrHub section audit (10-21)](project_installrhub_section_audit_1021.md): Crew left, Clients skipped; purpose = sales stacked with disco + demo calls; superseded 11-01 by one Marketing page (repo memory project_ih_marketing_page_1101)
-- [GBP API application (10-21)](project_gbp_api_application.md): no GBP access yet; applied from installrhub-hub-client-media 488435496724, quota 300 = approved
 - [GHL removal from the Hub (10-21, +10-25)](project_ghl_removal_hub.md): GHL out altogether, calendars last; 10-25 FULL GHL audit first; no duplicates; plan-ghl-removal-1024.md
-- [Sales kit = send info (10-21)](project_sales_kit_send_info_1021.md): Set ups + Send info, from Brad, Twilio texts, sales-kit-send fn, GHL note; test on Sam Taylor next
-- [php2shell cleanup (10-22)](project_php2shell_cleanup_1022.md): no PHP in our stack; Cloudflare done, IONOS .co.uk + wpdns.site host deletion + Retrofit email pending
 - [No test ask when reusing a proven system (10-22)](feedback_no_test_ask_when_reusing_proven_system.md): verify the join myself, don't ask her to test
 - [Check feedback before status SQL (10-22)](feedback_check_feedback_before_status_sql.md): read notes/feedback and ask before SQL that changes a client's status; J&B site moved to approval mid-changes
-- [Meta finance category rules (10-22)](reference_meta_finance_special_category_rules.md): no postcodes, 10mi pins min, age + living-in ok, 7 of 17 solar interests pass
-- [meta-sync skips untracked clients (10-22)](reference_meta_sync_skips_untracked_clients.md): no campaigns in Hub until Live; ask Meta via meta-assets-discover build_status
 - [Check Meta activity log before saying who made an ad (10-22)](feedback_check_meta_activity_log_before_blaming.md): Erin made the "Test -" ads, not Meta; read act_<id>/activities actor_name first
 - [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
-- [GT leads to telesales (10-22, fixed 10-23)](project_greentide_new_leads_not_reaching_telesales_1022.md): dialer opens with the call-centre key; v41 makes a call-centre copy, row takes its id
 - [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does
 - [Test-row cleanup needs no Serafim (10-23)](feedback_test_row_cleanup_no_serafim.md): removing Hub test leads from app tables is ours; flag only real app behaviour changes
-- [Mark Harvey + Q Smart not live (10-23)](project_mark_harvey_q_smart_not_live.md): pay-per-lead, not live; NE CRM link turned off by Charlotte before lead tests
 - [Meta in the Hub (10-23, planned 10-24)](project_hub_publish_to_meta_button.md): publish, tests, off/on, budgets, locations, set-ups, spend limits; meta_write tick; plan-meta-in-hub.md, 5 stages, next = Stage 1
 - [Meta in the Hub test list (10-24)](project_meta_in_hub_test_list.md): off/on tested; budget, go-live switch, connect step 6, used-up pause + each new stage still to try
 - [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
@@ -130,3 +108,9 @@
 - [Supabase MCP + Meta token on this Mac (11-03)](reference_supabase_mcp_and_meta_token_on_mac.md) — f958 MCP reads hub fns + logs; meta-access/.env token for live Meta reads
 - [Webinar after-event checks (11-03)](project_webinar_after_event_checks_1103.md): replay sequence on as it ends (15-min lookback), share links no cid, copy matches replay_hours
 - [Never checkout main over uncommitted work (11-03)](feedback_never_checkout_main_over_uncommitted.md) — `checkout origin/main -- .` wiped edits; compare in a temp worktree
+- [Nurture routes + after-webinar to-do (11-04)](project_nurture_routes_after_webinar_1104.md): call reminders never stopped by others; cancelled call = off nurture, on list; replay chip + route map next
+- [Check Serafim's changes against the Hub (11-04)](feedback_check_serafim_changes_against_hub.md): his #3163 trigger broke every unsubscribe/STOP 11:09-14:13; prime+handoff run the check in marketing-agent .claude/docs/serafim-changes.md
+- [CRM online bookings -> Google Calendar (11-04)](reference_crm_online_bookings_gcal.md): right type per booking page; blank meet_link on online hub_crm_bookings rows is fine; 6-day cap
+- [Homeowner leads stay on GHL (11-04)](project_homeowner_leads_stay_on_ghl_1104.md): own ih ids = sales only; call tasks go via GHL to the app Call Centre; David Facer 70 = leave
+- [Clipboard shared between sessions (11-04)](feedback_clipboard_shared_between_sessions.md): broadcasts went live as nurture-run v91; build from latest main, recopy at paste, check live fn marker
+- [Merged is not deployed (11-04)](feedback_merged_is_not_deployed.md): #3185 merged but never pasted; grep the live fn before saying fixed; removed_from_ghl never reopens
