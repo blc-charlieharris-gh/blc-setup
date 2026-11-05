@@ -64,7 +64,7 @@
 - [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
 - [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon
 - [Serafim Claude note = SQL (10-26)](feedback_serafim_claude_note_is_sql.md): short message for him + cross_agent_notes INSERT for his Claude, both up front; verify by ref_id
-- [Run eslint before push (10-26)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build; #2525 failed on no-sparse-arrays
+- [Run eslint before push (10-26, 11-05)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build, even for text edits; #2525 sparse array, #3255 quotes in What's new
 - [Finance category = choice, suggest not enforce (10-27)](feedback_finance_category_choice_not_enforced.md): Set it up in Meta offers both, suggested from the copied ad set
 - [Lead forms: verify number always (10-26)](feedback_lead_forms_verify_number_always.md): is_phone_sms_verify_enabled true, write-only; conditional logic not in API, Ads Manager only
 - [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
@@ -114,3 +114,6 @@
 - [Homeowner leads stay on GHL (11-04)](project_homeowner_leads_stay_on_ghl_1104.md): own ih ids = sales only; call tasks go via GHL to the app Call Centre; David Facer 70 = leave
 - [Clipboard shared between sessions (11-04)](feedback_clipboard_shared_between_sessions.md): broadcasts went live as nurture-run v91; build from latest main, recopy at paste, check live fn marker
 - [Merged is not deployed (11-04)](feedback_merged_is_not_deployed.md): #3185 merged but never pasted; grep the live fn before saying fixed; removed_from_ghl never reopens
+- [No Deno on this Mac (11-05)](reference_no_deno_on_mac_boot_check.md) — boot-check.sh always FAILs; npx esbuild for syntax, then live version + boot logs; no force push
+- [Refetch main before each paste (11-05)](feedback_refetch_main_right_before_each_paste.md): fetch+merge+rebundle+compare live per function; my v124 view paste dropped Serafim's calling list tab
+- [Fix drift by removing a switch (11-05)](feedback_fix_drift_by_removing_a_switch.md): two states drifting = remove one switch, never add stages/tracking/overrides; Crew round 2 was "complicating it"

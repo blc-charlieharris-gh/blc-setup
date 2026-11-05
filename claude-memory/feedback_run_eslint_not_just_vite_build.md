@@ -10,5 +10,7 @@ metadata:
 
 26 Oct 2026: #2525 failed its production deploy on `no-sparse-arrays` (`|| [, a, 0, '']`) after I'd only run `npx vite build` locally; the next merge built on top would have failed too.
 
+5 Nov 2026: #3255 broke production with one What's new line: `sed` put "double quotes" inside a double-quoted body string. I had only linted `src/pages/public`. Text-only edits count too: full `npx eslint .` + `npx vite build` before EVERY push, and never sed quote marks into JS strings.
+
 **Why:** the build script lints first and any eslint error fails the deploy; vite alone doesn't lint.
 **How to apply:** before every push in marketing-agent run `npx eslint .` (0 errors; ~240 warnings are normal) plus the touched tests (`VITE_SUPABASE_URL=http://x VITE_SUPABASE_ANON_KEY=x npx vitest run ...` in a worktree with no .env). After a merge, check `gh api repos/serafimparente-blc/marketing-agent/commits/<sha>/status`; logs via `blc-vercel inspect <dpl> --logs --scope blc-promotions`.
