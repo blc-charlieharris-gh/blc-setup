@@ -64,7 +64,7 @@
 - [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
 - [Hub UI: no overexplaining (10-25)](feedback_hub_ui_no_overexplaining.md): only what's needed at that spot; never repeat what's covered elsewhere; no jargon
 - [Serafim Claude note = SQL (10-26)](feedback_serafim_claude_note_is_sql.md): short message for him + cross_agent_notes INSERT for his Claude, both up front; verify by ref_id
-- [Run eslint before push (10-26, 11-05)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build, even for text edits; #2525 sparse array, #3255 quotes in What's new
+- [Run eslint before push (10-26, 11-05, 11-06)](feedback_run_eslint_not_just_vite_build.md): Vercel build = eslint . && vite build, even for text edits; #2525 sparse array, #3255 + #3289 quotes in What's new; check exit code
 - [Finance category = choice, suggest not enforce (10-27)](feedback_finance_category_choice_not_enforced.md): Set it up in Meta offers both, suggested from the copied ad set
 - [Lead forms: verify number always (10-26)](feedback_lead_forms_verify_number_always.md): is_phone_sms_verify_enabled true, write-only; conditional logic not in API, Ads Manager only
 - [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
@@ -86,7 +86,7 @@
 - [Browser pane: she types only after my turn (10-30)](feedback_browser_pane_blocks_typing_mid_turn.md): open the sign-in page, end the turn, then she signs in
 - [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
 - [Creative test needs 2 designs (10-31)](feedback_creative_test_needs_two_designs.md): Hub refuses a one-design new test; joining a running test is fine
-- [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; local sign-in lost with the tab, check live instead
+- [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; symlinked node_modules fails dep scan (11-06); check live instead
 - [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over
 - [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
 - [All sites live on their Hub jobs (11-01)](project_all_sites_on_hub_jobs.md): no client folders in the repo or on devices; Hub daily run keeps hosted blogs
@@ -117,3 +117,4 @@
 - [No Deno on this Mac (11-05)](reference_no_deno_on_mac_boot_check.md) — boot-check.sh always FAILs; npx esbuild for syntax, then live version + boot logs; no force push
 - [Refetch main before each paste (11-05)](feedback_refetch_main_right_before_each_paste.md): fetch+merge+rebundle+compare live per function; my v124 view paste dropped Serafim's calling list tab
 - [Fix drift by removing a switch (11-05)](feedback_fix_drift_by_removing_a_switch.md): two states drifting = remove one switch, never add stages/tracking/overrides; Crew round 2 was "complicating it"
+- [IH cost per discovery/demo (11-06)](reference_ih_cost_per_discovery_demo.md): calendars + CRM, hub_ih_signup_ad credit, spend view; webinar report people rule
