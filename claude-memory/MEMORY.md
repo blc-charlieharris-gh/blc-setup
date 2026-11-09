@@ -118,3 +118,8 @@
 - [Refetch main before each paste (11-05)](feedback_refetch_main_right_before_each_paste.md): fetch+merge+rebundle+compare live per function; my v124 view paste dropped Serafim's calling list tab
 - [Fix drift by removing a switch (11-05)](feedback_fix_drift_by_removing_a_switch.md): two states drifting = remove one switch, never add stages/tracking/overrides; Crew round 2 was "complicating it"
 - [IH cost per discovery/demo (11-06)](reference_ih_cost_per_discovery_demo.md): calendars + CRM, hub_ih_signup_ad credit, spend view; webinar report people rule
+- [Client post brand motifs by hand (11-07)](feedback_client_post_brand_motifs_manual.md): Elect's lines etc. are Charlotte's manual work; no Hub setting
+- [Not paid holds only launch (11-07)](feedback_not_paid_holds_only_launch.md): everything else goes ahead for Not paid clients; Britvolt ads were hidden by the old hold
+- [EST heat pump savings (11-07)](reference_est_heat_pump_savings_infogram.md): figures in an Infogram embed, 403 to curl; read infographicData in the pane
+- [Soft reset to origin/main undoes others (11-08)](feedback_soft_reset_origin_main_moves.md): shared ref moves between worktrees; pin the sha, check files changed before push
+- [One finance ask (11-08)](project_finance_one_ask_1108.md): lib/financeApproval is the one answer; form wording counts as approved; marketplace no brand = yes/no; Client clean-up vs Library clean-up
