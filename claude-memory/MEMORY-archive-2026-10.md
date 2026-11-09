@@ -204,3 +204,32 @@
 - [Client answers final, no extra problems (10-11)](feedback_client_answers_final_no_extra_problems.md): "not applicable" means leave it; do the job, flag only blockers
 - [Company is InstallrHub Ltd (10-12)](project_company_renamed_installrhub_ltd.md): was BLC Promotions Ltd, same address/number; mailboxes + GHL link host stay
 - [Migration number clash between sessions (10-12)](feedback_migration_version_collision_between_sessions.md): fetch + ls today's migrations right before naming; pick an odd minute
+
+## Moved from the index 2026-11-09 (dated reference and project entries)
+- [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
+- [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
+- [Meta in the Hub (10-23, planned 10-24)](project_hub_publish_to_meta_button.md): publish, tests, off/on, budgets, locations, set-ups, spend limits; meta_write tick; plan-meta-in-hub.md, 5 stages, next = Stage 1
+- [Meta in the Hub test list (10-24)](project_meta_in_hub_test_list.md): off/on tested; budget, go-live switch, connect step 6, used-up pause + each new stage still to try
+- [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
+- [Meta spend limit stops silently (10-23)](reference_meta_spend_cap_silent_stop.md): amount_spent = spend_cap, all Active; client-owned accounts need MANAGE to reset, client does it
+- [Wix old blog extraction (10-24)](reference_wix_old_site_blog_extraction.md): post-description body, 11062b_ = Wix-only stock, read every post first
+- [access@ mailbox forwarding (10-26)](reference_access_mailbox_forwarding.md): client invite address; switch -> Charlotte, filters -> Erin/Brad/Serafim; Google invites sign in as access@
+- [Webinar 4 Nov partners (10-27)](project_installrhub_webinar_partners_1027.md): Brad only presenter, FinMatch finance partner never speaks, EasyPV partner; November launch = speculation
+- [Client portal final parts (10-28)](project_client_portal_final_parts_1028.md): design sweep per page (Home first, mockup + OK), portal What's new, welcome videos; portal first, then GHL removal, then audit
+- [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
+- [Cut video at word edges (10-29, +11-03 reels)](reference_video_cut_at_word_edges.md): RMS-dip cuts, test each cut alone; inpaint burned captions; face-track crop; PIL text; Lyria no-ending prompt
+- [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
+- [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; symlinked node_modules fails dep scan (11-06); check live instead
+- [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
+- [Headless canvas checks (10-21)](feedback_headless_chrome_canvas_tests.md): compositor flag for SVG decode, serve storage files locally, shrink big PNGs, data URL not screenshot
+- [H1 names the place only on Home and Areas (10-24)](feedback_h1_place_only_home_and_areas.md): other H1s say what the homeowner gets; place stays in title + intro
+- [Grid place-items collapses img to 0x0 (10-26)](feedback_grid_place_items_collapses_img.md): badge tiles blank; flex centring fixes; check naturalWidth/rect before blaming headless
+- [Copy rewrites: keep what worked (10-27)](feedback_copy_rewrite_keep_what_worked.md): keep last headline, hedge "told me" facts, ask partner roles; she writes copy in her ChatGPT
+- [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
+- [Webinar questions (11-02)](project_webinar_questions_1102.md): emails link /webinar/question not thank-you (Meta Lead); telesales Log a question; CRM note waits on CRM owner
+- [Vercel cert not issued after DNS (11-02)](reference_vercel_cert_not_issued_after_dns.md): domain added before DNS moved, https dead, http fine; Charlotte runs blc-vercel certs issue
+- [Webinar deck figures (11-02, +11-03)](project_webinar_deck_figures_1102.md): all-bookings basis, oil ad = Heat pump 11; 11-03 2,000+/£10k+, built-in calculator, Brad notes keyed by note hash
+- [Webinar after-event checks (11-03)](project_webinar_after_event_checks_1103.md): replay sequence on as it ends (15-min lookback), share links no cid, copy matches replay_hours
+- [Nurture routes + after-webinar to-do (11-04)](project_nurture_routes_after_webinar_1104.md): call reminders never stopped by others; cancelled call = off nurture, on list; replay chip + route map next
+- [Client post brand motifs by hand (11-07)](feedback_client_post_brand_motifs_manual.md): Elect's lines etc. are Charlotte's manual work; no Hub setting
+- [EST heat pump savings (11-07)](reference_est_heat_pump_savings_infogram.md): figures in an Infogram embed, 403 to curl; read infographicData in the pane

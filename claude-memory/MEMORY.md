@@ -40,25 +40,15 @@
 - [Rebuild _deploy before paste](feedback_rebuild_deploy_files_before_paste.md): paste files not synced, always…
 - [Hub-only DB: we remove it](feedback_hub_only_db_we_remove.md): Serafim only gets items that affect the app
 
-- [Headless phone-width screenshots](feedback_headless_chrome_window_size_floor.md): CLI floors at ~500px; wrap the page in a 390px iframe (or puppeteer setViewport)
-- [Headless canvas checks (10-21)](feedback_headless_chrome_canvas_tests.md): compositor flag for SVG decode, serve storage files locally, shrink big PNGs, data URL not screenshot
 - [Results end yesterday, orders live (10-20, 11-02)](feedback_results_end_yesterday_orders_live.md): period figures to latestCompleteDay (UK day); since-the-start totals include today (Meta hourly); survey order counts live
-- [Meta accounts stop silently, credit line (10-20)](reference_meta_silent_stop_credit_line.md): GT/BLC showed Active but spent £0 from 11am 10-19; extendedcredits unreadable but card on file IS (funding_source_details); hourly breakdown finds stop
 - [Check branch after new worktree (10-21)](feedback_check_branch_before_commit_new_worktree.md): commit landed on an old merged branch, PR unmergeable; check branch + origin/main..HEAD before push
 - [GHL removal from the Hub (10-21, +10-25)](project_ghl_removal_hub.md): GHL out altogether, calendars last; 10-25 FULL GHL audit first; no duplicates; plan-ghl-removal-1024.md
 - [No test ask when reusing a proven system (10-22)](feedback_no_test_ask_when_reusing_proven_system.md): verify the join myself, don't ask her to test
 - [Check feedback before status SQL (10-22)](feedback_check_feedback_before_status_sql.md): read notes/feedback and ask before SQL that changes a client's status; J&B site moved to approval mid-changes
 - [Check Meta activity log before saying who made an ad (10-22)](feedback_check_meta_activity_log_before_blaming.md): Erin made the "Test -" ads, not Meta; read act_<id>/activities actor_name first
-- [BLC Vercel = blc-vercel wrapper (10-22)](reference_blc_vercel_wrapper.md): ~/code/blc-setup/bin/blc-vercel, scope blc-promotions; plain vercel is PULSET; link leaves .gitignore/.env.local to delete
 - [Test after switch-off (10-22)](feedback_test_after_switch_off.md): re-test once the old system is off; check which writer made the record; open the workflow before claiming what it does
 - [Test-row cleanup needs no Serafim (10-23)](feedback_test_row_cleanup_no_serafim.md): removing Hub test leads from app tables is ours; flag only real app behaviour changes
-- [Meta in the Hub (10-23, planned 10-24)](project_hub_publish_to_meta_button.md): publish, tests, off/on, budgets, locations, set-ups, spend limits; meta_write tick; plan-meta-in-hub.md, 5 stages, next = Stage 1
-- [Meta in the Hub test list (10-24)](project_meta_in_hub_test_list.md): off/on tested; budget, go-live switch, connect step 6, used-up pause + each new stage still to try
-- [Creative tests by API (10-23)](reference_meta_creative_test_api.md): ad_studies SPLIT_TEST_V2 + creative_test_config works; finance forms cannot ask postcode/address
-- [Meta spend limit stops silently (10-23)](reference_meta_spend_cap_silent_stop.md): amount_spent = spend_cap, all Active; client-owned accounts need MANAGE to reset, client does it
 - [Build gates never need Claude (10-24)](feedback_build_gates_must_never_need_claude.md): research checks ask covered not has; pre-build never waits on site check; badges only confirmed; sweep all gates at once
-- [H1 names the place only on Home and Areas (10-24)](feedback_h1_place_only_home_and_areas.md): other H1s say what the homeowner gets; place stays in title + intro
-- [Wix old blog extraction (10-24)](reference_wix_old_site_blog_extraction.md): post-description body, 11062b_ = Wix-only stock, read every post first
 - [Erin-facing info at the top (10-25)](feedback_erin_facing_info_at_top.md): summary box + Next line + board card, never a grey brief line
 - [Keep a running test list (10-25)](feedback_keep_running_test_list.md): marketing-agent .claude/docs/test-list.md (one list, all areas, from 10-28), every PR adds checks, real-life cycles, open items in each report
 - [UK time after clocks change (10-25)](feedback_uk_time_after_clocks_change.md): from 25 Oct UK = UTC; don't add an hour
@@ -70,35 +60,22 @@
 - [Drop parked items (10-26)](feedback_drop_parked_items.md): once she says leave it / ignore / on my taskboard, never list it again in summaries
 - [Handoff: commit, don't ask (10-26)](feedback_handoff_commit_without_asking.md): commit + push this session's handoff/CHANGELOG myself; she closes sessions without noticing a question
 - [Client site changes = save zip on the job, never a merge (10-26)](feedback_client_site_changes_via_hub_not_merge.md): old repo-built sites (J&B) switch on first save; check source.zip first
-- [Grid place-items collapses img to 0x0 (10-26)](feedback_grid_place_items_collapses_img.md): badge tiles blank; flex centring fixes; check naturalWidth/rect before blaming headless
-- [access@ mailbox forwarding (10-26)](reference_access_mailbox_forwarding.md): client invite address; switch -> Charlotte, filters -> Erin/Brad/Serafim; Google invites sign in as access@
-- [Webinar 4 Nov partners (10-27)](project_installrhub_webinar_partners_1027.md): Brad only presenter, FinMatch finance partner never speaks, EasyPV partner; November launch = speculation
-- [Copy rewrites: keep what worked (10-27)](feedback_copy_rewrite_keep_what_worked.md): keep last headline, hedge "told me" facts, ask partner roles; she writes copy in her ChatGPT
 - [Test list at prime + handoff (10-28)](feedback_test_list_in_prime_and_handoff.md): repo file only, counts at every prime/handoff until all ticked; no page; don't rename marketing-sync-meta
-- [Client portal final parts (10-28)](project_client_portal_final_parts_1028.md): design sweep per page (Home first, mockup + OK), portal What's new, welcome videos; portal first, then GHL removal, then audit
 - [Hub order after 10-28](project_hub_order_after_1028.md): portal final sweep, then GHL removal, then resume the audit
 - [Client copy: only if it strengthens (10-29)](feedback_client_copy_only_if_strengthens.md): no accuracy nits or weakening facts on client sites
-- [Blocked actions: give the command (10-29)](reference_blocked_actions_give_command.md): branch deletes and prod deploys refused; hand Charlotte the command, run scripts with zsh
 - [Daily clean-up at handoff (10-29)](feedback_daily_cleanup_at_handoff.md): first handoff of the day per device clears branches/worktrees/stashes/_deploy/temp/stacked docs; one zsh script for her
 - [Don't relay other sessions (10-29)](feedback_dont_relay_other_sessions.md): only my own work and what it needs from her; others' updates go quietly into the handoff
-- [Cut video at word edges (10-29, +11-03 reels)](reference_video_cut_at_word_edges.md): RMS-dip cuts, test each cut alone; inpaint burned captions; face-track crop; PIL text; Lyria no-ending prompt
 - [New worktree needs env link (10-29)](feedback_new_worktree_needs_env_link.md): link node_modules + .env/.env.local from marketing-agent or vitest fails 'supabaseUrl is required'
 - [Browser pane: she types only after my turn (10-30)](feedback_browser_pane_blocks_typing_mid_turn.md): open the sign-in page, end the turn, then she signs in
-- [ads synced_at vs full sync (10-30)](reference_ads_synced_at_full_sync_mark.md): status syncs once a day at 03:00; Hub publish stamps one row; use sync_runs mode full as the mark (#2918)
 - [Creative test needs 2 designs (10-31)](feedback_creative_test_needs_two_designs.md): Hub refuses a one-design new test; joining a running test is fine
-- [Preview a worktree in the pane (10-31)](reference_preview_worktree_launch_json.md): launch.json at ~/Code/BLC/.claude with npm --prefix; symlinked node_modules fails dep scan (11-06); check live instead
 - [Leaving Supabase for Cloudflare (11-01)](project_leaving_supabase_for_cloudflare.md): usage warnings fine for now; carry client-site-files zips over
-- [Clean-up scripts: rm -rf, tracked .DS_Store (11-01)](feedback_cleanup_scripts_rm_rf_and_tracked_dsstore.md): rm -r hangs on git read-only files; installrhub-static tracks .DS_Store
 - [All sites live on their Hub jobs (11-01)](project_all_sites_on_hub_jobs.md): no client folders in the repo or on devices; Hub daily run keeps hosted blogs
 - [Website job steps loop (11-01)](feedback_website_job_steps_loop.md): You're-on box, 6 Build and check <-> 7 Ask the client, one Download the kit, "Upload zip"
 - [SWH name unknown (11-02)](feedback_swh_name_unknown_dont_expand.md): write "SWH", never expand client initials
-- [Webinar questions (11-02)](project_webinar_questions_1102.md): emails link /webinar/question not thank-you (Meta Lead); telesales Log a question; CRM note waits on CRM owner
 - [Grants: ended schemes out, not over strict (11-02)](feedback_grants_ended_schemes_not_over_strict.md): BUS + Warm Homes live; ECO4/GHG/RHI never written, old pages redirect; council grant work fine
 - [CRM crossover additive only (11-02)](feedback_crm_crossover_additive_only.md): never stop app/GHL activity until Charlotte confirms the app is off; web bookings already CRM-only
-- [Vercel cert not issued after DNS (11-02)](reference_vercel_cert_not_issued_after_dns.md): domain added before DNS moved, https dead, http fine; Charlotte runs blc-vercel certs issue
 - [Resend direct client email (11-02)](reference_resend_direct_client_email.md): key in .env.local, brad@installrhub.com, composeClientEmail via vite-node; not in Hub History
 - [OpenRouter key + Playwright python on this Mac (11-02)](reference_openrouter_key_and_playwright_python.md) — key in ~/Code/BLC/.env.local (strip \\n); python3 without -I
-- [Webinar deck figures (11-02, +11-03)](project_webinar_deck_figures_1102.md): all-bookings basis, oil ad = Heat pump 11; 11-03 2,000+/£10k+, built-in calculator, Brad notes keyed by note hash
 - [No photo: AI image, not a question (11-02)](feedback_no_photos_use_ai_images_not_questions.md): list it in _client/ai-images.json; never a photo ask in missing.md
 - [GHL is never a fallback (11-03)](feedback_ghl_never_a_fallback.md): remove the GHL path completely, plain error instead; sweep every place offering the same thing
 - [pbcopy needs UTF-8 (11-03)](feedback_pbcopy_needs_utf8.md): always LANG=en_US.UTF-8 pbcopy; plain pbcopy turned £ — emoji into ¬£ ‚Äî üé• in pasted SQL/edge fns
@@ -106,20 +83,21 @@
 - [Replace every job, not every piece (11-03)](feedback_replace_every_job_not_every_piece.md): switch-overs list every job the old system did and prove each replacement live; direct website bookers were lost
 - [Fix THIS-ROUND items in the same zip (11-03)](feedback_do_this_round_items_too.md): kit reds + her ask in one upload, never "next round"
 - [Supabase MCP + Meta token on this Mac (11-03)](reference_supabase_mcp_and_meta_token_on_mac.md) — f958 MCP reads hub fns + logs; meta-access/.env token for live Meta reads
-- [Webinar after-event checks (11-03)](project_webinar_after_event_checks_1103.md): replay sequence on as it ends (15-min lookback), share links no cid, copy matches replay_hours
 - [Never checkout main over uncommitted work (11-03)](feedback_never_checkout_main_over_uncommitted.md) — `checkout origin/main -- .` wiped edits; compare in a temp worktree
-- [Nurture routes + after-webinar to-do (11-04)](project_nurture_routes_after_webinar_1104.md): call reminders never stopped by others; cancelled call = off nurture, on list; replay chip + route map next
 - [Check Serafim's changes against the Hub (11-04)](feedback_check_serafim_changes_against_hub.md): his #3163 trigger broke every unsubscribe/STOP 11:09-14:13; prime+handoff run the check in marketing-agent .claude/docs/serafim-changes.md
 - [CRM online bookings -> Google Calendar (11-04)](reference_crm_online_bookings_gcal.md): right type per booking page; blank meet_link on online hub_crm_bookings rows is fine; 6-day cap
-- [Homeowner leads stay on GHL (11-04)](project_homeowner_leads_stay_on_ghl_1104.md): own ih ids = sales only; call tasks go via GHL to the app Call Centre; David Facer 70 = leave
+- [Homeowner leads moving off GHL (11-09, replaces 11-04)](project_homeowner_leads_stay_on_ghl_1104.md): Green Tide, client, marketplace all to the CRM; call tasks still go via GHL today, need replacing first
 - [Clipboard shared between sessions (11-04)](feedback_clipboard_shared_between_sessions.md): broadcasts went live as nurture-run v91; build from latest main, recopy at paste, check live fn marker
 - [Merged is not deployed (11-04)](feedback_merged_is_not_deployed.md): #3185 merged but never pasted; grep the live fn before saying fixed; removed_from_ghl never reopens
 - [No Deno on this Mac (11-05)](reference_no_deno_on_mac_boot_check.md) — boot-check.sh always FAILs; npx esbuild for syntax, then live version + boot logs; no force push
 - [Refetch main before each paste (11-05)](feedback_refetch_main_right_before_each_paste.md): fetch+merge+rebundle+compare live per function; my v124 view paste dropped Serafim's calling list tab
 - [Fix drift by removing a switch (11-05)](feedback_fix_drift_by_removing_a_switch.md): two states drifting = remove one switch, never add stages/tracking/overrides; Crew round 2 was "complicating it"
 - [IH cost per discovery/demo (11-06)](reference_ih_cost_per_discovery_demo.md): calendars + CRM, hub_ih_signup_ad credit, spend view; webinar report people rule
-- [Client post brand motifs by hand (11-07)](feedback_client_post_brand_motifs_manual.md): Elect's lines etc. are Charlotte's manual work; no Hub setting
 - [Not paid holds only launch (11-07)](feedback_not_paid_holds_only_launch.md): everything else goes ahead for Not paid clients; Britvolt ads were hidden by the old hold
-- [EST heat pump savings (11-07)](reference_est_heat_pump_savings_infogram.md): figures in an Infogram embed, 403 to curl; read infographicData in the pane
 - [Soft reset to origin/main undoes others (11-08)](feedback_soft_reset_origin_main_moves.md): shared ref moves between worktrees; pin the sha, check files changed before push
 - [One finance ask (11-08)](project_finance_one_ask_1108.md): lib/financeApproval is the one answer; form wording counts as approved; marketplace no brand = yes/no; Client clean-up vs Library clean-up
+- [IH ads: TOF/MOF kept, MOF wants frequency 5+ (11-09)](project_ih_ads_tof_mof_1109.md): Advantage audience makes the MOF list a suggestion; its old frequency was Audience Network; TOF CBO piles spend on one video; goal = own leads not webinar
+- [Read-only login can't run the returns helper (11-09)](reference_read_only_login_cant_run_returned_helper.md): booked-number functions error when I call them; read hub_survey_returns instead
+- [Mock-ups: HTML in the pane (11-09)](feedback_mockups_html_in_pane_not_inline.md): she can't see inline widgets; HTML file + browser pane + SendUserFile
+- [Site audit: say what you saw (11-09)](feedback_site_audit_say_what_you_saw.md): overall strength read, not a fact check or fix list; credit what is there, raise missing things only if they matter
+- [Madola leads booked by phone only (11-09)](project_madola_leads_booked_by_phone.md): Hub web booking writing survey is not a gap for their battery-only jobs; don't raise it
